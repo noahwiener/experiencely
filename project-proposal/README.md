@@ -1,24 +1,30 @@
 # Explorely
 
-[Heroku link][heroku] **NB:** This should be a link to your production site
+[Heroku link][heroku]
 
 [heroku]: https://stark-woodland-1668.herokuapp.com/
 
 ## Minimum Viable Product
 
-FresherNote is a web application inspired by Evernote built using Ruby on Rails
-and React.js. FresherNote allows users to:
+Workshoply is a Ruby on Rails/React.js web app inspired by Feastly, a community where professional chefs host private dinners.  In this adaptation, professionals will host workshops teaching guests new skills, providing unique personal experiences, and granting private access to exciting materials in their field. Workshoply will allow users to:
+
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
 - [ ] Create an account
 - [ ] Log in / Log out
-- [ ] Create, read, edit, and delete notes
-- [ ] Organize notes within Notebooks
-- [ ] Tag notes with multiple tags and search notes by tag
-- [ ] Search through notes for blocks of text
-- [ ] Apply complex styling to notes while editing
-- [ ] Set reminders on notes
+- [ ] Browse upcoming workshops by date
+- [ ] View details, reviews, image carousels, etc for each workshop
+- [ ] Read reviews of workshop hosts
+- [ ] View workshops by map location
+- [ ] Sign up for workshops
+- [ ] Sign up for later workshop sessions if upcoming sessions have reached capacity
+- [ ] Review hosts of previously attended workshops
+- [ ] Edit and update previously written reviews
+- [ ] View descriptive homepage if not logged in
+- [ ] Redirect to browse page if logged in
+- [ ] View other recommended workshops
+- [ ] upload a profile picture
 
 ## Design Docs
 * [View Wireframes][view]
