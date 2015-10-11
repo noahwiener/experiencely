@@ -1,8 +1,6 @@
-# FresherNote
+# Explorely
 
-[Heroku link][heroku] **NB:** This should be a link to your production site
-
-[heroku]: http://www.herokuapp.com
+[Heroku link][https://stark-woodland-1668.herokuapp.com/]
 
 ## Minimum Viable Product
 
@@ -64,7 +62,7 @@ extend this to a fuzzy search through every Note's content.
 
 ### Phase 4: Allow Complex Styling in Notes (1 day)
 
-Using quill.js, allow for complex styling of notes. 
+Using quill.js, allow for complex styling of notes.
 
 [Details][phase-four]
 
