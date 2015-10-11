@@ -1,6 +1,8 @@
 # Explorely
 
-[Heroku link][https://stark-woodland-1668.herokuapp.com/]
+[Heroku link][heroku] **NB:** This should be a link to your production site
+
+[heroku]: https://stark-woodland-1668.herokuapp.com/
 
 ## Minimum Viable Product
 
