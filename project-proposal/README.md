@@ -18,10 +18,11 @@ Workshoply is a Ruby on Rails/React.js web app inspired by Feastly, a community 
 - [ ] Read reviews of workshop hosts
 - [ ] View workshops by map location
 - [ ] Sign up for workshops
-- [ ] Sign up for later workshop sessions if upcoming sessions have reached capacity
+- [ ] Prevented from signing up for workshops that are at capacity
 - [ ] Review hosts of previously attended workshops
-- [ ] Edit and update previously written reviews
-- [ ] View descriptive homepage if not logged in
+- [ ] Update profile information
+- [ ] View attended workshops, attended workshops, and reviews on profile page
+- [ ] View descriptive homepage when not logged in
 - [ ] Redirect to browse page if logged in
 - [ ] View other recommended workshops
 - [ ] upload a profile picture
@@ -35,67 +36,57 @@ Workshoply is a Ruby on Rails/React.js web app inspired by Feastly, a community 
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Note Model and JSON API (1.5 days)
+### Phase 1: User Authentication, Models and JSON API for users, hosts, and workshops (1.5 days)
 
-In Phase 1, I will begin by implementing user signup and authentication (using
-BCrypt). There will be a basic landing page after signup that will contain the
-container for the application's root React component. Before building out the
-front end, I will begin by setting up a full JSON API for Notes.
+In phase 1, I will begin by building out the models and backend structure for users, workshops, and hosts. With basic models in place, I will create
+rails (BCrypt) user authentication pages. The authentication page will direct users to
+the Browse page, to be built in phase II using data from the workshops index action.
+
+After completing authentication, I will begin setting up JSON api/controllers for users.
 
 [Details][phase-one]
 
-### Phase 2: Flux Architecture and Note CRUD (2.5 days)
+### Phase 2: Seed Data, Browse Page  (2.5 days)
 
-Phase 2 is focused on setting up Flux, the React Router, and the React view
-structure for the main application. After the basic Flux architecture has been
-set up, a Note store will be implemented and a set of actions corresponding to
-the needed CRUD functionality created. Once this is done, I will create React
-views for the Notes `Index`, `IndexItem` and `Form`. At the end of Phase 2,
-Notes can be created, read, edited and destroyed in the browser. Notes should
-save to the database when the form loses focus or is left idle after editing.
-Lastly, while constructing the views I will start using basic bootstrap for
-styling.
+I will start off phase two by adding workshop and user seed data. In adding photo seed data, I will set up polymorphic photo relationships.
+
+Phase 2 is focused on building out the browse (main) page, which will be populated by workshops. In generating this page, I will set up Flux architecture for workshops, including react components for the browse page components as well as the Workshops store. The majority of time will be spent on the browse listing components, which will link to the workshops views that will be built in phase III.
+
+When the basic browse page architecture is in place, I will style it with bootstrap.
 
 [Details][phase-two]
 
-### Phase 3: Notebooks and Tags (2 days)
+### Phase 3: Workshops Pages (2 days)
 
-Phase 3 adds organization to the Notes. Notes belong to a Notebook, which has
-its own `Index` view. Create JSON API for Notebooks. Notes can also now be
-tagged with multiple tags. Users can bring up notes in a separate `SearchIndex`
-view by searching for their tags. Once the tag search is implemented, I will
-extend this to a fuzzy search through every Note's content.
+Phase 3 builds out the workshop pages, and with them, the ability for users to sign up for a workshop.
+In building a workshops page, I will set up relationships between workshops and hosts, and register events when users sign up for a workshop, which will involve setting up clickhandlers and a workshop store. I will work with google maps API to add map locations on each workshop page. Once again, bootstrap will be added once the functionality is in place.
 
 [Details][phase-three]
 
-### Phase 4: Allow Complex Styling in Notes (1 day)
+### Phase 4: Profiles and Reviews (2 days)
 
-Using quill.js, allow for complex styling of notes.
+Phase 4 builds out user profile pages, with react components for the profile page, upcoming events, past events, and reviews. Workshop reviews will persist through to their hosts. (ASK TA--should I create a user store here? Or should adding reviews here just create one in the database, which will then communicate with the respective workshop's store, which in turn, will emit a change event?) I will go back to the browse and workshop pages to add review information to these pages.
 
 [Details][phase-four]
 
-### Phase 5: Reminders and Garbage Collection (1 day)
+### Phase 5: Static pages, additional data (2 days)
 
-Phase 5 introduces two new features. First, users can set reminders on notes
-which will at the time they are set for prompt the user to review and edit the
-given note. In addition, I will implement a feature that asks users to review
-notes once they reach a certain age and ask whether they should be kept,
-archived, or deleted.
+Phase 5 will include the creation of the home page, the footer/navbar, updates to the login page, and other static but css-heavy contributions. The home page will require some new css elements for hash fragments. In addition, logged in users will be redirected from the home to the browse page, and will not view the home page.
+The navbar will need to be aware of login status, so click handlers will need to be added to the log in, register, and log out buttons.  CHECK WITH TAs--SHOULD THIS GO INTO A USER STORE? OR WHERE SHOULD THIS AUTHENTICATION INFO EXIST IN REACT?
+
+Finally, with the main architecture in place, I will add additional seed data, and complete the CSS.
 
 [Details][phase-five]
 
-### Phase 6: Styling Cleanup and Seeding (1 day)
+### Phase 6: Bonus features (Reminaing days)
 
-Bootstrap will have been used to keep things organized up until now, but in
-Phase 6 I will add styling flourishes and make modals out of some elements (like
-the NotebookForm).
+The final phase will be contingent upon how much time there is left in the project.  See bonus features (below)
 
 ### Bonus Features (TBD)
-- [ ] Prettify transitions
-- [ ] Use javascript library for cleaner tag selection
-- [ ] Changelogs for Notes
-- [ ] Pagination / infinite scroll for Notes Index
-- [ ] Multiple sessions
+- [ ] Search feature in Browse Page
+- [ ] Build a new form page for users to apply to become workshop hosts
+- [ ] Expand the reviews system and database--adding review ratings based on hospitality, education, community, fun, new skills learned
+- [ ] Additional CSS transitions
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

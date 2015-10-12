@@ -1,35 +1,15 @@
-# Phase 5: Reminders and Garbage Collection
-
-## Rails
-### Models
-* Reminder
-
-### Controllers
-* Api::RemindersController (create, destroy, index, show, update)
-
-### Views
-* reminders/index.json.jbuilder
+# Phase 5: Static pages, additional data
 
 ## Flux
 ### Views (React Components)
-* RemindersIndex
-  - ReminderIndexItem
-* ReminderShow
-* ReminderForm
-
-### Stores
-* Reminder
+* Navbar/header
+* footer
+* home
 
 ### Actions
-* ApiActions.receiveAllReminders
-* ApiActions.receiveSingleReminder
-* ApiActions.deleteReminder
+* ApiActions.receiveLoggedIn
+* ApiActions.redirectloggedin
 
 ### ApiUtil
-* ApiUtil.fetchAllReminders
-* ApiUtil.fetchSingleReminder
-* ApiUtil.createReminder
-* ApiUtil.updateReminder
-* ApiUtil.destroyReminder
 
 ## Gems/Libraries

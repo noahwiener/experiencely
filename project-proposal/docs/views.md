@@ -22,5 +22,5 @@
 [home]: ./wireframes/home_component_wireframe.png
 [login]: ./wireframes/login_signup_wireframe.png
 [profile]: ./wireframes/profile_component_wireframe.png
-[workshops]: ./wireframes/workshops_component_wireframe.png
+[workshop]: ./wireframes/workshops_component_wireframe.png
 [component-heirarchy]: ./wireframes/component_heirarchy.png

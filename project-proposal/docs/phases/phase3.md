@@ -1,39 +1,32 @@
-# Phase 3: Notebooks and Tags (2 days)
+# Phase 3: Workshops Pages (2 days)
 
 ## Rails
 ### Models
-* Notebook
-* Tag
-* Tagging
+* signups
 
 ### Controllers
-* Api::NotebooksController (create, destroy, index, show, update)
+
 
 ### Views
-* notebooks/index.json.jbuilder
-* notebooks/show.json.jbuilder
-* tags/show.json.jbuilder
+* workshops/show.json.jbuilder
+
 
 ## Flux
 ### Views (React Components)
-* NotebooksIndex
-  - NotebookIndexItem
-* NotebookForm
-* SearchIndex
+* WorkshopsShow
+  -Hostbar component
+  -details component
+  -hostinfo component
+  -reviews component (empty shell until phase 4)
+  -map component
+
 
 ### Stores
-* Notebook
+* Workshops
 
 ### Actions
-* ApiActions.receiveAllNotebooks
-* ApiActions.receiveSingleNotebook
-* ApiActions.deleteNotebook
+* ApiActions.Register
 
-### ApiUtil
-* ApiUtil.fetchAllNotebooks
-* ApiUtil.fetchSingleNotebook
-* ApiUtil.createNotebook
-* ApiUtil.editNotebook
-* ApiUtil.destroyNotebook
 
 ## Gems/Libraries
+* Google Maps API

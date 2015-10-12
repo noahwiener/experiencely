@@ -1,7 +1,8 @@
-# Phase 2: Flux Architecture and Note CRUD (2 days)
+# Phase 2: Seed Data, Browse Page (2 days)
 
 ## Rails
 ### Models
+* Photos
 
 ### Controllers
 
@@ -9,24 +10,18 @@
 
 ## Flux
 ### Views (React Components)
-* NotesIndex
-  - NotesIndexItem
-* NoteForm
+* Browse
+  - BrowseBanner
+  - BrowseListing
 
 ### Stores
-* Note
 
 ### Actions
-* ApiActions.receiveAllNotes
-* ApiActions.receiveSingleNote
-* ApiActions.deleteNote
+* ApiActions.receiveAllWorkshops
 
 ### ApiUtil
-* ApiUtil.fetchAllNotes
-* ApiUtil.fetchSingleNote
-* ApiUtil.createNote
-* ApiUtil.editNote
-* ApiUtil.destroyNote
+* ApiUtil.fetchAllWorkshops
+* ApiUtil.fetchSingleWorkshop
 
 ## Gems/Libraries
 * Flux Dispatcher

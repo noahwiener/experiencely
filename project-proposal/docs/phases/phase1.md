@@ -1,29 +1,33 @@
-# Phase 1: User Authentication, Note Model and JSON API
+# Phase 1: User Authentication, Models and JSON API for users, hosts, and workshops
 
 ## Rails
 ### Models
 * User
-* Note
+* host
+* workshop
+
 
 ### Controllers
-* UsersController (create, new)
+* Api::UsersController (create, new)
 * SessionsController (create, new, destroy)
-* Api::NotesController (create, destroy, index, show, update)
+* Api::WorkshopsController (index, show, update)
 
 ### Views
+* root.html.erb
 * users/new.html.erb
-* session/new.html.erb
-* notes/index.json.jbuilder
-* notes/show.json.jbuilder
+* workshops/index.json.jbuilder
 
 ## Flux
 ### Views (React Components)
+Browse--create the component page to use as landing page, will be built out in later phase.
 
 ### Stores
 
 ### Actions
+ApiActions.receiveAllUsers
 
 ### ApiUtil
+ApiUtil.fetchAllUsers
 
 ## Gems/Libraries
 * BCrypt
