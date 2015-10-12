@@ -11,5 +11,7 @@
 * ApiActions.redirectloggedin
 
 ### ApiUtil
+* ApiActions.fetchLoggedIn
+
 
 ## Gems/Libraries

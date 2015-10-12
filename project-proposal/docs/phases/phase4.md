@@ -32,12 +32,9 @@
 * ApiActions.receiveUsers
 
 ### ApiUtil
-* ApiActions.fetchAllReviews
-* ApiActions.fetchReviewsByUser
+* ApiUtil.fetchAllReviews
+* ApiUtil.fetchReviewsByUser
+* ApiUtil.fetchReviewsByWorkshop
 
 
 ## Gems/Libraries
-
-
-<!--
-Phase 4 builds out user profile pages, with react components for the profile page, upcoming events, past events, and reviews. Workshop reviews will persist through to their hosts. I will go back to the browse and workshop pages to add review information to these pages. The logic for all of these events will go through the workshops store, with other elements listening for changes to each workshop's reviews. -->

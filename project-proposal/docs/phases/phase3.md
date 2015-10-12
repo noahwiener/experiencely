@@ -27,6 +27,8 @@
 ### Actions
 * ApiActions.Register
 
+### Actions
+* ApiUtil.fetchRegistrations
 
 ## Gems/Libraries
 * Google Maps API
