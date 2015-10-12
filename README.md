@@ -31,8 +31,8 @@ Workshoply is a Ruby on Rails/React.js web app inspired by Feastly, a community 
 * [View Wireframes][view]
 * [DB schema][schema]
 
-[view]: ./docs/views.md
-[schema]: ./docs/schema.md
+[view]: ./project-proposal/docs/views.md
+[schema]: ./project-proposal/docs/schema.md
 
 ## Implementation Timeline
 
@@ -88,8 +88,8 @@ The final phase will be contingent upon how much time there is left in the proje
 - [ ] Expand the reviews system and database--adding review ratings based on hospitality, education, community, fun, new skills learned
 - [ ] Additional CSS transitions
 
-[phase-one]: ./docs/phases/phase1.md
-[phase-two]: ./docs/phases/phase2.md
-[phase-three]: ./docs/phases/phase3.md
-[phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
+[phase-one]: ./project-proposal/docs/phases/phase1.md
+[phase-two]: ./project-proposal/docs/phases/phase2.md
+[phase-three]: ./project-proposal/docs/phases/phase3.md
+[phase-four]: ./project-proposal/docs/phases/phase4.md
+[phase-five]: ./project-proposal/docs/phases/phase5.md
