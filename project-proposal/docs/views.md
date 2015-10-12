@@ -1,26 +1,26 @@
 # View Wireframes
 
-## New User
-![new-user]
+## Browse
+![browse]
 
-## New Session
-![new-session]
+## Home
+![home]
 
-## NotesIndex / NoteIndexItem / NoteForm
-![notes]
+## Login/Signup
+![login]
 
-## NotebooksIndex / NotebookIndexItem
-![notebooks]
+## Profile
+![profile]
 
-## NoteBookForm
-![notebook-form]
+## Workshop
+![workshop]
 
 ## Component Heirarchy
 ![component-heirarchy]
 
-[new-user]: ./wireframes/new_user.png
-[new-session]: ./wireframes/new_session.png
-[notes]: ./wireframes/root_notes.png
-[notebooks]: ./wireframes/root_notebooks.png
-[notebook-form]: ./wireframes/notebook_form.png
+[browse]: ./wireframes/browse_component_wireframe.png
+[home]: ./wireframes/home_component_wireframe.png
+[login]: ./wireframes/login_signup_wireframe.png
+[profile]: ./wireframes/profile_component_wireframe.png
+[workshops]: ./wireframes/workshops_component_wireframe.png
 [component-heirarchy]: ./wireframes/component_heirarchy.png

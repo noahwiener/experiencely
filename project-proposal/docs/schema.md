@@ -4,6 +4,8 @@
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
+first_name      | string    |
+last_name       | string    |
 about_me        | text      |
 username        | string    | not null, indexed, unique
 password_digest | string    | not null
