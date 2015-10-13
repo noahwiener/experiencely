@@ -1,4 +1,4 @@
-# Explorely
+# Experiencely
 
 [Heroku link][heroku]
 
