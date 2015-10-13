@@ -18,4 +18,5 @@
 #
 
 class Workshop < ActiveRecord::Base
+  validates :host_id, :location, presence: true
 end
