@@ -1,9 +1,10 @@
 (function(root) {
   'use strict';
 
+  var CHANGE_EVENT = "change";
   var _workshops = [];
 
-  var resetBenches = function(workshops){
+  var resetWorkshops = function(workshops){
     _workshops = workshops;
   };
 
@@ -11,9 +12,12 @@
     all: function(){
       return _workshops.slice();
     },
+    addChangeListener: function(callback){
+      WorkshopStore.on(CHANGE_EVENT, callback);
+    },
     dispatcherID: AppDispatcher.register(function(payload){
       if(payload.actionType === WorkshopConstants.WORKSHOPS_RECEIVED){
-        resetWorkshops(payload.benches);
+        resetWorkshops(payload.workshops);
         WorkshopStore.emit(CHANGE_EVENT);
       }
     })

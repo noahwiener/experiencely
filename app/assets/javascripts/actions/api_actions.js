@@ -1,7 +1,7 @@
 ApiActions = {
   receiveAll: function (workshops){
     AppDispatcher.dispatch({
-      actionType: WorkshopConstants.BENCHES_RECEIVED,
+      actionType: WorkshopConstants.WORKSHOPS_RECEIVED,
       workshops: workshops
     });
   }
