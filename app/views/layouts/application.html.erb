@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
   <% if current_user %>
     <script>
-      window.current_user_id = <%= current_user.id %>
-      // don't use this for forms--just for the navbar
+      window.CURRENT_USER_ID = <%= current_user.id %>
+      // DON'T use this for forms--just for the navbar, navigation, check if logged in
+      // then, can use if (window.CURRENT_USER_ID) to return a truthy or falsey value
     </script>
   <% end %>
 </head>

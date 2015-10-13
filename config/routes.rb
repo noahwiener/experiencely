@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :edit, :update]
   resource :session, only: [:create, :destroy, :new]
 
+  namespace :api do
+    resources :workshops, defaults: {format: :json}, only: [:index, :show]
+  end
+
   get '/account/login', to: 'users#new'
 end

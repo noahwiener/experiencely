@@ -1,0 +1,3 @@
+WorkshopConstants = {
+  WORKSHOPS_RECEIVED: "WORKSHOPS_RECEIVED"
+};
