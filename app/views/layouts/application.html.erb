@@ -5,6 +5,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <% if current_user %>
+    <script>
+      window.current_user_id = <%= current_user.id %>
+      // don't use this for forms--just for the navbar
+    </script>
+  <% end %>
 </head>
 <body>
 

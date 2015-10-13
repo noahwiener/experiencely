@@ -1,0 +1,3 @@
+var Workshop = React.createClass({
+
+});
