@@ -1,6 +1,6 @@
 RenderJS = function() {
 
-  var root = document.getElementById('browse');
+  var root = document.getElementById('root');
   var Route = ReactRouter.Route;
   var Router = ReactRouter.Router;
   var IndexRoute = ReactRouter.IndexRoute;
@@ -18,8 +18,8 @@ RenderJS = function() {
 
   var routes = (
     <Route path="/" component={App}>
-      <IndexRoute component={ListingsIndex}/>
-      // <Route path="/browse" component={ListingsIndex} />
+      <IndexRoute component={Home}/>
+      <Route path="/browse" component={ListingsIndex} />
     </Route>
   );
 
