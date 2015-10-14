@@ -17,3 +17,53 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.main-login {
+  background-color: lightgrey;
+}
+
+
+.login-box {
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 50px;
+}
+
+.login-box h1 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+// .non-guest {
+//   border-bottom: 1px solid darkgrey;
+// }
+
+.sign-in {
+  text-align: center;
+  border-right: 1px solid darkgrey;
+}
+
+.sign-up {
+  text-align: center;
+}
+
+.login-box .btn {
+  color: white;
+  border-bottom: solid 1px #db9a09;
+  border-radius: 3px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 50px;
+  background: #f7b002;
+}
+
+.login-box .btn:hover {
+  background: #ffbe14;
+
+}
+
+.guest-login {
+  padding: 50px;
+  text-align: center;
+}

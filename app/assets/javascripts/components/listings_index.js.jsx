@@ -16,12 +16,12 @@ ListingsIndex = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className = "listings">
         <ul>{
         this.state.listings.map(function(workshop) {
           return(
             <li key={workshop.title}>
-              title: {workshop.title}
+              {workshop.title}
             </li>
           );
         }.bind(this))

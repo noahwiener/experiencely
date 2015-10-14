@@ -1,4 +1,4 @@
-$(document).ready(function(){
+RenderJS = function() {
 
   var root = document.getElementById('browse');
   var Route = ReactRouter.Route;
@@ -23,6 +23,7 @@ $(document).ready(function(){
     </Route>
   );
 
-  React.render(<Router>{routes}</Router>, root);
 
-});
+React.render(<Router>{routes}</Router>, root);
+// Jeff suggested to wrap this in a function so that it doesn't get confused on standard application.html.erb.  How?
+};

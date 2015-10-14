@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013183503) do
+ActiveRecord::Schema.define(version: 20151013233453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20151013183503) do
     t.string   "location",                      null: false
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.string   "price"
   end
 
   add_index "workshops", ["host_id"], name: "index_workshops_on_host_id", using: :btree
