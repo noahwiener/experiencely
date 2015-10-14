@@ -16,18 +16,23 @@ ListingsIndex = React.createClass({
 
   render: function () {
     return (
-      <div className = "listings">
-        <ul>{
-        this.state.listings.map(function(workshop) {
-          return(
-            <li key={workshop.title}>
-              {workshop.title}
-            </li>
-          );
+      <div>
+      <div className="jumbotron wine">
+        <div className="container">
+          <h1>This will be my Jumbotron</h1>
+        </div>
+      </div>
+
+
+        <ul>
+          {this.state.listings.map(function(workshop) {
+          return  <ListingsIndexItem key={workshop.id} workshop={workshop} />;
         }.bind(this))
       }
       </ul>
+
     </div>
+
     );
   }
 });
