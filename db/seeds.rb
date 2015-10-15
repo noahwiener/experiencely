@@ -65,3 +65,5 @@ workshops = Workshop.create([{host_id: 2,
                                 price: "$10"
                               }
                               ])
+
+photos = Photo.create(name: 'Noah', imageable_type: "User", imageable_id: 2, url: "noah_profile.jpg")

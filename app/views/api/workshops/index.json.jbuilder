@@ -12,4 +12,9 @@ json.array!(@workshops) do |workshop|
                 :lng,
                 :location,
                 :price)
+  json.photos do
+    json.array! workshop.host.photos do |photo|
+      json.partial! "api/photos/photo", photo: photo
+    end
+  end
 end

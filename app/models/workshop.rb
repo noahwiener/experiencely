@@ -22,5 +22,6 @@ class Workshop < ActiveRecord::Base
   validates :host_id, :location, presence: true
 
   has_many :photos, as: :imageable
+  belongs_to :host, class_name: "User", foreign_key: :host_id, primary_key: :id
 
 end
