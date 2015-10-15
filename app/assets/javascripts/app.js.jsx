@@ -9,7 +9,7 @@ RenderJS = function() {
     render: function(){
       return (
         <div>
-          <header><h1>Experiencely</h1></header>
+          < Navbar />
           {this.props.children}
         </div>
       );
@@ -20,6 +20,7 @@ RenderJS = function() {
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
       <Route path="/browse" component={ListingsIndex} />
+      <Route path="/profile" component={Profile} />
     </Route>
   );
 

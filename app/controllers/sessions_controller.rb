@@ -12,13 +12,13 @@ class SessionsController < ApplicationController
      redirect_to account_login_url
    else
      login_user!(user)
-     redirect_to root_url
+     redirect_to "/#browse"
    end
  end
 
  def destroy
    logout_user!
-   redirect_to account_login_url
+   render json: {}
  end
 
  def new

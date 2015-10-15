@@ -1,5 +1,6 @@
 json.array!(@workshops) do |workshop|
   json.extract!(workshop,
+                :id,
                 :host_id,
                 :title,
                 :details,
@@ -9,5 +10,6 @@ json.array!(@workshops) do |workshop|
                 :max_attendees,
                 :lat,
                 :lng,
-                :location)
+                :location,
+                :price)
 end

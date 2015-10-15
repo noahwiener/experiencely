@@ -1,15 +1,24 @@
 window.ListingsIndexItem = React.createClass({
   mixins: [ReactRouter.History],
 
+
+
   showWorkshop: function(){
     this.history.pushState(null, '/workshops/' + this.props.workshop.id, {});
   },
 
   render: function(){
     return(
-      <li onClick={this.showWorkshop} className="listings-index-item">
-        <p> {this.props.workshop.title}</p>
-      </li>
+      <div onClick={this.showWorkshop} className="col-xs-12 col-sm-6 col-lg-4">
+        <div className="listings-index-item">
+          <div className="listing-block"></div>
+          <h2>{this.props.workshop.title}</h2>
+          <p>{this.props.workshop.details}</p>
+          <p>{this.props.workshop.location}</p>
+          <p>{this.props.workshop.date}</p>
+          <p>{this.props.workshop.price}</p>
+        </div>
+      </div>
     );
   }
 

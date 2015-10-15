@@ -23,6 +23,24 @@
   background-color: lightgrey;
 }
 
+.noah-nav ul li a:hover {
+  background-color: white;
+}
+
+.navbar-nav > li > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.navbar-right a {
+  color: #747676;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 40px 40px;
+  line-height: 60px;
+}
 
 .login-box {
   background-color: white;
@@ -35,19 +53,6 @@
   font-size: 22px;
 }
 
-// .non-guest {
-//   border-bottom: 1px solid darkgrey;
-// }
-
-.sign-in {
-  text-align: center;
-  border-right: 1px solid darkgrey;
-}
-
-.sign-up {
-  text-align: center;
-}
-
 .login-box .btn {
   color: white;
   border-bottom: solid 1px #db9a09;
@@ -58,14 +63,33 @@
   background: #f7b002;
 }
 
+.login-errors {
+  margin: auto;
+  text-align: center;
+}
+
+.sign-in {
+  border-right: 1px solid darkgrey;
+}
+
+.sign-up {
+  text-align: center;
+}
+
 .login-box .btn:hover {
   background: #ffbe14;
-
 }
 
 .guest-login {
   padding: 50px;
   text-align: center;
+}
+
+
+// browse page
+
+.browse {
+  background-color: #f7f7f6;
 }
 
 .wine {
@@ -74,5 +98,17 @@
   background-image: image-url("wineglasses.jpg");
   background-size:   cover;
   background-repeat: no-repeat;
+  height: 300px;
   background-position: center center;
+}
+
+.listings-index-item {
+  background-color: white;
+  margin: 10px;
+}
+
+.listing-block {
+  height: 290px;
+  width: 100%;
+  background-color: darkgrey;
 }

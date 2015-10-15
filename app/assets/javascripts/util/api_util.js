@@ -7,5 +7,14 @@ ApiUtil = {
         ApiActions.receiveAll(response);
       }
     });
+  },
+
+  signOut: function(){
+    $.ajax( '/session', {
+      type: 'DELETE',
+      success: function (){
+        window.location='/account/login';
+      },
+    });
   }
 };

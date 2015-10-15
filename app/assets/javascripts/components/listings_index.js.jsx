@@ -16,38 +16,22 @@ ListingsIndex = React.createClass({
 
   render: function () {
     return (
-      <div>
-      <div className="jumbotron wine">
-        <div className="container">
-          <h1>This will be my Jumbotron</h1>
+      <div className="browse">
+        <div className="jumbotron wine">
+          <div className="container">
+            <h1>This will be my Jumbotron</h1>
+          </div>
+        </div>
+
+        <div className="container listings-index">
+          <div className="row">
+            {this.state.listings.map(function(workshop) {
+             return <ListingsIndexItem key={workshop.title} workshop={workshop} />;
+            }.bind(this))}
+          </div>
         </div>
       </div>
-
-
-        <ul>
-          {this.state.listings.map(function(workshop) {
-          return  <ListingsIndexItem key={workshop.id} workshop={workshop} />;
-        }.bind(this))
-      }
-      </ul>
-
-    </div>
 
     );
   }
 });
-
-
-
-// componentDidMount: function() {
-//   WorkshopStore.addChangeListener(this._onChange);
-// },
-//
-// _onChange: function() {
-//   this.setState({listings: WorkshopStore.all() });
-// },
-//
-// _onClick: function(){
-//   console.log("hi");
-//     // this.props.history.pushState(null, "/");
-// },

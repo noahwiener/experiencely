@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login_user!(@user)
-      redirect_to root_url
+      redirect_to "/#browse"
     else
       flash[:errors] = @user.errors.full_messages
       redirect_to account_login_url
