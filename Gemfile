@@ -29,6 +29,9 @@ gem 'flux-rails-assets'
 
 gem 'bootstrap-sass'
 
+gem 'bcrypt'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -43,7 +46,6 @@ group :development, :test do
   gem 'byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'bcrypt'
 
 
 end
