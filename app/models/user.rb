@@ -23,12 +23,16 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
-  attr_reader :password
 
   validates :password_digest, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :session_token, presence: true, uniqueness: true
   validates :user_name, presence: true, uniqueness: true
+
+  has_many :photos, as: :imageable
+
+  attr_reader :password
+
 
   def self.find_by_credentials(user_name, password)
     user = User.find_by(user_name: user_name)

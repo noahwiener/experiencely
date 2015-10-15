@@ -20,4 +20,7 @@
 
 class Workshop < ActiveRecord::Base
   validates :host_id, :location, presence: true
+
+  has_many :photos, as: :imageable
+
 end
