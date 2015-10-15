@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
   validates :user_name, presence: true, uniqueness: true
 
   has_many :photos, as: :imageable
-  has_many :workshops
+  has_many :workshops_hosted, class_name: "Workshop", foreign_key: :host_id, primary_key: :id
 
   attr_reader :password
 

@@ -10,7 +10,8 @@
 users = User.create([{user_name: "rumo", password: "password123", first_name: "Rumo", last_name: "Dog"},
                      {user_name: "noah", password: "password123", first_name: "Noah", last_name: "Wiener"},
                      {user_name: "Limor", password: "password123", first_name: "Limor", last_name: "Finkel"},
-                     {user_name: "Ethan", password: "password123", first_name: "Ethan", last_name: "Prantera"}
+                     {user_name: "Ethan", password: "password123", first_name: "Ethan", last_name: "Prantera"},
+                     {user_name: "Marley", password: "password123", first_name: "Marley", last_name: "BenShalom"}
                   ])
 
 
@@ -63,6 +64,18 @@ workshops = Workshop.create([{host_id: 2,
                                 lng: -122.289131,
                                 location: "Green Fairy Farm, Berkeley",
                                 price: "$10"
+                              },
+                              {host_id: 5,
+                                title: "Sustainable Systems",
+                                details: "Urban Gardens and Community",
+                                date: Date.new(2015,10,24),
+                                start_time: Time.new(2015, 10, 24, 4, 0, 0),
+                                current_attendees: 5,
+                                max_attendees: 20,
+                                lat: 37.796534,
+                                lng: -122.263412,
+                                location: "Mindful Garden Collective, Laney College, Oakland",
+                                price: "$5"
                               }
                               ])
 
