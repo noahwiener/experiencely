@@ -42,7 +42,8 @@ var Workshop = React.createClass({
             <div className="workshop-title">{this.state.workshop.title}</div>
             <div className="collapse" id="expandable">
               <p>{this.state.workshop.location}</p>
-              <p>{this.state.workshop.body}</p>
+
+              <pre>{this.state.workshop.body}</pre>
             </div>
             <button className="btn" data-toggle="collapse" data-target="#expandable">View Details</button>
           </div>
