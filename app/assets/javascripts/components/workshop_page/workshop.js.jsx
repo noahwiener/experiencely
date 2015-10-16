@@ -13,6 +13,11 @@ var Workshop = React.createClass({
     }.bind(this));
      return result;
   },
+
+  componentWillMount: function() {
+    window.scrollTo(0,0);
+  },
+
   componentDidMount: function () {
     WorkshopStore.addChangeListener(this._workshopChanged);
     ApiUtil.fetchWorkshops();
@@ -34,22 +39,24 @@ var Workshop = React.createClass({
     this.setState({ workshop: workshop });
   },
   render: function(){
-    return (
-        <div>
-          < WorkshopCarousel photos={this.state.workshop.photos || []} />
-          <div className="reviews-avg-bar">Some Review Stuff Will Go Here</div>
-          <div className="workshop-text">
-            <div className="workshop-title">{this.state.workshop.title}</div>
-            <div className="collapse" id="expandable">
-              <p>{this.state.workshop.location}</p>
 
-              <pre>{this.state.workshop.body}</pre>
-            </div>
-            <button className="btn" data-toggle="collapse" data-target="#expandable">View Details</button>
+    if (Object.keys(this.state.workshop).length === 0){
+      return (<p>Your stuff is loading</p>);
+    }else {
+      return (
+          <div>
+            < WorkshopCarousel photos={this.state.workshop.photos} />
+            < WorkshopReviewBar workshop={this.state.workshop} />
+            < WorkshopText workshop={this.state.workshop} />
+            < WorkshopDescription workshop={this.state.workshop} />
+
+
+            <a href="/#browse">Back to All Workshops</a>
+
           </div>
-          <a href="/#browse">Back to All Workshops</a>
-
-        </div>
-      );
+        );
     }
+  }
 });
+
+// < WorkshopHost host={this.state.workshop.host} />

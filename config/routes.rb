@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "static_pages#root"
 
-  resources :users, only: [:new, :create, :edit, :update]
+  resources :users, only: [:new, :create, :edit, :update, :index, :show]
   resource :session, only: [:create, :destroy, :new]
 
   namespace :api do

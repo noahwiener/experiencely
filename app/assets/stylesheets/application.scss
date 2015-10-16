@@ -190,6 +190,12 @@ body {
   z-index: 10;
 }
 
+.item.active{
+  overflow: hidden;
+  margin: auto;
+  min-width: 100%;
+}
+
 .center-image {
   position: absolute;
   left: 50%;
@@ -201,22 +207,16 @@ body {
 .side {
   min-width: 40%;
   opacity: 0.2;
+  position: absolute;
 }
 
 .side.left {
-  float: left;
+  left: 0;
 }
 
 .side.right {
-  float: right;
+  right: 0;
 }
-
-.item{
-  overflow: hidden;
-  margin: auto;
-  min-width: 100%;
-}
-
 
 
 // Workshop Main Page
@@ -240,15 +240,43 @@ body {
   font-weight: 400;
 }
 
-.not-collapsed{
-  max-height: 100px;
-  display: block;
-}
-
 .workshop-body{
   display: none;
 }
 
-.collapse-button{
-  display: block;
+.see-details:hover{
+  cursor: pointer;
+}
+
+// main body description and image for workshops
+
+.workshop-description{
+  position: relative;
+  z-index: 1;
+}
+
+.description-text{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  white-space: pre-wrap;
+  background-color: white;
+  box-shadow: 0px 0px 5px 5px #222222;
+  z-index: 10;
+}
+
+.workshop-description-background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  -webkit-filter: blur(5px) saturate(2);
+  opacity: 0.5;
+}
+
+
+// host info
+.host-img img{
+  border-radius: 50%;
 }

@@ -5,10 +5,10 @@ WorkshopCarousel = React.createClass({
       <div id="myCarousel" className="carousel slide" data-ride="carousel">
         <div className="slides-cont">
           <ol className="carousel-indicators">
-            { this.props.photos.map(function (_, idx) {
+            { this.props.photos.map(function (photo, idx) {
                 var klass = (idx === 0 ? 'active' : '');
                 return (
-                  <li data-target="#myCarousel" data-slide-to={idx} className={klass}></li>
+                  <li data-target="#myCarousel" data-slide-to={idx} key={idx + "_" + photo.url} className={klass}></li>
                 );
               })
             }
@@ -19,8 +19,8 @@ WorkshopCarousel = React.createClass({
             this.props.photos.map(function(photo, idx){
               var klass = idx === 0 ? 'item active' : 'item';
               return (
-                <div className={klass}>
-                  <img className="side left" src={"images/workshops/" + photo.url} />
+                <div key={photo.url} className={klass}>
+                  <img className="side left"  src={"images/workshops/" + photo.url} />
                   <img className="center-image" src={"images/workshops/" + photo.url} />
                   <img className="side right" src={"images/workshops/" + photo.url} />
                 </div>

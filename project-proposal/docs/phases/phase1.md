@@ -15,7 +15,7 @@
 ### Views
 * root.html.erb
 * users/new.html.erb
-* workshops/index.json.jbuilder
+* workshops/index.json.receiveAll
 
 ## Flux
 ### Views (React Components)

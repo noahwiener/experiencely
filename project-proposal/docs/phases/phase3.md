@@ -8,7 +8,7 @@
 
 
 ### Views
-* workshops/show.json.jbuilder
+* workshops/show.json.receiveAll
 
 
 ## Flux

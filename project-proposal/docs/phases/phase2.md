@@ -17,7 +17,7 @@
 ### Stores
 
 ### Actions
-* ApiActions.receiveAllWorkshops
+* ApiActions.receiveAll
 
 ### ApiUtil
 * ApiUtil.fetchAllWorkshops

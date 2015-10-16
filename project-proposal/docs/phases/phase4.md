@@ -6,8 +6,8 @@
 ### Controllers
 
 ### Views
-* users/show.json.jbuilder
-* reviews/index.json.jbuilder
+* users/show.json.receiveAll
+* reviews/index.json.receiveAll
 
 
 ## Flux

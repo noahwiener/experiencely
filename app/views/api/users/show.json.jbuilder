@@ -1,4 +1,4 @@
-json.extract!(@workshop,
+json.extract!(@user,
               :id,
               :host_id,
               :host,

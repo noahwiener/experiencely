@@ -9,6 +9,16 @@ ApiUtil = {
     });
   },
 
+  fetchUsers: function(){
+    $.ajax({
+      url: "users",
+      dataType: 'json',
+      success: function(response){
+        ApiActions.receiveAll(response);
+      }
+    });
+  },
+
   signOut: function(){
     $.ajax( '/session', {
       type: 'DELETE',
