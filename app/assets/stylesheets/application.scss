@@ -229,6 +229,7 @@ body {
 
 .workshop-text{
   padding: 10px;
+  text-align: center;
 }
 
 .workshop-title{
@@ -237,4 +238,17 @@ body {
   padding: 15px;
   font-size: 40px;
   font-weight: 400;
+}
+
+.not-collapsed{
+  max-height: 100px;
+  display: block;
+}
+
+.workshop-body{
+  display: none;
+}
+
+.collapse-button{
+  display: block;
 }

@@ -40,11 +40,11 @@ var Workshop = React.createClass({
           <div className="reviews-avg-bar">Some Review Stuff Will Go Here</div>
           <div className="workshop-text">
             <div className="workshop-title">{this.state.workshop.title}</div>
-            <div className="container">
+            <div className="collapse" id="expandable">
               <p>{this.state.workshop.location}</p>
-                <p className="collapse" id="expandable">{this.state.workshop.body}</p>
-                <button class="btn" data-toggle="collapse" data-target="#expandable">View Details</button>
+              <p>{this.state.workshop.body}</p>
             </div>
+            <button className="btn" data-toggle="collapse" data-target="#expandable">View Details</button>
           </div>
           <a href="/#browse">Back to All Workshops</a>
 
