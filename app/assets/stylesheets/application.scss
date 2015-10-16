@@ -18,24 +18,75 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.above-foot {
+  margin-bottom: 90px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #464646;
+  color: #FFFFF5;
+}
+
+.bottom-bar {
+  position: absolute;
+  font-weight: 500;
+  font-size: 10px;
+  padding: 10px 0;
+  background: #747676;
+  color: white;
+  opacity: 0.5;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-item {
+  margin: auto;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 20px 0 40px 0;
+}
+
+.footer-item li {
+  display: inline;
+  padding: 0 40px;
+}
+
+.footer-item li > a{
+  color: #989b99;
+  padding: 5px 0;
+}
+
 
 .main-login {
   background-color: lightgrey;
+}
+
+.navbar-nav > li > a {
+  padding: 0px;
+  background-color: white;
 }
 
 .noah-nav ul li a:hover {
   background-color: white;
 }
 
-.navbar-nav > li > a {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  background-color: white;
-}
-
 .navbar-right a {
   color: #747676;
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-size: 20px;
   letter-spacing: 2px;
@@ -45,7 +96,6 @@
 
 .login-box {
   background-color: white;
-  font-family: 'Montserrat', sans-serif;
   padding: 50px;
 }
 
@@ -95,7 +145,6 @@
 
 .wine {
   color: white;
-  font-family: 'Montserrat', sans-serif;
   background-image: image-url("wineglasses.jpg");
   background-size:   cover;
   background-repeat: no-repeat;
@@ -112,4 +161,80 @@
   height: 290px;
   width: 100%;
   background-color: darkgrey;
+}
+
+
+// carousel
+
+.carousel {
+  height: 550px;
+  margin-bottom: 0px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 550px;
+  background-color: #777;
+}
+.carousel-inner > .item > img{
+  height: 550px;
+  display: inline-block;
+  margin: auto;
+}
+
+.carousel-caption {
+  z-index: 10;
+}
+
+.center-image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0px 0px 5px 5px #222222;
+}
+
+.side {
+  min-width: 40%;
+  opacity: 0.2;
+}
+
+.side.left {
+  float: left;
+}
+
+.side.right {
+  float: right;
+}
+
+.item{
+  overflow: hidden;
+  margin: auto;
+  min-width: 100%;
+}
+
+
+
+// Workshop Main Page
+.reviews-avg-bar{
+  background-color: #f8f9f7;
+  color: #747676;
+  text-align: center;
+  padding: 30px;
+}
+
+.workshop-text{
+  padding: 10px;
+}
+
+.workshop-title{
+  font-family: serif;
+  text-align: center;
+  padding: 15px;
+  font-size: 40px;
+  font-weight: 400;
 }

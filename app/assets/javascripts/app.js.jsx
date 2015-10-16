@@ -9,8 +9,11 @@ RenderJS = function() {
     render: function(){
       return (
         <div>
-          < Navbar />
-          {this.props.children}
+          <div className="above-foot">
+            < Navbar />
+            {this.props.children}
+          </div>
+            < Footer />
         </div>
       );
     }
@@ -21,6 +24,7 @@ RenderJS = function() {
       <IndexRoute component={Home}/>
       <Route path="/browse" component={ListingsIndex} />
       <Route path="/profile" component={Profile} />
+      <Route path="/workshops/:id" component={Workshop} />
     </Route>
   );
 

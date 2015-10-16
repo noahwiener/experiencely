@@ -15,6 +15,10 @@
     addChangeListener: function(callback){
       WorkshopStore.on(CHANGE_EVENT, callback);
     },
+    removeChangeListener: function(callback){
+      this.removeListener(CHANGE_EVENT, callback);
+    },
+
     dispatcherID: AppDispatcher.register(function(payload){
       if(payload.actionType === WorkshopConstants.WORKSHOPS_RECEIVED){
         resetWorkshops(payload.workshops);

@@ -5,6 +5,10 @@ class Api::WorkshopsController < ApplicationController
     render :index
   end
 
-  # will I need a show action?  Probably, right?
+  def show
+    @workshop = Workshop.find(params[:id])
+    render :show
+  end
+
 
 end

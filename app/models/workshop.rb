@@ -16,12 +16,18 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #  price             :string
+#  body              :text
 #
 
 class Workshop < ActiveRecord::Base
   validates :host_id, :location, presence: true
 
   has_many :photos, as: :imageable
+  has_many :host_photos, through: :host, source: :photos
   belongs_to :host, class_name: "User", foreign_key: :host_id, primary_key: :id
 
+
+  def all_photos
+    photos + host_photos
+  end
 end
