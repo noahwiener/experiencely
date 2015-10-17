@@ -21,8 +21,4 @@ json.photos do
   json.array! workshop.photos do |photo|
     json.partial! "api/photos/photo", photo: photo
   end
-
-  json.array! workshop.host.photos do |photo|
-    json.partial! "api/photos/photo", photo: photo
-  end
 end
