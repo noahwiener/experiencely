@@ -155,6 +155,7 @@ body {
 .listings-index-item {
   background-color: white;
   margin: 10px;
+  overflow: hidden;
 }
 
 .listing-block {
@@ -256,6 +257,7 @@ body {
 }
 
 .description-text{
+  text-align: justify;
   margin-top: 50px;
   margin-bottom: 50px;
   white-space: pre-wrap;
@@ -277,6 +279,18 @@ body {
 
 
 // host info
-.host-img img{
-  border-radius: 50%;
+
+.host-info {
+  text-align: center;
+}
+
+.host-img img {
+  max-height: 300px;
+  border-radius: 20%;
+}
+
+.host-about-me {
+  text-align: justify;
+  white-space: pre-wrap;
+
 }

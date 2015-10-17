@@ -43,13 +43,14 @@ var Workshop = React.createClass({
     if (Object.keys(this.state.workshop).length === 0){
       return (<p>Your stuff is loading</p>);
     }else {
+
       return (
           <div>
             < WorkshopCarousel photos={this.state.workshop.photos} />
             < WorkshopReviewBar workshop={this.state.workshop} />
             < WorkshopText workshop={this.state.workshop} />
             < WorkshopDescription workshop={this.state.workshop} />
-
+            < WorkshopHost host={this.state.workshop.host} />
 
             <a href="/#browse">Back to All Workshops</a>
 
@@ -58,5 +59,3 @@ var Workshop = React.createClass({
     }
   }
 });
-
-// < WorkshopHost host={this.state.workshop.host} />

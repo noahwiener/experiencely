@@ -10,7 +10,15 @@
 users = User.create([{user_name: "rumo", password: "password123", first_name: "Rumo", last_name: "Dog"},
                      {user_name: "noah", password: "password123", first_name: "Noah", last_name: "Wiener"},
                      {user_name: "Limor", password: "password123", first_name: "Limor", last_name: "Finkel"},
-                     {user_name: "Ethan", password: "password123", first_name: "Ethan", last_name: "Prantera"},
+                     {user_name: "Ethan", password: "password123", first_name: "Ethan", last_name: "Prantera", about_me: "I started my journey with Natural Building five years ago, after seeing a short documentary advocating the use of natural materials. Shortly after, I sought every opportunity available to learn skills by obtaining apprenticeships with top-class natural builders across the world.
+
+Time and again in these workshops, with the guidance of brilliant mentors, I saw empowerment happen. I witnessed people of widely diverse backgrounds, from the struggling single mother to the estranged radical environmentalist, learn from the group process and from sharing life experience together. I was constantly inspired to orchestrate such events and to perpetuate these experiences, a camaraderie formed in mud.
+
+Being a fervent believer in community and sustainable lifestyles, my dream is to make Natural Building technologies more accessible and well known.
+
+Ready to plant roots into a community, I settled in Berkeley, California after finishing an internship in Natural Building and orchard care in Yolo County. Choosing the hub of urban art and progressive innovations was a clear easy choice. I landed at Green Faerie Farm, helping to manage animals onsite, and began a contracting/carpentry apprenticeship to further expand hands-on building experience. Being in the Bay Area fosters my connection to the building community and has helped shape my experiences into a career.
+
+Although the core of my experience lies in Natural Building and Carpentry, my goal is to integrate all systems of self-reliance and sufficiency to create human ecosystems to heal the planet. This is the type of community I wish to contribute to."},
                      {user_name: "Marley", password: "password123", first_name: "Marley", last_name: "BenShalom"}
                   ])
 
@@ -79,18 +87,12 @@ Limor developed her love of wine while living in the heart of Malbec country on 
                                 max_attendees: 80,
                                 lat: 37.864702,
                                 lng: -122.289131,
-                                location: "Green Fairy Farm, Berkeley",
-                                body: "From the workshop host, Ethan Prantera:
+                                location: "Green Fairie Farm, Berkeley",
+                                body: "Our team will get together to finish building a Nubian Vault at Berkeley’s Green Fairie Farm. Guests will learn new natural building techniques in a farm setting nestled in bustling West Berkeley. You’ll join host Ethan Prantera, a veteran natural builder and a born teacher, to build a hybrid cob/adobe multi-purpose structure to house interns, process food, and store associated tools. 
 
-                                I started my journey with Natural Building five years ago, after seeing a short documentary advocating the use of natural materials. Shortly after, I sought every opportunity available to learn skills by obtaining apprenticeships with top-class natural builders across the world.
+The building features a Nubian Vault style masonry roof and features organic lines created with earthen materials as well as with innovative bamboo tensile reinforcement. With the exception of the framing for doors and windows, this building is made without wood. The shaded roof structure is a classic post-and-beam design with shaped bracing to aesthetically mimic the shape of the building.
 
-Time and again in these workshops, with the guidance of brilliant mentors, I saw empowerment happen. I witnessed people of widely diverse backgrounds, from the struggling single mother to the estranged radical environmentalist, learn from the group process and from sharing life experience together. I was constantly inspired to orchestrate such events and to perpetuate these experiences, a camaraderie formed in mud.
-
-Being a fervent believer in community and sustainable lifestyles, my dream is to make Natural Building technologies more accessible and well known.
-
-Ready to plant roots into a community, I settled in Berkeley, California after finishing an internship in Natural Building and orchard care in Yolo County. Choosing the hub of urban art and progressive innovations was a clear easy choice. I landed at Green Faerie Farm, helping to manage animals onsite, and began a contracting/carpentry apprenticeship to further expand hands-on building experience. Being in the Bay Area fosters my connection to the building community and has helped shape my experiences into a career.
-
-Although the core of my experience lies in Natural Building and Carpentry, my goal is to integrate all systems of self-reliance and sufficiency to create human ecosystems to heal the planet. This is the type of community I wish to contribute to. ",
+In this fun, team-building workshop, Ethan will guide guests through the processes used in vault construction, and you’ll go home with the skills needed to get your natural building project started!  Visitors will have the chance to become part of the Bay Area’s natural building community, assisting each other on sustainable and natural construction projects.",
                                 price: "$10"
                               },
                               {host_id: 5,

@@ -14,7 +14,7 @@ ApiUtil = {
       url: "users",
       dataType: 'json',
       success: function(response){
-        ApiActions.receiveAll(response);
+        ApiActions.receiveUsers(response);
       }
     });
   },

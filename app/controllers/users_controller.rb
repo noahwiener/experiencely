@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @user = User.all
+    @users = User.all
     render json: @users
   end
 
