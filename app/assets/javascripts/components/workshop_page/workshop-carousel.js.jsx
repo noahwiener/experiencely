@@ -20,12 +20,12 @@ WorkshopCarousel = React.createClass({
               var klass = idx === 0 ? 'item active' : 'item';
               return (
                 <div key={photo.url} className={klass}>
-                  <img className="side left"  src={"images/workshops/" + photo.url} />
-                  <img className="center-image" src={"images/workshops/" + photo.url} />
-                  <img className="side right" src={"images/workshops/" + photo.url} />
+                  <img className="side left"  src={"images/workshops/" + this.props.workshop.id + "/" + photo.url} />
+                  <img className="center-image" src={"images/workshops/" + this.props.workshop.id + "/" + photo.url} />
+                  <img className="side right" src={"images/workshops/" + this.props.workshop.id + "/" + photo.url} />
                 </div>
               );
-            })
+            }.bind(this))
           }
         </div>
 

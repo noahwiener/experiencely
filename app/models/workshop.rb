@@ -27,6 +27,12 @@ class Workshop < ActiveRecord::Base
   belongs_to :host, class_name: "User", foreign_key: :host_id, primary_key: :id
 
 
+  def sorted_photos
+    photos.sort do |photo1, photo2|
+      photo1.name <=> photo2.name
+    end
+  end
+
   def all_photos
     photos + host_photos
   end

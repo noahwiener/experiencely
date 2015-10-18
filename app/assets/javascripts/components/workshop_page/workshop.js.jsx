@@ -46,7 +46,7 @@ var Workshop = React.createClass({
 
       return (
           <div>
-            < WorkshopCarousel photos={this.state.workshop.photos} />
+            < WorkshopCarousel workshop={this.state.workshop} photos={this.state.workshop.photos} />
             < WorkshopReviewBar workshop={this.state.workshop} />
             < WorkshopText workshop={this.state.workshop} />
             < WorkshopDescription workshop={this.state.workshop} />

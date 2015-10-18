@@ -1,6 +1,6 @@
 WorkshopHost = React.createClass({
     render: function(){
-      var imgUrl = "images/workshops/" + this.props.host.photos[0].url;
+      var imgUrl = "images/profile/" +  this.props.host.photos[0].url;
 
       return (
         <div className="container">

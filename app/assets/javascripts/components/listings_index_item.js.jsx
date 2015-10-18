@@ -7,7 +7,7 @@ window.ListingsIndexItem = React.createClass({
 
   render: function(){
     if (this.props.workshop.photos[0]){
-    var urlsrc = "images/workshops/" + this.props.workshop.photos[0].url;}
+    var urlsrc = "images/workshops/" + this.props.workshop.id + "/" + this.props.workshop.photos[0].url;}
 
     return(
       <div onClick={this.showWorkshop} className="col-xs-12 col-sm-6 col-lg-4">

@@ -18,7 +18,7 @@ json.extract!(workshop,
   end
 
 json.photos do
-  json.array! workshop.photos do |photo|
+  json.array! workshop.sorted_photos do |photo|
     json.partial! "api/photos/photo", photo: photo
   end
 end

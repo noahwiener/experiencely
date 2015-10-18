@@ -8,8 +8,10 @@
 
 
 users = User.create([{user_name: "rumo", password: "password123", first_name: "Rumo", last_name: "Dog"},
-                     {user_name: "noah", password: "password123", first_name: "Noah", last_name: "Wiener"},
-                     {user_name: "Limor", password: "password123", first_name: "Limor", last_name: "Finkel"},
+                     {user_name: "noah", password: "password123", first_name: "Noah", last_name: "Wiener", about_me: "Former archaeologist Noah Wiener has turned to a career in coding. A soon-to-be graduate of San Fransisco's acclaimed App Academy bootcamp, Noah is Experiencely's .... make this better later"},
+                     {user_name: "Limor", password: "password123", first_name: "Limor", last_name: "Finkel", about_me: "Limor Finkel, of Oakland's Dashe Cellars, is Experiencely’s most highly rated host. She has led tours of wine caves in Sonoma, zinfandel vineyards in the Russian River Valley, and wine tastings right here in the Bay Area.
+
+Limor developed her love of wine while living in the heart of Malbec country on the slopes of the Argentinian Andes, and has experience working in Sonoma before moving into the world of urban wineries here in the Bay Area.  She will be your guide as you learn to distinguish a Sauvignon Blanc from a Chardonnay and how to pair the right wine with your favorite meal." },
                      {user_name: "Ethan", password: "password123", first_name: "Ethan", last_name: "Prantera", about_me: "I started my journey with Natural Building five years ago, after seeing a short documentary advocating the use of natural materials. Shortly after, I sought every opportunity available to learn skills by obtaining apprenticeships with top-class natural builders across the world.
 
 Time and again in these workshops, with the guidance of brilliant mentors, I saw empowerment happen. I witnessed people of widely diverse backgrounds, from the struggling single mother to the estranged radical environmentalist, learn from the group process and from sharing life experience together. I was constantly inspired to orchestrate such events and to perpetuate these experiences, a camaraderie formed in mud.
@@ -124,8 +126,20 @@ We are an inner city community college serving a diverse population and our visi
 photos = Photo.create([{name: 'Noah', imageable_type: "User", imageable_id: 2, url: "noah_profile.jpg"},
                       {name: 'Ethan team on roof', imageable_type: "Workshop", imageable_id: 4, url: "ethan_team_project.jpeg"},
                       {name: 'Nubian2', imageable_type: "Workshop", imageable_id: 4, url: "nubian2.jpg"},
-                      {name: 'Nubian', imageable_type: "Workshop", imageable_id: 4, url: "nubian_vault.jpg"},
+                      {name: '0_Nubian', imageable_type: "Workshop", imageable_id: 4, url: "nubian_vault.jpg"},
                       {name: 'Team', imageable_type: "Workshop", imageable_id: 4, url: "ethan_team.jpeg"},
                       {name: 'EthanOven', imageable_type: "Workshop", imageable_id: 4, url: "ethan_oven.jpeg"},
-                      {name: 'Ethan', imageable_type: "User", imageable_id: 4, url: "ethan_profile.jpeg"}
+                      {name: 'Ethan', imageable_type: "User", imageable_id: 4, url: "ethan_profile.jpeg"},
+
+                      {name: 'Bottle and Barrels', imageable_type: "Workshop", imageable_id: 3, url: "bottle_and_barrels.jpg"},
+                      {name: 'Cheers', imageable_type: "Workshop", imageable_id: 3, url: "cheers.jpg"},
+                      {name: 'Glass', imageable_type: "Workshop", imageable_id: 3, url: "glass.JPG"},
+                      {name: 'grapes and barrel', imageable_type: "Workshop", imageable_id: 3, url: "grapes_and_barrel.JPG"},
+                      {name: 'wine_bottles', imageable_type: "Workshop", imageable_id: 3, url: "wine_bottles.jpg"},
+                      {name: 'Limor', imageable_type: "User", imageable_id: 3, url: "limor_profile.jpg"},
+
+                      {name: '0_coding-demo', imageable_type: "Workshop", imageable_id: 1, url: "0_coding_demo.JPG"},
+                      {name: 'atom_screenshot', imageable_type: "Workshop", imageable_id: 1, url: "atom_screenshot.png"},
+                      {name: 'anthony_and_edmund', imageable_type: "Workshop", imageable_id: 1, url: "anthony_and_edmund.JPG"},
+                      {name: '1_whiteboarding', imageable_type: "Workshop", imageable_id: 1, url: "whiteboarding.JPG"}
                         ])
