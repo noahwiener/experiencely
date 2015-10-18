@@ -26,5 +26,15 @@ ApiUtil = {
         window.location='/account/login';
       },
     });
+  },
+
+  fetchCurrent: function(){
+    $.ajax({
+      url: "users/current",
+      dataType: 'json',
+      success: function(response){
+        ApiActions.receiveCurrent(response);
+      }
+    });
   }
 };

@@ -8,9 +8,7 @@
   <%= csrf_meta_tags %>
   <% if current_user %>
     <script>
-      window.CURRENT_USER = JSON.parse('<%= current_user.to_json(except: [:password_digest, :session_token]).html_safe %>' );
-      // DON'T use this for forms--just for the navbar, navigation, check if logged in
-      // then, can use if (window.CURRENT_USER_ID) to return a truthy or falsey value
+      window.CURRENT_USER = JSON.parse('<%= current_user.to_json(except: [:password_digest, :session_token]).html_safe %>');
     </script>
   <% end %>
 </head>

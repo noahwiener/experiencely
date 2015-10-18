@@ -7,8 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-users = User.create([{user_name: "rumo", password: "password123", first_name: "Rumo", last_name: "Dog"},
-                     {user_name: "noah", password: "password123", first_name: "Noah", last_name: "Wiener", about_me: "Former archaeologist Noah Wiener has turned to a career in coding. A soon-to-be graduate of San Fransisco's acclaimed App Academy bootcamp, Noah is Experiencely's .... make this better later"},
+users = User.create([{user_name: "rumo", password: "password123", first_name: "Rumo", last_name: "Dog", about_me: "Woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof
+   woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof
+    woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof"},
+                     {user_name: "noah", password: "password123", first_name: "Noah", last_name: "Wiener", about_me: "Former archaeologist Noah Wiener has turned to a career in coding. .... make this better later"},
                      {user_name: "Limor", password: "password123", first_name: "Limor", last_name: "Finkel", about_me: "Limor Finkel, of Oakland's Dashe Cellars, is Experiencely’s most highly rated host. She has led tours of wine caves in Sonoma, zinfandel vineyards in the Russian River Valley, and wine tastings right here in the Bay Area.
 
 Limor developed her love of wine while living in the heart of Malbec country on the slopes of the Argentinian Andes, and has experience working in Sonoma before moving into the world of urban wineries here in the Bay Area.  She will be your guide as you learn to distinguish a Sauvignon Blanc from a Chardonnay and how to pair the right wine with your favorite meal." },
@@ -21,7 +23,9 @@ Being a fervent believer in community and sustainable lifestyles, my dream is to
 Ready to plant roots into a community, I settled in Berkeley, California after finishing an internship in Natural Building and orchard care in Yolo County. Choosing the hub of urban art and progressive innovations was a clear easy choice. I landed at Green Faerie Farm, helping to manage animals onsite, and began a contracting/carpentry apprenticeship to further expand hands-on building experience. Being in the Bay Area fosters my connection to the building community and has helped shape my experiences into a career.
 
 Although the core of my experience lies in Natural Building and Carpentry, my goal is to integrate all systems of self-reliance and sufficiency to create human ecosystems to heal the planet. This is the type of community I wish to contribute to."},
-                     {user_name: "Marley", password: "password123", first_name: "Marley", last_name: "BenShalom"}
+                     {user_name: "Marley", password: "password123", first_name: "Marley", last_name: "BenShalom", about_me:"Marley Benshalom works with Natural Conservation and Research with an emphasis on Social Sustainability. She is dedicated to a life of service and believes all beings should have access to food, shelter, and love. Marley continuously creates monthly events around health and wellness to empower the community and give back to those in need. When she is not being a community connector, she is on her bike, hiking, practicing yoga, and most importantly spending time with mother earth. She believes the most important part of life is the present moment and sharing authentically with those around you.
+
+Her work with the Laney College Mindful Garden Collective has helped establish a space that empowers students and community members to create their own adventure through the revitalization and expansion of an urban space. As a key player in the development and promotion of the garden, she is committed to the wellness of her locality by providing organic food to those in need and by hosting a space for community gatherings. "}
                   ])
 
 
@@ -58,9 +62,8 @@ Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
                                 lng: -122.274688,
                                 location: "Ohlone Dog Park, Berkeley",
                                 body: "Woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof
-                                woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof
-                                woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof
-                                woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof",
+woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof
+woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof",
                                 price: "$20"
                               },
                               {host_id: 3,
@@ -98,8 +101,8 @@ In this fun, team-building workshop, Ethan will guide guests through the process
                                 price: "$10"
                               },
                               {host_id: 5,
-                                title: "Sustainable Systems",
-                                details: "Urban Gardens and Community",
+                                title: "Building Urban Gardens and Community",
+                                details: "Hands-on gardening interspersed with discussions on sustainability",
                                 date: Date.new(2015,10,24),
                                 start_time: Time.new(2015, 10, 24, 4, 0, 0),
                                 current_attendees: 5,
@@ -109,7 +112,7 @@ In this fun, team-building workshop, Ethan will guide guests through the process
                                 location: "Mindful Garden Collective, Laney College, Oakland",
                                 body: "By your host, Marley BenShalom, director of the Mindful Garden Collective at Laney College in Oakland:
 
-                                The Mindful Garden Collective is a social innovation project lead by students that empowers other students to create their own adventure through the revitalization and expansion of an urban space. We are committed to the wellness of our locality by providing organic food to those in need and by hosting a space for community gatherings. We believe in serving the community as a part of a larger effort to consciously influence the evolution of the planet in the name of synergy, compassion, and love.
+The Mindful Garden Collective is a social innovation project lead by students that empowers other students to create their own adventure through the revitalization and expansion of an urban space. We are committed to the wellness of our locality by providing organic food to those in need and by hosting a space for community gatherings. We believe in serving the community as a part of a larger effort to consciously influence the evolution of the planet in the name of synergy, compassion, and love.
 
 The Laney edible garden is located in Oakland, CA in the Peralta district next to Lake Merritt. It was first started six years ago by a man who has been supporting agricultural growth and restoration throughout the Eastbay his entire life. Kenneth Kolevzon aka Grey is a key activist, teacher, and friend who supports some of the most influential projects throughout the bay. He started the Laney garden just so he would have an outdoors space to teach his High School class about the land. He continued to restore the land and expand the garden until it was big enough to feed hundreds.
 
@@ -141,5 +144,24 @@ photos = Photo.create([{name: 'Noah', imageable_type: "User", imageable_id: 2, u
                       {name: '0_coding-demo', imageable_type: "Workshop", imageable_id: 1, url: "0_coding_demo.JPG"},
                       {name: 'atom_screenshot', imageable_type: "Workshop", imageable_id: 1, url: "atom_screenshot.png"},
                       {name: 'anthony_and_edmund', imageable_type: "Workshop", imageable_id: 1, url: "anthony_and_edmund.JPG"},
-                      {name: '1_whiteboarding', imageable_type: "Workshop", imageable_id: 1, url: "whiteboarding.JPG"}
+                      {name: '1_whiteboarding', imageable_type: "Workshop", imageable_id: 1, url: "whiteboarding.JPG"},
+
+                      {name: 'Marley', imageable_type: "User", imageable_id: 5, url: "marley.jpg"},
+                      {name: 'garden2', imageable_type: "Workshop", imageable_id: 5, url: "garden2.jpg"},
+                      {name: 'garden3', imageable_type: "Workshop", imageable_id: 5, url: "garden3.jpg"},
+                      {name: '0_garden4', imageable_type: "Workshop", imageable_id: 5, url: "garden4.jpg"},
+                      {name: 'garden', imageable_type: "Workshop", imageable_id: 5, url: "garden.jpg"},
+                      {name: 'garden5', imageable_type: "Workshop", imageable_id: 5, url: "garden5.jpg"},
+                      {name: 'feet', imageable_type: "Workshop", imageable_id: 5, url: "feet.jpg"},
+
+
+                      {name: 'Rumo', imageable_type: "User", imageable_id: 1, url: "rumo.png"},
+                      {name: '0_hike2', imageable_type: "Workshop", imageable_id: 2, url: "0_hike2.png"},
+                      {name: 'beach', imageable_type: "Workshop", imageable_id: 2, url: "beach.png"},
+                      {name: 'ears', imageable_type: "Workshop", imageable_id: 2, url: "ears.png"},
+                      {name: 'hat', imageable_type: "Workshop", imageable_id: 2, url: "hat.png"},
+                      {name: 'hike', imageable_type: "Workshop", imageable_id: 2, url: "hike.png"},
+                      {name: 'pack', imageable_type: "Workshop", imageable_id: 2, url: "pack.png"},
+                      {name: 'tent', imageable_type: "Workshop", imageable_id: 2, url: "tent.png"},
+                      {name: 'tongue', imageable_type: "Workshop", imageable_id: 2, url: "tongue.png"}
                         ])

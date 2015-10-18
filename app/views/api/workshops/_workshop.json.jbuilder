@@ -14,7 +14,7 @@ json.extract!(workshop,
               :body)
   #
   json.host do
-    json.partial! "api/users/host", host: workshop.host
+    json.partial! "api/host/host", host: workshop.host
   end
 
 json.photos do

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
-  before_action :require_no_user!
+  before_action :require_no_user!, only: [:new]
+  before_filter :require_signed_in!, only: [:profile, :show, :index]
 
   def create
     @user = User.new(user_params)
@@ -26,6 +27,11 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     render json: @users
+  end
+
+  def profile
+    @user = current_user
+    render json: @user
   end
 
   private

@@ -24,7 +24,7 @@ RenderJS = function() {
       <IndexRoute component={Home}/>
       <Route path="/step*" component={Home}/>
       <Route path="/browse" component={ListingsIndex} />
-      <Route path="/profile" component={Profile} />
+      <Route path="/account/profile" component={Profile} />
       <Route path="/workshops/:id" component={Workshop} />
     </Route>
   );
