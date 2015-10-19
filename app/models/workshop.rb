@@ -25,6 +25,8 @@ class Workshop < ActiveRecord::Base
   has_many :photos, as: :imageable
   has_many :host_photos, through: :host, source: :photos
   belongs_to :host, class_name: "User", foreign_key: :host_id, primary_key: :id
+  has_many :signups
+  has_many :attendees, through: :signups, source: :user
 
 
   def sorted_photos

@@ -29,6 +29,8 @@ class User < ActiveRecord::Base
 
   has_many :photos, as: :imageable
   has_many :workshops_hosted, class_name: "Workshop", foreign_key: :host_id, primary_key: :id
+  has_many :signups
+  has_many :workshops_attended, through: :signups, source: :workshop
 
   attr_reader :password
 

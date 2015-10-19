@@ -5,7 +5,7 @@ Sidebar = React.createClass({
     var imgUrl;
 
     if (this.props.user.photos.length === 0){
-      imgUrl = 'http://res.cloudinary.com/drfyambuq/image/upload/v1445286277/empty_person1_qsxnqh.png';
+      imgUrl = 'https://res.cloudinary.com/drfyambuq/image/upload/v1445286277/empty_person1_qsxnqh.png';
     }else {
       imgUrl = this.props.user.photos[0].url;
     }
