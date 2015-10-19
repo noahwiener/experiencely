@@ -11,7 +11,7 @@ WorkshopDescription = React.createClass({
         <div className="workshop-description-background" style={divStyle}></div>
         <div className="container">
           <div className="row">
-            <div className="description-text col-sm-6 col-sm-offset-3">
+            <div className="description-text col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
               {this.props.workshop.body}
             </div>
           </div>

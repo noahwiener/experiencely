@@ -5,7 +5,7 @@ WorkshopHost = React.createClass({
       return (
         <div className="container">
           <div className="row">
-          <div className="host-info col-sm-6 col-sm-offset-3">
+          <div className="host-info col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
             <div className="host-img">
               <img src={imgUrl} />
             </div>

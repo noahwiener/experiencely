@@ -8,7 +8,6 @@ window.ListingsIndexItem = React.createClass({
   render: function(){
     if (this.props.workshop.photos[0]){
     var urlsrc = this.props.workshop.photos[0].url;}
-
     return(
       <div onClick={this.showWorkshop} className="col-xs-12 col-sm-6 col-lg-4">
         <div className="listings-index-item">

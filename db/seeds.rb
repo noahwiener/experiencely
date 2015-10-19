@@ -40,7 +40,7 @@ Aaron has experience as an editor and reporter for the Washington City Paper, LA
 
 
 workshops = Workshop.create([{host_id: 2,
-                                title: "React.js Crash Course",
+                                title: "Learn React.js",
                                 details: "From the Virtual DOM to Flux Architecture",
                                 date: Date.new(2015,10,20),
                                 start_time: Time.new(2015, 10, 20, 2, 0, 0),
