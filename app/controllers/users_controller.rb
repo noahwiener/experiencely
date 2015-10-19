@@ -20,18 +20,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = current_user
     render json: @user
   end
 
   def index
     @users = User.all
     render json: @users
-  end
-
-  def profile
-    @user = current_user
-    render json: @user
   end
 
   private

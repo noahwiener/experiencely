@@ -1,8 +1,8 @@
 Navbar = React.createClass({
   render: function () {
     var x = "";
-    if (window.CURRENT_USER){
-      x = <a href="/#profile">{window.CURRENT_USER.first_name || window.CURRENT_USER.user_name}</a>;
+    if (window.CURRENT_USER_UNAME){
+      x = <a href="#/account/profile">{window.CURRENT_USER_FNAME || window.CURRENT_USER_UNAME}</a>;
     }else{
       x=<a href="/account/login">LOG IN/SIGN UP</a>;
     }

@@ -8,7 +8,8 @@
   <%= csrf_meta_tags %>
   <% if current_user %>
     <script>
-      window.CURRENT_USER = JSON.parse('<%= current_user.to_json(except: [:password_digest, :session_token]).html_safe %>');
+      window.CURRENT_USER_FNAME = "<%= current_user.first_name %>";
+      window.CURRENT_USER_UNAME = "<%= current_user.user_name %>";
     </script>
   <% end %>
 </head>

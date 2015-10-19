@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "static_pages#root"
 
-  get 'users/current', to: 'users#profile', as: :profile
+  get 'users/current', to: 'users#show'
 
   resources :users, only: [:new, :create, :edit, :update, :index, :show]
 

@@ -1,32 +1,30 @@
 var Profile = React.createClass({
 
-  // getInitialState: function () {
-  //   var id = this.props.params.id;
-  //   var workshop = this._findWorkshopById(id) || {} ;
-  //   return { workshop: workshop };
-  // },
-  // _findWorkshopById: function (id) {
-  //   var result;
-  //    WorkshopStore.all().forEach(function (workshop) {
-  //     if (id == workshop.id) {
-  //       result = workshop;
-  //     }
-  //   }.bind(this));
-  //    return result;
-  // },
-  //
-  // componentWillMount: function() {
-  //   window.scrollTo(0,0);
-  // },
-  //
-  // componentDidMount: function () {
-  //   WorkshopStore.addChangeListener(this._workshopChanged);
-  //   ApiUtil.fetchWorkshops();
-  // },
-  //
-  // componentWillUnmount: function (){
-  //   WorkshopStore.removeChangeListener(this._workshopChanged);
-  // },
+  getInitialState: function () {
+    var user = UserStore.current() || {} ;
+    return { user: user };
+  },
+
+  componentWillMount: function() {
+    window.scrollTo(0,0);
+  },
+
+  componentDidMount: function () {
+    UserStore.addChangeListener(this._userChanged);
+    var user = ApiUtil.fetchCurrent();
+    this.setState({ user: user });
+  },
+
+  _userChanged: function () {
+    var user = UserStore.current();
+    this.setState({ user: user });
+  },
+
+  componentWillUnmount: function (){
+    UserStore.removeChangeListener(this._userChanged);
+  },
+
+
   //
   // componentWillReceiveProps: function(newprops){
   //     var id = newprops.params.id;
@@ -34,18 +32,10 @@ var Profile = React.createClass({
   //     this.setState({ workshop: workshop });
   // },
   //
-  // _workshopChanged: function () {
-  //   var id = this.props.params.id;
-  //   var workshop = this._findWorkshopById(id);
-  //   this.setState({ workshop: workshop });
-  // },
   render: function(){
-
-    if (window.CURRENT_USER){
-      x = <span>{window.CURRENT_USER.first_name || window.CURRENT_USER.user_name}</span>;
-    }else{
-      x=<a href="/account/login">THIS ISN'T WORKING---ADD REDIRECT</a>;
-    }
+    if (typeof (this.state.user) === 'undefined'){
+      return (<p>Your stuff is loading</p>);
+    }else {
 
     return(
       <div className="container">
@@ -53,12 +43,12 @@ var Profile = React.createClass({
         <div className="row row-offcanvas row-offcanvas-right">
 
           <div className="col-xs-6 col-sm-4 sidebar-offcanvas" id="sidebar">
-            < Sidebar />
+            < Sidebar user={this.state.user} />
           </div>
 
           <div className="col-xs-12 col-sm-8">
             <div className="hello">
-              <h1>Hello, {window.CURRENT_USER.first_name}!</h1>
+              <h1>Hello, {this.state.user.first_name}!</h1>
             </div>
             <div className="row">
               <div className="col-xs-12 col-sm-6">
@@ -81,6 +71,6 @@ var Profile = React.createClass({
 
 
     );
-
+  }
   }
 });
