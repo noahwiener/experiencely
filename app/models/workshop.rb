@@ -28,6 +28,13 @@ class Workshop < ActiveRecord::Base
   has_many :signups
   has_many :attendees, through: :signups, source: :user
 
+  def attendees
+    guests = current_attendees
+    signups.each do |signup|
+      guests += signup.num_in_party
+    end
+    guests
+  end
 
   def sorted_photos
     photos.sort do |photo1, photo2|

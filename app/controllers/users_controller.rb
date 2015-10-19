@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: @users
+    render :index
   end
 
   private

@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'users/current', to: 'users#show'
 
-  resources :users, only: [:new, :create, :edit, :update, :index, :show]
+  resources :users, only: [:new, :create, :edit, :update]
+
+  resources :users, defaults: {format: :json}, only: [:index, :show]
 
   resource :session, only: [:create, :destroy, :new]
 
