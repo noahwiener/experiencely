@@ -145,7 +145,7 @@ body {
 
 .wine {
   color: white;
-  background-image: image-url("wineglasses.jpg");
+  background-image: url("http://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_1544/v1445277822/wineglasses_ukxka1.jpg");
   background-size:   cover;
   background-repeat: no-repeat;
   height: 300px;
@@ -291,7 +291,7 @@ body {
 // home page
 
 #header.header {
-  background-image: url("home/boat.png");
+  background-image: url("http://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_1080/v1445277829/boat_c6acwi.png");
   background-size: cover;
   display: block;
   height: 600px;
@@ -373,15 +373,15 @@ body {
 }
 
 .exp-homeimg.step1{
-  background-image: url("home/muralmax.png");
+  background-image: url("http://res.cloudinary.com/drfyambuq/image/upload/v1445277833/muralmax_yhonxd.png");
 }
 
 .exp-homeimg.step2{
-  background-image: url("home/ben_for_home.jpg");
+  background-image: url("http://res.cloudinary.com/drfyambuq/image/upload/v1445277802/ben_for_home_ykbvr0.jpg");
 }
 
 .exp-homeimg.step3{
-  background-image: url("home/narrows.png");
+  background-image: url("http://res.cloudinary.com/drfyambuq/image/upload/v1445277826/narrows_sc6anh.png");
 }
 
 .exp-homequote {
@@ -487,4 +487,19 @@ body {
 
 .hello {
   text-align: center;
+}
+
+
+.profile-sidebar {
+  background-color: darkgrey;
+}
+.profile-pic{
+  display: block;
+  height: 300px;
+  margin: 20px;
+}
+
+.profile-sidebar-text{
+  margin: 20px;
+  background-color: #CCC;
 }

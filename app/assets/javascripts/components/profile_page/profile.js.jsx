@@ -11,7 +11,8 @@ var Profile = React.createClass({
 
   componentDidMount: function () {
     UserStore.addChangeListener(this._userChanged);
-    var user = ApiUtil.fetchCurrent();
+    ApiUtil.fetchCurrent();
+    var user = UserStore.current();
     this.setState({ user: user });
   },
 
@@ -33,10 +34,9 @@ var Profile = React.createClass({
   // },
   //
   render: function(){
-    if (typeof (this.state.user) === 'undefined'){
+    if (Object.keys(this.state.user).length === 0){
       return (<p>Your stuff is loading</p>);
     }else {
-
     return(
       <div className="container">
 

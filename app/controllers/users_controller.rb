@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    render json: @user
+    render :show
   end
 
   def index

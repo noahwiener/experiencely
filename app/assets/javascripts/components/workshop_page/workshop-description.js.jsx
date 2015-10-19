@@ -1,7 +1,7 @@
 WorkshopDescription = React.createClass({
 
   render: function(){
-    var imgUrl = "images/workshops/"  + this.props.workshop.id + "/" + this.props.workshop.photos[0].url;
+    var imgUrl = this.props.workshop.photos[0].url;
     var divStyle = {
       backgroundImage: 'url(' + imgUrl + ')'
     };
