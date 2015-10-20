@@ -7,7 +7,7 @@
 #  title             :string           not null
 #  details           :text
 #  date              :date
-#  start_time        :time
+#  start_time        :string
 #  current_attendees :integer          default(0)
 #  max_attendees     :integer
 #  lat               :float

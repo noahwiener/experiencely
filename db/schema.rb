@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019205104) do
+ActiveRecord::Schema.define(version: 20151020154049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20151019205104) do
     t.string   "title",                         null: false
     t.text     "details"
     t.date     "date"
-    t.time     "start_time"
+    t.string   "start_time"
     t.integer  "current_attendees", default: 0
     t.integer  "max_attendees"
     t.float    "lat"
