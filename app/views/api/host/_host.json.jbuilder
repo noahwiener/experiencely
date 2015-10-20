@@ -9,9 +9,6 @@ json.photos(host.photos) do |photo|
   json.partial! "api/photos/photo", photo: photo
 end
 
-# 
-# json.photos do
-#   json.array! host.photos do |photo|
-#     json.partial! "api/photos/photo", photo: photo
-#   end
-# end
+json.reviews_of_self(host.reviews_of_self) do |review|
+  json.partial! "api/reviews/review", review: review
+end

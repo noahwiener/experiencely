@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   namespace :api do
     resources :workshops, defaults: {format: :json}, only: [:index, :show]
     resources :signups, defaults: {format: :json}, only: [:create, :destroy, :index]
+    resources :reviews, defaults: {format: :json}, only: [:create, :edit, :update, :destroy, :index]
+
   end
 
   get '/account/login', to: 'users#new'

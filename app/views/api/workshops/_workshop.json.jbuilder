@@ -24,6 +24,11 @@ json.extract!(workshop,
     json.partial! "api/host/host", host: workshop.host
   end
 
+  json.reviews do
+    json.array! workshop.reviews do |review|
+      json.partial! "api/reviews/review", review: review
+    end
+  end
 
 
 json.photos do

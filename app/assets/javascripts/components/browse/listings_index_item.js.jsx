@@ -11,6 +11,10 @@ window.ListingsIndexItem = React.createClass({
     WorkshopStore.addChangeListener(this._onChange);
   },
 
+  componentWillUnmount: function() {
+    WorkshopStore.removeChangeListener(this._onChange);
+  },
+
   _onChange: function(signedUp){
     this.setState({isSignedUp: signedUp});
   },
