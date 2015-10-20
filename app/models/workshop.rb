@@ -29,6 +29,10 @@ class Workshop < ActiveRecord::Base
   has_many :attendees, through: :signups, source: :user
   has_many :reviews
 
+  def self.upcoming
+    Workshop.where('date > ?', Date.today).order('date')
+  end
+
   def attendees
     guests = current_attendees
     signups.each do |signup|
