@@ -2,7 +2,6 @@ class Api::WorkshopsController < ApplicationController
 
   def index
     @workshops = Workshop.all
-    # @workshops = Workshop.where('date > ?', Date.today).order('date')
     render :index
   end
 
