@@ -19,7 +19,6 @@ ListingsIndex = React.createClass({
       <div className="browse">
         <div className="jumbotron wine">
           <div className="container">
-            <h1>This will be my Jumbotron</h1>
           </div>
         </div>
 

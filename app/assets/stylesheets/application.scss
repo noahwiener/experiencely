@@ -145,7 +145,7 @@ body {
 
 .wine {
   color: white;
-  background-image: url("https://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_1544/v1445277822/wineglasses_ukxka1.jpg");
+  background-image: url("http://res.cloudinary.com/drfyambuq/image/upload/v1445354786/wineglasses_bgrwux.png");
   background-size:   cover;
   background-repeat: no-repeat;
   height: 300px;
@@ -295,7 +295,7 @@ body {
 // home page
 
 #header.header {
-  background-image: url("https://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_1080/v1445277829/boat_c6acwi.png");
+  background-image: url("https://res.cloudinary.com/drfyambuq/image/upload/v1445277833/muralmax_yhonxd.png");
   background-size: cover;
   display: block;
   height: 600px;
@@ -313,10 +313,20 @@ body {
 .maintitle {
   font-size: 50px;
   margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight: 700;
+  line-height: 62.5px;
+  font-size: 50px;
 }
 
 .subtitle {
-  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding: 0 80px
+
 }
 
 .browseworkshops{
@@ -377,7 +387,7 @@ body {
 }
 
 .exp-homeimg.step1{
-  background-image: url("https://res.cloudinary.com/drfyambuq/image/upload/v1445277833/muralmax_yhonxd.png");
+  background-image: url("http://res.cloudinary.com/drfyambuq/image/upload/v1445312113/IMG_0184_kbrmtg.png");
 }
 
 .exp-homeimg.step2{
@@ -385,7 +395,7 @@ body {
 }
 
 .exp-homeimg.step3{
-  background-image: url("https://res.cloudinary.com/drfyambuq/image/upload/v1445277826/narrows_sc6anh.png");
+  background-image: url("https://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_1080/v1445277829/boat_c6acwi.png");
 }
 
 .exp-homequote {
@@ -419,7 +429,7 @@ body {
   top: -50px;
   border-radius: 50%;
   margin-left: -50px;
-  z-index: 10000;
+  z-index: 15;
   border: 3px solid;
 }
 
@@ -469,13 +479,17 @@ body {
 
 .exp-home-title{
   font-family: 'Montserrat', sans-serif;
+  padding-left: 80px;
+  padding-right: 80px;
   color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-weight: 700;
   line-height: 62.5px;
   font-size: 50px;
   text-align: center;
   position: absolute;
-  margin-top: 200px;
+  margin-top: 150px;
+  z-index: 20;
   left: 50%;
   transform: translateX(-50%);
 }
