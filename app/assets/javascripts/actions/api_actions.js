@@ -10,6 +10,18 @@ ApiActions = {
       actionType: UserConstants.CURRENT_USER_RECEIVED,
       user: user
   });
-}
+},
+receiveSignUp: function(signup){
+  AppDispatcher.dispatch({
+    actionType: WorkshopConstants.SIGNUP_RECEIVED,
+    signup: signup
+});
+},
 
+receiveCancelSignUp: function(signup){
+  AppDispatcher.dispatch({
+    actionType: WorkshopConstants.SIGNUP_RECEIVED,
+    signup: signup
+});
+}
 };

@@ -36,5 +36,27 @@ ApiUtil = {
         ApiActions.receiveCurrent(response);
       }
     });
+  },
+
+  signUp: function(id){
+    $.ajax({
+      url: "api/signups",
+      type: 'POST',
+      data: { workshop_id: id },
+      success: function(response){
+        ApiActions.receiveSignUp(response);
+      }
+    });
+  },
+
+  cancelSignUp: function(id){
+    $.ajax({
+      url: "api/signups/" + id,
+      type: 'DELETE',
+      data: { workshop_id: id },
+      success: function(response){
+        ApiActions.receiveCancelSignUp(response);
+      }
+    });
   }
 };

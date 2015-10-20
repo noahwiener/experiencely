@@ -41,7 +41,7 @@ var Workshop = React.createClass({
   render: function(){
 
     if (Object.keys(this.state.workshop).length === 0){
-      return (<p>Your stuff is loading</p>);
+      return (<div className="spinner-loader">Loading…</div>);
     }else {
 
       return (
@@ -49,6 +49,7 @@ var Workshop = React.createClass({
             < WorkshopCarousel workshop={this.state.workshop} photos={this.state.workshop.photos} />
             < WorkshopReviewBar workshop={this.state.workshop} />
             < WorkshopText workshop={this.state.workshop} />
+            < WorkshopSignup workshop={this.state.workshop} />
             < WorkshopDescription workshop={this.state.workshop} />
             < WorkshopHost host={this.state.workshop.host} />
 

@@ -158,6 +158,10 @@ body {
   overflow: hidden;
 }
 
+.listings-index-item:hover {
+  cursor: pointer;
+}
+
 // carousel
 
 .carousel {
@@ -502,4 +506,28 @@ body {
 .profile-sidebar-text{
   margin: 20px;
   background-color: #CCC;
+}
+
+.signup-btn{
+
+  border-bottom: solid 1px #005c66;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  font-size: 13px;
+  background-color: #06a8b8;
+  color: white;
+  padding: 0 10px;
+  vertical-align: middle;
+  width: 300px;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+}
+
+.signup-btn:hover{
+  color: white;
+  background-color: #8cd2de;
 }
