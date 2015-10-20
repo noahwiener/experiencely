@@ -31,6 +31,8 @@ class User < ActiveRecord::Base
   has_many :workshops_hosted, class_name: "Workshop", foreign_key: :host_id, primary_key: :id
   has_many :signups
   has_many :workshops_attended, through: :signups, source: :workshop
+  has_many :reviews
+  has_many :reviews_of_self, through: :workshops_hosted, source: :reviews
 
   attr_reader :password
 

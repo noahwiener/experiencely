@@ -27,6 +27,7 @@ class Workshop < ActiveRecord::Base
   belongs_to :host, class_name: "User", foreign_key: :host_id, primary_key: :id
   has_many :signups
   has_many :attendees, through: :signups, source: :user
+  has_many :reviews
 
   def attendees
     guests = current_attendees
