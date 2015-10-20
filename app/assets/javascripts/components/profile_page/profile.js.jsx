@@ -50,16 +50,28 @@ var Profile = React.createClass({
             <div className="hello">
               <h1>Hello, {this.state.user.first_name}!</h1>
             </div>
-            <div className="row">
-              <div className="col-xs-12 col-sm-6">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <div className="row upcoming">
+              <div>
+                <h1>Upcoming Reservations</h1>
+
+                {this.state.user.upcoming.map(function(workshop) {
+                 return <Reservation key={workshop.title} workshop={workshop} />;
+                }.bind(this))}
               </div>
-              <div className="col-xs-12 col-sm-6">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+
+            <div className="row previous">
+              <div>
+                <h1>Workshops Attended</h1>
+                {this.state.user.attended.map(function(workshop) {
+                 return <Reservation key={workshop.title} workshop={workshop} />;
+                }.bind(this))}
+              </div>
+            </div>
+
+            <div className="row profile-reviews">
+              <div>
+                <h1>Reviews</h1>
               </div>
             </div>
           </div>

@@ -34,6 +34,14 @@ class User < ActiveRecord::Base
 
   attr_reader :password
 
+  def attended
+    workshops_attended.where('date < ?', Date.today).order('date')
+  end
+
+  def upcoming
+    workshops_attended.where('date >= ?', Date.today).order('date')
+  end
+
 
   def self.find_by_credentials(user_name, password)
     user = User.find_by(user_name: user_name)
