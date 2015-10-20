@@ -44,6 +44,17 @@ class User < ActiveRecord::Base
     workshops_attended.where('date >= ?', Date.today).order('date')
   end
 
+  def avg_reviews
+    num_reviews = 0
+    total = 0
+    reviews_of_self.each do |review|
+      if review.rating
+        total += review.rating
+        num_reviews += 1
+      end
+    end
+    (total.to_f)/num_reviews
+  end
 
   def self.find_by_credentials(user_name, password)
     user = User.find_by(user_name: user_name)

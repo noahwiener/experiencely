@@ -3,7 +3,8 @@ json.extract!(host,
               :user_name,
               :first_name,
               :last_name,
-              :about_me)
+              :about_me,
+              :avg_reviews)
 
 json.photos(host.photos) do |photo|
   json.partial! "api/photos/photo", photo: photo
