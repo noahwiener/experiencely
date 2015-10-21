@@ -2,7 +2,7 @@
   var CHANGE_EVENT = "review change";
   var _reviews = {};
 
-  var resetReviews = function(reviews) {
+  var resetReviews = function(review) {
     _reviews = reviews;
   };
 
@@ -29,8 +29,8 @@
     },
 
     dispatcherID: AppDispatcher.register(function(payload){
-      if(payload.actionType === ReviewConstants.REVIEWS_RECEIVED){
-        resetReviews(payload.reviews);
+      if(payload.actionType === UserConstants.REVIEWS_RECEIVED){
+        resetReviews(payload.review);
         ReviewStore.emit(CHANGE_EVENT);
       }else if (payload.actionType === ReviewConstants.UPDATED_REVIEW_RECEIVED){
           updateReview(payload.review);

@@ -8,6 +8,10 @@
     _user = user;
   };
 
+  var addreview = function(review){
+    _user.reviews.push(review);
+  };
+
   root.UserStore = $.extend({}, EventEmitter.prototype, {
     current: function(){
       return jQuery.extend(true, {}, _user);
@@ -23,6 +27,12 @@
       if(payload.actionType === UserConstants.CURRENT_USER_RECEIVED){
         currentUser(payload.user);
         UserStore.emit(CHANGE_EVENT);
+      }else if(payload.actionType === UserConstants.REVIEWS_RECEIVED){
+          addreview(payload.review);
+          UserStore.emit(CHANGE_EVENT);
+      }else if (payload.actionType === UserConstants.UPDATED_REVIEW_RECEIVED){
+          updateReview(payload.review);
+          UserStore.emit(CHANGE_EVENT);
       }
     })
   });

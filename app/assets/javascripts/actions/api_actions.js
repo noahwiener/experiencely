@@ -25,17 +25,17 @@ ApiActions = {
   });
   },
 
-receiveReviews: function(reviews) {
+receiveReview: function(review) {
     var payload = {
-      actionType: ReviewConstants.REVIEWS_RECEIVED,
-      reviews: reviews
+      actionType: UserConstants.REVIEWS_RECEIVED,
+      review: review
     };
     AppDispatcher.dispatch(payload);
   },
 
   updateReview: function(review) {
     var payload = {
-      actionType: ReviewConstants.UPDATED_REVIEW_RECEIVED,
+      actionType: UserConstants.UPDATED_REVIEW_RECEIVED,
       review: review
     };
     AppDispatcher.dispatch(payload);

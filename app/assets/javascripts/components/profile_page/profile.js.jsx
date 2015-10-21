@@ -74,7 +74,7 @@ var Profile = React.createClass({
               <div>
                 <h1>Reviews</h1>
                   {this.state.user.reviews.map(function(review) {
-                   return <ProfileReview key={review.workshop_id} review={review} id={review.workshop_id}/>;
+                   return <ProfileReview key={review.workshop_id} review={review} id={review.workshop_id} user={this.state.user}/>;
                   }.bind(this))}
               </div>
             </div>

@@ -67,7 +67,7 @@ ApiUtil = {
       dataType: "json",
       data: {review: review},
       success: function(response) {
-        ApiActions.receiveReviews([response]);
+        ApiActions.receiveReview([response]);
       }
     });
   },

@@ -34,7 +34,7 @@ PastWorkshop = React.createClass({
     if (this.state.displaymodalIsOpen === true){
       modal = < ReviewDisplayModal close={ this.closeModal } review={this.props.workshop.current_user_review[0]} />;
     } else if (this.state.formmodalIsOpen === true){
-      modal = < CreateReviewModal close={ this.closeModal } workshop={this.props.workshop} />;
+      modal = < CreateReviewModal close={ this.closeModal } workshop={this.props.workshop} user={this.props.user} />;
     }else{
       modal = "";
     }
