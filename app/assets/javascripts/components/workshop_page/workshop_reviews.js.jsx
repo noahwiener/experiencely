@@ -9,7 +9,7 @@ WorkshopReviews = React.createClass({
             <div className="reviews-list">
 
               {this.props.reviews.map(function(review) {
-               return (<div key={review.id}>
+               return (<div key={review.title}>
                          <p>Review by { review.userinfo.username } </p>
                          <p>This will be the pic: { review.userinfo.user_profile_pic }</p>
                          <p>{ review.title }</p>

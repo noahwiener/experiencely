@@ -13,7 +13,7 @@ WorkshopText = React.createClass({
               <p>Maximum Attendees: {this.props.workshop.max_attendees}</p>
               <p>Host: {this.props.workshop.host.first_name} {this.props.workshop.host.last_name}</p>
             </div>
-            <p className="see-details" data-toggle="collapse" data-target=".expandable"> + See All Details</p>
+            <p className="see-details" data-toggle="collapse" data-target=".expandable" href=".expandable"> + See All Details</p>
         </div>
     );
   }

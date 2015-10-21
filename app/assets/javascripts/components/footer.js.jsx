@@ -11,7 +11,7 @@ Footer = React.createClass({
             </ul>
           </div>
         <div className="bottom-bar">
-          © EXPERIENCELY 2015 (who am I kidding, nothing here is copyrighted...)
+          © EXPERIENCELY 2015
         </div>
       </footer>
     );
