@@ -8,7 +8,8 @@ WorkshopSignup = React.createClass({
     if (window.CURRENT_USER_UNAME){
       ApiUtil.signUp(this.props.workshop.id);
     } else {
-      alert("please sign in to sign up for an event");
+      alert("Please sign in to sign up for an event");
+      window.location = '/account/login';
     }
   },
   render: function(){

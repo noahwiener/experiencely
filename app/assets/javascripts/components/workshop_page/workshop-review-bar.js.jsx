@@ -1,9 +1,13 @@
 WorkshopReviewBar = React.createClass({
-
   render: function(){
+  if (this.props.workshop.host.reviews_of_self.length > 0){
     return (
-      <div className="reviews-avg-bar">Some Review Stuff Will Go Here</div>
+      <div className="reviews-avg-bar">{this.props.workshop.host.first_name} has earned an average of {this.props.workshop.host.avg_reviews} stars</div>
+    );
+  }else {
+    return (
+      <div className="reviews-avg-bar">Looks like {this.props.workshop.host.first_name} hasn't been reviewed yet. Check out their workshop and let us know what you think!</div>
     );
   }
-
+  }
 });

@@ -318,7 +318,8 @@ signups = Signup.create([{user_id:1, workshop_id:1},
                         {user_id:2, workshop_id:6},
                         {user_id:2, workshop_id:12},
                         {user_id:2, workshop_id:14},
-                        {user_id:2, workshop_id:9}
+                        {user_id:2, workshop_id:9},
+                        {user_id:2, workshop_id:11}
                         ])
 
 reviews = Review.create([{user_id: 1, workshop_id: 8, title: "Woof", body: "Maybe you shouldnt have dogs take coding classes", rating: 2},

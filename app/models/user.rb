@@ -44,6 +44,15 @@ class User < ActiveRecord::Base
     workshops_attended.where('date >= ?', Date.today).order('date')
   end
 
+  def reviewed?(workshop)
+    # if this is the correct thing to do, rewrite as SQL query
+    reviews.any? { |review| review.workshop_id == workshop.id}
+  end
+
+  def review(workshop)
+    reviews.select { |review| review.workshop_id == workshop.id }
+  end
+
   def avg_reviews
     num_reviews = 0
     total = 0
