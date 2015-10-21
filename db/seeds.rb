@@ -320,7 +320,6 @@ signups = Signup.create([{user_id:1, workshop_id:1},
                         {user_id:2, workshop_id:14},
                         {user_id:2, workshop_id:9},
                         {user_id:2, workshop_id:11},
-                        {user_id:2, workshop_id:14},
                         {user_id:2, workshop_id:8}
                         ])
 
@@ -328,6 +327,5 @@ reviews = Review.create([{user_id: 1, workshop_id: 8, title: "Woof", body: "Mayb
                         {user_id: 2, workshop_id: 10, title: "Amazing", body: "Limor is the best host!", rating: 5},
                         {user_id: 5, workshop_id: 11, title: "Amazing", body: "Great Bike Ride!", rating: 4},
                         {user_id: 2, workshop_id: 15, title: "Terrible", body: "I got lit on fire!", rating: 1},
-                        {user_id: 5, workshop_id: 11, title: "Amazing", body: "Great Bike Ride!", rating: 4},
                         {user_id: 5, workshop_id: 14, title: "Hard", body: "Journalism is challenging for a dog, what with the fact that I can't speak or write", rating: 1}
   ])
