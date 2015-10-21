@@ -1,4 +1,4 @@
-ReviewDisplayModal = React.createClass({
+CreateReviewModal = React.createClass({
 
   render: function() {
     return (
@@ -8,11 +8,11 @@ ReviewDisplayModal = React.createClass({
             <article className="modal-content">
               <span onClick={ this.props.close } className="modal-close js-hide-modal">&times;</span>
 
-                <h1>{this.props.review.title}</h1>
+              < ReviewForm workshop={this.props.workshop} />
+              <h1>This is going to be a review form</h1>
 
-                <p>{this.props.review.body}</p>
-                <p>Rating (out of five): {this.props.review.rating} </p>
-
+              <p>form here</p>
+              <p>Rating (out of five) </p>
 
             </article>
             <div className="modal-screen js-hide-modal"></div>

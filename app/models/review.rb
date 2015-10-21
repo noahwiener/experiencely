@@ -23,4 +23,11 @@ class Review < ActiveRecord::Base
     {username: name, user_profile_pic: photo}
   end
 
+  def workshopinfo
+    title = workshop.title
+    date = workshop.date
+    host = (workshop.host.first_name + " " + workshop.host.last_name[0] + ".")
+    {workshop_title: title, workshop_date: date, host_name: host}
+  end
+
 end

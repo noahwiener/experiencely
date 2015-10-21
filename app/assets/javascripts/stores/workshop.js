@@ -1,7 +1,7 @@
 (function(root) {
   'use strict';
 
-  var CHANGE_EVENT = "change";
+  var CHANGE_EVENT = "workshop change";
   var _workshops = [];
 
   var resetWorkshops = function(workshops){
@@ -25,7 +25,7 @@
     },
     addChangeListener: function(callback){
       WorkshopStore.on(CHANGE_EVENT, callback);
-      this.setMaxListeners(20);
+      this.setMaxListeners(30);
     },
     removeChangeListener: function(callback){
       this.removeListener(CHANGE_EVENT, callback);

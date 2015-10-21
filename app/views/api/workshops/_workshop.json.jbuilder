@@ -27,3 +27,7 @@ json.photos do
     json.partial! "api/photos/photo", photo: photo
   end
 end
+
+json.host do
+  json.partial! "api/host/host", host: workshop.host
+end

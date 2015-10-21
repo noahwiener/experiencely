@@ -7,8 +7,5 @@ json.array!(Workshop.upcoming) do |workshop|
     end
   end
 
-  json.host do
-    json.partial! "api/host/host", host: workshop.host
-  end
 
 end

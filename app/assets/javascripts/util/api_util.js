@@ -58,5 +58,30 @@ ApiUtil = {
         ApiActions.receiveCancelSignUp(response);
       }
     });
+  },
+
+  submitReview: function(review) {
+    $.ajax({
+      url: "api/reviews",
+      type: "POST",
+      dataType: "json",
+      data: {review: review},
+      success: function(response) {
+        ApiActions.receiveReviews([response]);
+      }
+    });
+  },
+
+  updateReview: function(review) {
+    console.log(review);
+    $.ajax({
+      url: "api/reviews/"+review.id,
+      type: "PATCH",
+      dataType: "json",
+      data: {review: review},
+      success: function(review) {
+        ApiActions.updateReview(review);
+      }
+    });
   }
 };

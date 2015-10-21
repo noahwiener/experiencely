@@ -3,31 +3,38 @@ PastWorkshop = React.createClass({
 
   getInitialState: function() {
     return {
-      modalIsOpen: false
+      displaymodalIsOpen: false,
+      formmodalIsOpen: false
     };
   },
 
-  openModal: function() {
-    this.setState({modalIsOpen: true});
+  openDisplayModal: function() {
+    this.setState({displaymodalIsOpen: true});
+  },
+
+  openFormModal: function() {
+    this.setState({formmodalIsOpen: true});
   },
 
   closeModal: function() {
-    this.setState({modalIsOpen: false});
+    this.setState({displaymodalIsOpen: false});
+    this.setState({formmodalIsOpen: false});
   },
 
   showReview: function(){
     if (this.props.workshop.reviewed){
-      this.openModal();
+      this.openDisplayModal();
     } else {
-      alert("Send this to new review form");
+      this.openFormModal();
     }
   },
 
   render: function(){
-
     var modal;
-    if (this.state.modalIsOpen === true){
+    if (this.state.displaymodalIsOpen === true){
       modal = < ReviewDisplayModal close={ this.closeModal } review={this.props.workshop.current_user_review[0]} />;
+    } else if (this.state.formmodalIsOpen === true){
+      modal = < CreateReviewModal close={ this.closeModal } workshop={this.props.workshop} />;
     }else{
       modal = "";
     }
@@ -39,6 +46,13 @@ PastWorkshop = React.createClass({
       height: '200px'
     };
 
+    var btntext;
+    if (this.props.workshop.reviewed){
+      btntext = "Read your review";
+    } else {
+      btntext = "Write Review";
+    }
+
     return(<div className="col-xs-12 col-sm-6">
             <div className="reservation">
               { modal }
@@ -49,7 +63,7 @@ PastWorkshop = React.createClass({
                 <p>Location: {this.props.workshop.location}</p>
                 <p>{this.props.workshop.details}</p>
                 <p>Host: {this.props.workshop.host.first_name} {this.props.workshop.host.last_name}</p>
-              <p><a className="btn btn-default" onClick={this.showReview}>Write/Edit Review</a></p>
+              <p><a className="btn btn-default" onClick={this.showReview}>{btntext}</a></p>
             </div>
           </div>);
   }

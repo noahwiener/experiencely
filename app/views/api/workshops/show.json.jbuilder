@@ -5,7 +5,3 @@ json.reviews do
     json.partial! "api/reviews/review", review: review
   end
 end
-
-json.host do
-  json.partial! "api/host/host", host: workshop.host
-end

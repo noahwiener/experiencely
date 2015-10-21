@@ -19,7 +19,6 @@ WorkshopReviews = React.createClass({
                        </div>);
               }.bind(this))}
             </div>
-            <p className="see-details" data-toggle="collapse" data-target=".expandable"> + See All Details</p>
         </div>
     );
   }

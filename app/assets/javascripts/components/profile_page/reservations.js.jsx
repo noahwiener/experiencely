@@ -6,7 +6,6 @@ Reservation = React.createClass({
   },
 
   render: function(){
-
     var divStyle = {
       backgroundImage: 'url(' + this.props.workshop.photos[0].url + ')',
       backgroundSize: 'cover',

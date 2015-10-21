@@ -7,10 +7,11 @@ class Api::ReviewsController < ApplicationController
     render json: @review
   end
 
-  def edit
-  end
-
   def update
+    @review = Review.find(params[:review][:review_id])
+    if @review.update(review_params)
+      render json: @review
+    end
   end
 
   def index
