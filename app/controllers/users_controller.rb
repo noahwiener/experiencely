@@ -14,6 +14,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    fail
+    @user = User.find(params.id)
+    if @user.update
+      render :show
+    end
+  end
+
   def new
     @user = User.new
     render :new

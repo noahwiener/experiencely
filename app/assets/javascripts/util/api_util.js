@@ -49,6 +49,17 @@ ApiUtil = {
     });
   },
 
+  updateProfile: function(profile_params){
+    $.ajax( '/users/' + profile_params.user_id, {
+      type: 'PATCH',
+      data: {profile_params: params},
+      success: function (response){
+        ApiActions.receiveCurrent(response);
+      },
+    });
+  },
+
+
   fetchCurrent: function(){
     $.ajax({
       url: "users/current",

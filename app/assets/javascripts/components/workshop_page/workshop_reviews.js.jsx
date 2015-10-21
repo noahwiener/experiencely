@@ -1,7 +1,6 @@
 WorkshopReviews = React.createClass({
 
   render: function(){
-
     return(
           <div className="workshop-reviews">
             <div className="workshop-title">{this.props.reviews.title}</div>
@@ -9,9 +8,9 @@ WorkshopReviews = React.createClass({
             <div className="reviews-list">
 
               {this.props.reviews.map(function(review) {
-               return (<div key={review.title}>
-                         <p>Review by { review.userinfo.username } </p>
-                         <p>This will be the pic: { review.userinfo.user_profile_pic }</p>
+               return (<div key={review.id}>
+                         <p>Review by { review.userinfo.user_first_name } { review.userinfo.user_last_name[0] }.</p>
+                         <p>This will be the pic: { review.userinfo.user_pic_url }</p>
                          <p>{ review.title }</p>
                          <p>{ review.body }</p>
                          <p>Rating (out of five): { review.rating }</p>
