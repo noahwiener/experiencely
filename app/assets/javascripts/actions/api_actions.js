@@ -39,6 +39,18 @@ receiveReview: function(review) {
       review: review
     };
     AppDispatcher.dispatch(payload);
+  },
+
+  fetchSingleWorkshop: function(id) {
+    ApiUtil.fetchSingleWorkshop(id);
+  },
+
+  receiveSingleWorkshop: function(workshop){
+    var payload = {
+      actionType: WorkshopConstants.RECEIVE_SINGLE_WORKSHOP,
+      workshop: workshop
+    };
+    AppDispatcher.dispatch(payload);
   }
 
 };

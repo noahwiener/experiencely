@@ -9,12 +9,33 @@ ApiUtil = {
     });
   },
 
+  fetchSingleWorkshop: function(workshop_id){
+    $.ajax({
+      url: "api/workshops/" + workshop_id,
+      dataType: 'json',
+      success: function(response){
+        ApiActions.receiveSingleWorkshop(response);
+      }
+    });
+  },
+
   fetchUsers: function(){
     $.ajax({
       url: "users",
       dataType: 'json',
       success: function(response){
         ApiActions.receiveUsers(response);
+      }
+    });
+  },
+
+  fetchCurrentUser: function(){
+    $.ajax({
+      url: "users/1",
+      dataType: 'json',
+      success: function(response){
+        ApiActions.receiveCurrent(response);
+        ApiActions.receiveAll(response.attended);
       }
     });
   },
@@ -67,7 +88,8 @@ ApiUtil = {
       dataType: "json",
       data: {review: review},
       success: function(response) {
-        ApiActions.receiveReview([response]);
+        ApiActions.receiveReview(response);
+        ApiActions.fetchSingleWorkshop(response.workshop_id);
       }
     });
   },

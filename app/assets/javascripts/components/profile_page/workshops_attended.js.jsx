@@ -1,4 +1,4 @@
-PastWorkshop = React.createClass({
+WorkshopsAttended = React.createClass({
   mixins: [ReactRouter.History],
 
   getInitialState: function() {

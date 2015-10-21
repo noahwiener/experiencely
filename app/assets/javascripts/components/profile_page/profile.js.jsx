@@ -2,7 +2,7 @@ var Profile = React.createClass({
 
   getInitialState: function () {
     var user = UserStore.current() || {} ;
-    return { user: user };
+    return { user: user, attended: [] };
   },
 
   componentWillMount: function() {
@@ -11,9 +11,8 @@ var Profile = React.createClass({
 
   componentDidMount: function () {
     UserStore.addChangeListener(this._userChanged);
-    ApiUtil.fetchCurrent();
-    var user = UserStore.current();
-    this.setState({ user: user });
+    WorkshopStore.addChangeListener(this._workshopschanged);
+    ApiUtil.fetchCurrentUser();
   },
 
   _userChanged: function () {
@@ -21,8 +20,14 @@ var Profile = React.createClass({
     this.setState({ user: user });
   },
 
+  _workshopschanged: function (){
+    var workshops = WorkshopStore.all();
+    this.setState({ attended: workshops });
+  },
+
   componentWillUnmount: function (){
     UserStore.removeChangeListener(this._userChanged);
+    WorkshopStore.removeChangeListener(this._workshopschanged);
   },
 
 
@@ -37,7 +42,7 @@ var Profile = React.createClass({
 
 
     if (Object.keys(this.state.user).length === 0){
-      return (<p>Your stuff is loading</p>);
+      return (<div className="spinner-loader">Loading…</div>);
     }else {
     return(
       <div className="container">
@@ -64,8 +69,8 @@ var Profile = React.createClass({
             <div className="row previous">
               <div>
                 <h1>Workshops Attended</h1>
-                {this.state.user.attended.map(function(workshop) {
-                 return <PastWorkshop key={workshop.title} user={this.state.user} workshop={workshop} />;
+                {this.state.attended.map(function(workshop) {
+                 return <WorkshopsAttended key={workshop.title} user={this.state.user} workshop={workshop} />;
                 }.bind(this))}
               </div>
             </div>

@@ -4,7 +4,7 @@ class Api::ReviewsController < ApplicationController
     user_id = current_user.id
     workshop_id = params[:workshop_id]
     @review = Review.create!({user_id: user_id, workshop_id: workshop_id}.merge(review_params))
-    render json: @review
+    render :show
   end
 
   def update

@@ -1,7 +1,7 @@
 ListingsIndex = React.createClass({
 
   getInitialState: function() {
-    return { listings: WorkshopStore.all() };
+    return { listings: [] };
   },
 
   componentDidMount: function() {
@@ -10,6 +10,10 @@ ListingsIndex = React.createClass({
     // the above call isn't putting workshops into the store
   },
 
+  componentWillUnmount: function() {
+    WorkshopStore.removeChangeListener(this._onChange);
+  },
+  
   _onChange: function(){
     this.setState({ listings: WorkshopStore.all() });
   },
