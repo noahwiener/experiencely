@@ -62,7 +62,9 @@ class User < ActiveRecord::Base
         num_reviews += 1
       end
     end
-    (total.to_f)/num_reviews
+    return 0 if num_reviews == 0
+    avg = (total.to_f)/num_reviews
+    ((avg*2).round)/2.0
   end
 
   def self.find_by_credentials(user_name, password)

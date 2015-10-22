@@ -33,6 +33,9 @@ gem 'bcrypt'
 
 gem "font-awesome-rails"
 
+gem 'cloudinary'
+
+gem "figaro"
 
 
 # Use ActiveModel has_secure_password

@@ -15,9 +15,16 @@ class UsersController < ApplicationController
   end
 
   def update
-    fail
-    @user = User.find(params.id)
-    if @user.update
+    id = params["user"]["user_id"].to_i
+    @user = User.find(id)
+    if @user.update(user_params)
+      if params["user"]["photo_url"]
+        if @user.photos.first
+          @user.photos.first.update(url: params["user"]["photo_url"])
+        else
+          Photo.create(imageable_type: "User", imageable_id: id, url: params["user"]["photo_url"])
+        end
+      end
       render :show
     end
   end

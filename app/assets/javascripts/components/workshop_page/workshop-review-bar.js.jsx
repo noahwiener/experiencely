@@ -2,7 +2,9 @@ WorkshopReviewBar = React.createClass({
   render: function(){
   if (this.props.workshop.host.reviews_of_self.length > 0){
     return (
-      <div className="reviews-avg-bar">{this.props.workshop.host.first_name} has earned an average of {this.props.workshop.host.avg_reviews} stars</div>
+      <div className="reviews-avg-bar">{this.props.workshop.host.first_name} has earned an average of {this.props.workshop.host.avg_reviews} stars
+
+      </div>
     );
   }else {
     return (
@@ -11,3 +13,5 @@ WorkshopReviewBar = React.createClass({
   }
   }
 });
+
+// <StarRating name="test" caption="testingcaption" ratingAmount={5} rating={this.props.workshop.host.avg_reviews}  disabled={true} />

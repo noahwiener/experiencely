@@ -7,12 +7,20 @@
   <link rel="stylesheet" href="http://css-spinners.com/css/spinner/spinner.css" type="text/css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <script>
+    window.CLOUD_NAME = "<%= ENV["CLOUD_NAME"]  %>"
+    window.UPLOAD_PRESET = "<%= ENV["UPLOAD_PRESET"] %>"
+  </script>
+
   <% if current_user %>
     <script>
       window.CURRENT_USER_FNAME = "<%= current_user.first_name %>";
       window.CURRENT_USER_UNAME = "<%= current_user.user_name %>";
     </script>
   <% end %>
+  <script src="http://widget.cloudinary.com/global/all.js" type="text/javascript">
+</script>
 </head>
 <body>
 

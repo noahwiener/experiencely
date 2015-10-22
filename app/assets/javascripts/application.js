@@ -21,3 +21,4 @@
 //= require components
 //= require_tree .
 //= require bootstrap
+//= require react-star-rating

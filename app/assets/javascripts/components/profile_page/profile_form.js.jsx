@@ -15,7 +15,7 @@ ProfileForm = React.createClass({
         profile_params[key] = this.state[key];
     }.bind(this));
 
-    ApiUtil.updateProfile(profile_params);
+    ApiUtil.updateProfile({ user: profile_params });
 
     this.props.close();
   },
@@ -27,7 +27,7 @@ ProfileForm = React.createClass({
   },
 
   render: function() {
-    return (
+      return (
       <div className="review-form">
         <form onSubmit={this.handleSubmit}  >
 
