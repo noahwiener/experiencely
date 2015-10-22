@@ -54,6 +54,11 @@
         WorkshopStore.emit(CHANGE_EVENT);
       } else if (payload.actionType === WorkshopConstants.SIGNUP_RECEIVED){
         var workshop = findById(payload.signup.workshop_id);
+        if (workshop.isSignedUp){
+          workshop.attendees = (workshop.attendees - payload.signup.num_in_party );
+        }else {
+          workshop.attendees = (workshop.attendees + payload.signup.num_in_party );
+        }
         workshop.isSignedUp = !workshop.isSignedUp;
         WorkshopStore.emit(CHANGE_EVENT);
       }else if (payload.actionType === WorkshopConstants.RECEIVE_SINGLE_WORKSHOP){

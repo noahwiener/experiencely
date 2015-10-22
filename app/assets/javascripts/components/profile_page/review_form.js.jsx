@@ -9,7 +9,6 @@ ReviewForm = React.createClass({
     this.setState({ rating: idx });
   },
 
-
   handleSubmit: function(event) {
     event.preventDefault();
 

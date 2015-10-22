@@ -71,11 +71,11 @@ ApiUtil = {
     });
   },
 
-  signUp: function(id){
+  signUp: function(id, num_in_party){
     $.ajax({
       url: "api/signups",
       type: 'POST',
-      data: { workshop_id: id },
+      data: { workshop_id: id, num_in_party: num_in_party },
       success: function(response){
         ApiActions.receiveSignUp(response);
       }

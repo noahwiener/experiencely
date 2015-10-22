@@ -1,25 +1,57 @@
 WorkshopSignup = React.createClass({
   mixins: [ReactRouter.History],
 
-  componentWillReceiveProps: function (props) {
+  getInitialState: function() {
+    return {
+      signUpModalIsOpen: false,
+      signInModalIsOpen: false
+    };
+  },
+
+  openSignUpModal: function() {
+    this.setState({signUpModalIsOpen: true});
+  },
+
+  openSignInModal: function() {
+    this.setState({signInModalIsOpen: true});
+  },
+
+  closeModal: function() {
+    this.setState({signUpModalIsOpen: false});
+    this.setState({signInModalIsOpen: false});
   },
 
   _signup: function(){
     if (window.CURRENT_USER_UNAME){
-      ApiUtil.signUp(this.props.workshop.id);
+      this.openSignUpModal();
     } else {
-      alert("Please sign in to sign up for an event");
-      window.location = '/account/login';
+      this.openSignInModal();
     }
   },
   render: function(){
+    var modal;
+
+
     if (this.props.workshop.isSignedUp){
       return (<div>
                 <h2>You are signed up to attend this workshop on {this.props.workshop.date}</h2>
                 <div onClick={ApiUtil.cancelSignUp.bind(null, this.props.workshop.id)} className="btn signup-btn">Cancel Reservation</div>
               </div>);
     }else {
-      return(<div onClick={this._signup} className="btn signup-btn">SIGN UP FOR THIS WORKSHOP</div>);
+      if (this.state.signUpModalIsOpen){
+        modal = < ModalSignup close={ this.closeModal } signup={ this._signup } workshop={this.props.workshop}/>;
+      }else if (this.state.signInModalIsOpen){
+        modal = < ModalSignin close={ this.closeModal } signup={ this._signup } workshop={this.props.workshop} />;
+      }else{
+        modal = "";
+      }
+
+      return(
+        <div>
+          { modal }
+          <div onClick={this._signup} className="btn signup-btn">SIGN UP FOR THIS WORKSHOP</div>
+        </div>
+      );
     }
 
 }
