@@ -2,7 +2,7 @@ var Profile = React.createClass({
 
   getInitialState: function () {
     var user = UserStore.current() || {} ;
-    return { user: user, attended: [] };
+    return { user: user, attended: [], updatemodalIsOpen: false };
   },
 
   componentWillMount: function() {
@@ -31,6 +31,7 @@ var Profile = React.createClass({
   },
 
 
+
   //
   // componentWillReceiveProps: function(newprops){
   //     var id = newprops.params.id;
@@ -39,7 +40,6 @@ var Profile = React.createClass({
   // },
   //
   render: function(){
-
 
     if (Object.keys(this.state.user).length === 0){
       return (<div className="spinner-loader">Loading…</div>);
@@ -76,12 +76,7 @@ var Profile = React.createClass({
             </div>
 
             <div className="row profile-reviews">
-              <div>
-                <h1>Reviews</h1>
-                  {this.state.user.reviews.map(function(review) {
-                   return <ProfileReview key={review.workshop_id} review={review} id={review.workshop_id} user={this.state.user}/>;
-                  }.bind(this))}
-              </div>
+              < Reviews user={this.state.user} />
             </div>
           </div>
         </div>

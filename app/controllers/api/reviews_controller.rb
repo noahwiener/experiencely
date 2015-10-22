@@ -8,9 +8,9 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    @review = Review.find(params[:review][:review_id])
+    @review = Review.find_by user_id: (params[:review][:user_id]), workshop_id: (params[:review][:workshop_id])
     if @review.update(review_params)
-      render json: @review
+      render :show
     end
   end
 

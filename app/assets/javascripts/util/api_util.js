@@ -106,6 +106,7 @@ ApiUtil = {
     });
   },
 
+
   updateReview: function(review) {
     console.log(review);
     $.ajax({
@@ -115,6 +116,7 @@ ApiUtil = {
       data: {review: review},
       success: function(review) {
         ApiActions.updateReview(review);
+        ApiActions.fetchSingleWorkshop(review.workshop_id);
       }
     });
   }

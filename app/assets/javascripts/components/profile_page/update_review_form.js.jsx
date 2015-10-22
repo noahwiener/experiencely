@@ -1,25 +1,24 @@
-ReviewForm = React.createClass({
+UpdateReviewForm = React.createClass({
   mixins: [React.addons.LinkedStateMixin, ReactRouter.history],
 
   getInitialState: function() {
-    return { title: '', body: '', rating: 3};
+    return { title: this.props.title || '', body: this.props.body || '', rating: this.props.rating || 3};
   },
 
   handleRating: function(idx){
     this.setState({ rating: idx });
   },
 
-
   handleSubmit: function(event) {
     event.preventDefault();
 
-    var review_params = {workshop_id: this.props.workshop.id, user_id: this.props.user.id};
+    var review_params = {workshop_id: this.props.workshop_id, user_id: this.props.user.id};
 
     Object.keys(this.state).forEach(function(key) {
         review_params[key] = this.state[key];
     }.bind(this));
 
-    ApiUtil.submitReview(review_params);
+    ApiUtil.updateReview(review_params);
 
     this.props.close();
   },

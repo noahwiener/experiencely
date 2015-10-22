@@ -4,7 +4,8 @@ WorkshopsAttended = React.createClass({
   getInitialState: function() {
     return {
       displaymodalIsOpen: false,
-      formmodalIsOpen: false
+      formmodalIsOpen: false,
+      updatemodalIsOpen: false
     };
   },
 
@@ -16,9 +17,14 @@ WorkshopsAttended = React.createClass({
     this.setState({formmodalIsOpen: true});
   },
 
+  openUpdateFormModal: function(){
+    this.setState({updatemodalIsOpen: true});
+  },
+
   closeModal: function() {
     this.setState({displaymodalIsOpen: false});
     this.setState({formmodalIsOpen: false});
+    this.setState({updatemodalIsOpen: false});
   },
 
   showReview: function(){
@@ -32,9 +38,11 @@ WorkshopsAttended = React.createClass({
   render: function(){
     var modal;
     if (this.state.displaymodalIsOpen === true){
-      modal = < ReviewDisplayModal close={ this.closeModal } review={this.props.workshop.current_user_review[0]} />;
+      modal = < ReviewDisplayModal close={ this.closeModal } openUpdateFormModal={this.openUpdateFormModal} review={this.props.workshop.current_user_review[0]} />;
     } else if (this.state.formmodalIsOpen === true){
       modal = < CreateReviewModal close={ this.closeModal } workshop={this.props.workshop} user={this.props.user} />;
+    }else if (this.state.updatemodalIsOpen === true){
+      modal = < UpdateModal close={ this.closeModal } workshop={this.props.workshop} workshop_id={this.props.workshop.id} user={this.props.user} review={this.props.workshop.current_user_review[0]} />;
     }else{
       modal = "";
     }

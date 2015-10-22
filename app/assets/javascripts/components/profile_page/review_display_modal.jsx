@@ -1,5 +1,10 @@
 ReviewDisplayModal = React.createClass({
 
+  handleClick: function(){
+    this.props.close();
+    this.props.openUpdateFormModal();
+  },
+
   render: function() {
     return (
       <div>
@@ -11,7 +16,8 @@ ReviewDisplayModal = React.createClass({
                 <h1>{this.props.review.title}</h1>
 
                 <p>{this.props.review.body}</p>
-                <p>Rating (out of five): {this.props.review.rating} </p>
+                < Stars clickable={false} rating={this.props.review.rating} size={'fa-2x'} />
+                <button className="btn" type="submit" onClick={this.handleClick}>Update Your Review</button>
 
 
             </article>

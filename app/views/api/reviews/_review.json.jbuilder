@@ -11,8 +11,8 @@ json.userinfo do
   json.user_pic_url review.user.photos.first.url
 end
 
-json.workshopinfo do
-  json.workshop_title review.workshop.title
+json.workshop do
+  json.title review.workshop.title
 
   json.workshop_host do
     json.first_name review.workshop.host.first_name

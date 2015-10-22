@@ -12,6 +12,14 @@
     _user.reviews.push(review);
   };
 
+  var updateReview = function(review){
+    for (var i = 0; i < _user.reviews.length; i++) {
+      if (_user.reviews[i].workshop_id === review.workshop_id){
+        _user.reviews[i] = review;
+      }
+    }
+  };
+
   root.UserStore = $.extend({}, EventEmitter.prototype, {
     current: function(){
       return jQuery.extend(true, {}, _user);
