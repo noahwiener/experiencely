@@ -2,7 +2,11 @@ ReviewForm = React.createClass({
   mixins: [React.addons.LinkedStateMixin, ReactRouter.history],
 
   getInitialState: function() {
-    return { title: '', body: '', rating: ''};
+    return { title: '', body: '', rating: 1};
+  },
+
+  handleRating: function(idx){
+    this.setState({ rating: idx });
   },
 
 
@@ -32,21 +36,17 @@ ReviewForm = React.createClass({
         <form onSubmit={this.handleSubmit}  >
 
           <div className='form-group'>
+            <label htmlFor='rating'>Rating</label>
+            < Stars clickable={true} rating={this.state.rating} size={'fa-3x'} clickHandler={this.handleRating} />
+        </div>
+
+          <div className='form-group'>
             <label htmlFor='title'>Title</label>
             <input type='text'
                    className='form-control'
                    value={this.state.title}
                    placeholder="Title"
                    onChange={this.handleInput.bind(null, 'title')}/>
-          </div>
-
-          <div className='form-group'>
-            <label htmlFor='rating'>Rating</label>
-            <input type='text'
-                   className='form-control'
-                   value={this.state.rating}
-                   placeholder="Value from 1-5"
-                   onChange={this.handleInput.bind(null, 'rating')}/>
           </div>
 
           <div className='form-group'>

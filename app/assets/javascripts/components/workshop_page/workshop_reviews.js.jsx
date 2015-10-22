@@ -13,7 +13,7 @@ WorkshopReviews = React.createClass({
                          <p>This will be the pic: { review.userinfo.user_pic_url }</p>
                          <p>{ review.title }</p>
                          <p>{ review.body }</p>
-                         <p>Rating (out of five): { review.rating }</p>
+                          < Stars clickable={false} rating={review.rating} size={'fa-2x'} />
                          <p>-------</p>
                        </div>);
               }.bind(this))}

@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
+
  */
 
 
@@ -218,12 +220,6 @@ body {
 
 
 // Workshop Main Page
-.reviews-avg-bar{
-  background-color: #f8f9f7;
-  color: #747676;
-  text-align: center;
-  padding: 30px;
-}
 
 .workshop-text{
   padding: 10px;
@@ -641,4 +637,32 @@ body {
   }
   .modal-close:hover {
     color: black;
+  }
+
+  .star-bar {
+    -webkit-padding-start: 0;
+  }
+
+  .star-bar li {
+    display: inline;
+    list-style: none;
+    float: left;
+    padding:0px;
+    color: #f7b002;
+  }
+
+  .reviews-avg-stars{
+    position: absolute;
+    float: left;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  .reviews-avg-bar{
+    background-color: #f8f9f7;
+    color: #747676;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    position: relative;
   }

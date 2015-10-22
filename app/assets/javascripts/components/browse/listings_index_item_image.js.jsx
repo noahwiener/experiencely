@@ -5,7 +5,7 @@ ListingsIndexItemImage = React.createClass({
 
     if(this.props.workshop.isSignedUp){
       return(<div className="listings-index-pic">
-              <strong className="active-image-banner">Reserved</strong>
+              <strong className="active-image-banner">Attending</strong>
               <img src={urlsrc} height="290px" />
             </div>);
     }else if (this.props.workshop.max_attendees - this.props.workshop.attendees < 10){

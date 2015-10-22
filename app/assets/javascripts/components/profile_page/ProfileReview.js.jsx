@@ -6,7 +6,7 @@ ProfileReview = React.createClass({
             <p>Host: {this.props.review.workshopinfo.workshop_host.first_name} {this.props.review.workshopinfo.workshop_host.last_init}</p>
             <h3>{this.props.review.title}</h3>
             <p>{this.props.review.body}</p>
-            <p>Rating: {this.props.review.rating}</p>
+            < Stars clickable={false} rating={this.props.review.rating} size={'fa-2x'} />
           </div>;
   }
 });

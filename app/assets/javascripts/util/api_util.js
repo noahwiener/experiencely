@@ -50,6 +50,7 @@ ApiUtil = {
   },
 
   updateProfile: function(profile_params){
+
     $.ajax( '/users/' + profile_params.user_id, {
       type: 'PATCH',
       data: profile_params,

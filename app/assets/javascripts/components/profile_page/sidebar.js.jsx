@@ -23,8 +23,11 @@ Sidebar = React.createClass({
         console.log(error);
       } else {
         this.setState({image_url: result[0]['url']})
+        var profile_params = { user_id: this.props.user.id, photo_url: this.state.image_url };
+        ApiUtil.updateProfile({ user: profile_params });
       }
     }.bind(this));
+
   },
 
   render: function(){
