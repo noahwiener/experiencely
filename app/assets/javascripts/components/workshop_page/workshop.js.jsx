@@ -53,7 +53,8 @@ var Workshop = React.createClass({
             < WorkshopDescription workshop={this.state.workshop} />
             < WorkshopHost host={this.state.workshop.host} />
             < WorkshopReviews host={this.state.workshop.host} reviews={ this.state.workshop.host.reviews_of_self } />
-            <a href="/#browse">Back to All Workshops</a>
+            < Map workshop={this.state.workshop} />
+            
 
           </div>
         );

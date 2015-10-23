@@ -13,6 +13,8 @@
     window.UPLOAD_PRESET = "<%= ENV["UPLOAD_PRESET"] %>"
   </script>
 
+  <script src="https://maps.googleapis.com/maps/api/js?key="<%= "#{ENV['google_maps_key']}" %> > </script>
+
   <% if current_user %>
     <script>
       window.CURRENT_USER_FNAME = "<%= current_user.first_name %>";
