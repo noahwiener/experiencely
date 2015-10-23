@@ -1,18 +1,27 @@
 var Profile = React.createClass({
 
+
   getInitialState: function () {
     var user = UserStore.current() || {} ;
     return { user: user, attended: [], updatemodalIsOpen: false };
-  },
-
-  componentWillMount: function() {
-    window.scrollTo(0,0);
   },
 
   componentDidMount: function () {
     UserStore.addChangeListener(this._userChanged);
     WorkshopStore.addChangeListener(this._workshopschanged);
     ApiUtil.fetchCurrentUser();
+  },
+
+  componentDidUpdate: function(prevProps, prevState) {
+    if (document.getElementById("attended") && this.props.location.search === "?attended"){
+      document.getElementById("attended").scrollIntoView();
+    } else if (document.getElementById("attending") && this.props.location.search === "?attending"){
+      document.getElementById("attending").scrollIntoView();
+    } else if (document.getElementById("reviews") && this.props.location.search === "?reviews"){
+      document.getElementById("reviews").scrollIntoView();
+    } else{
+      window.scrollTo(0,0);
+    }
   },
 
   _userChanged: function () {
@@ -44,6 +53,7 @@ var Profile = React.createClass({
     if (Object.keys(this.state.user).length === 0){
       return (<div className="spinner-loader">Loading…</div>);
     }else {
+
     return(
       <div className="container">
 
