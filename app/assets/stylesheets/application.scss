@@ -79,7 +79,7 @@ body {
 }
 
 .navbar-nav > li > a {
-  padding: 0px;
+  padding: 1px;
   background-color: white;
 }
 
@@ -87,14 +87,23 @@ body {
   background-color: white;
 }
 
-.navbar-right a {
+.navbar-right li a {
   color: #747676;
   font-style: normal;
   font-size: 20px;
   letter-spacing: 2px;
-  padding: 40px 40px;
+  padding: 0 40px;
   line-height: 60px;
 }
+
+.dropdown-menu li a {
+  padding-left: 10px;
+}
+
+.divider {
+  border-bottom: 1px solid lightgrey;
+}
+
 
 .login-box {
   background-color: white;

@@ -57,7 +57,7 @@ var Profile = React.createClass({
               <h1>Hello, {this.state.user.first_name || this.state.user.user_name}!</h1>
             </div>
 
-            <div className="row upcoming">
+            <div className="row upcoming" id="attending">
               <div>
                 <h1>Upcoming Reservations</h1>
                 {this.state.user.upcoming.map(function(workshop) {
@@ -66,7 +66,7 @@ var Profile = React.createClass({
               </div>
             </div>
 
-            <div className="row previous">
+            <div className="row previous" id="attended">
               <div>
                 <h1>Workshops Attended</h1>
                 {this.state.attended.map(function(workshop) {
@@ -75,7 +75,7 @@ var Profile = React.createClass({
               </div>
             </div>
 
-            <div className="row profile-reviews">
+            <div className="row profile-reviews" id="reviews">
               < Reviews user={this.state.user} />
             </div>
           </div>
