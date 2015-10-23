@@ -41,7 +41,8 @@ Sidebar = React.createClass({
 
     var profileStyle = {
       backgroundImage: 'url(' + imgUrl + ')',
-      backgroundSize: 'cover'
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center'
     };
 
     var modal;

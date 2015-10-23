@@ -38,13 +38,20 @@ Her work with the Laney College Mindful Garden Collective has helped establish a
 
 Aaron has experience as an editor and reporter for the Washington City Paper, LA Times, Foreign Policy, Slate, The New Republic, and several other presses, and enjoys hosting workshops on journalism and investigative reporting."},
 
-{user_name: "Ben", password: "password123", first_name: "Ben", last_name: "Mossbarger", about_me:"A laser and optical engineer by profession, Ben is a man who enjoys eclectic performance-focused hobbies, ranging from trapeze to fire-dancing to burlesque and clowning. His performances draw fascinated crowds and his art projects at Burning Man have attracted media attention. He enjoys nothing more than sharing his passions and inviting new friends to join in on his creative spirit. "}
+{user_name: "Ben", password: "password123", first_name: "Ben", last_name: "Mossbarger", about_me:"A laser and optical engineer by profession, Ben is a man who enjoys eclectic performance-focused hobbies, ranging from trapeze to fire-dancing to burlesque and clowning. His performances draw fascinated crowds and his art projects at Burning Man have attracted media attention. He enjoys nothing more than sharing his passions and inviting new friends to join in on his creative spirit. "},
+
+{user_name: "bugs@bunny.com", password: "bugsbunny", first_name: "Bugs", last_name: "Bunny", about_me:"What's up doc? Welcome to Experiencely! I use this website all of the time to meet new friends, find new hobbies, and pick up some new skills along the way.  While you are here, play around on the profile page. Try reading and editing some of the reviews I've written, or write some new ones for the workshops I've already attended.
+
+You can sign me up for more events on individual workshops' pages, and they will appear here on the profile page.
+
+Tired of being Bugs? Personalize your profile! Click Update Profile to make this page your own, and click on the profile picture if you are done looking like a bunny (but it is a pretty good look, if I do say so myself!)"},
+
                   ])
 
 
 
 
-workshops = Workshop.create([{host_id: users[2-1].id,
+workshops = Workshop.create([{host_id: users[1].id,
                                 title: "Learn React.js",
                                 details: "From the Virtual DOM to Flux Architecture",
                                 date: (Time.now + 9.days).to_date,
@@ -315,8 +322,8 @@ photos = Photo.create([{name: 'Noah', imageable_type: "User", imageable_id: user
                       {name: 'Ben', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/0Ben_nk4vfr.jpg"},
                       {name: 'Ben.jpg', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/01Ben_s8kuzn.jpg"},
                       {name: 'ben2', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/ben2_zehx74.jpg"},
-                      {name: '0ben3', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/ben3_gskyhu.jpg"}
-
+                      {name: '0ben3', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/ben3_gskyhu.jpg"},
+                      {name: 'Bugs', imageable_type: "User", imageable_id: users[7].id, url: "http://res.cloudinary.com/drfyambuq/image/upload/v1445639967/bugs_pphxai.jpg"}
                         ])
 
 signups = Signup.create([{user_id:users[1-1].id, workshop_id:workshops[1-1].id},

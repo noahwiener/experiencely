@@ -1,4 +1,8 @@
 Footer = React.createClass({
+  top: function(){
+    window.scrollTo(0,0);
+  },
+
   render: function(){
     return(
       <footer className="footer">
@@ -11,7 +15,9 @@ Footer = React.createClass({
             </ul>
           </div>
         <div className="bottom-bar">
-          © EXPERIENCELY 2015
+          <span className="footer-logo" onClick={this.top}>
+            <img src="images/logo.png" alt="logo" height="60px"/>
+          </span>
         </div>
       </footer>
     );
