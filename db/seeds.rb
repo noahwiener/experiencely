@@ -6,6 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.destroy_all
+Workshop.destroy_all
+Photo.destroy_all
+Signup.destroy_all
+Review.destroy_all
 
 users = User.create([{user_name: "rumo", password: "password123", first_name: "Rumo", last_name: "Dog", about_me: "Woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof
 woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof
@@ -39,7 +44,7 @@ Aaron has experience as an editor and reporter for the Washington City Paper, LA
 
 
 
-workshops = Workshop.create([{host_id: 2,
+workshops = Workshop.create([{host_id: users[2-1].id,
                                 title: "Learn React.js",
                                 details: "From the Virtual DOM to Flux Architecture",
                                 date: (Time.now + 9.days).to_date,
@@ -58,7 +63,7 @@ Your host for this workshop is Experiencely’s founder, Noah Wiener, who design
 
 This workshop will be held in the heart of San Francisco’s tech scene at the App Academy offices. The workshop will go back-and-forth between demo and lecture, as Noah introduces guests to React components, the React router, and Flux’s unidirectional data model. At the end of the lecture, guests will each sit down at a computer and work through Experiencely’s source code to see React in action!"
                               },
-                              {host_id: 1,
+                              {host_id: users[1-1].id,
                                 title: "Barking Lessons",
                                 details: "Professional Advice from My Dog",
                                 date: (Time.now + 25.days).to_date,
@@ -72,7 +77,7 @@ woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof 
 woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof",
                                 price: "$20"
                               },
-                              {host_id: 3,
+                              {host_id: users[3-1].id,
                                 title: "Wine Tasting",
                                 details: "Discover California Zinfandels",
                                 date: (Time.now + 12.days).to_date,
@@ -88,7 +93,7 @@ You’ll join Limor, Experiencely’s most highly rated host, for a private tast
 Limor developed her love of wine while living in the heart of Malbec country on the slopes of the Argentinian Andes, and has experience working in Sonoma before moving into the world of urban wineries here in the Bay Area.  She will be your guide as you learn to distinguish a Sauvignon Blanc from a Chardonnay and how to pair the right wine with your favorite meal.",
                                 price: "$20"
                               },
-                              {host_id: 4,
+                              {host_id: users[4-1].id,
                                 title: "Natural Building",
                                 details: "Get your hands dirty with adobe brickmaking",
                                 date: (Time.now + 17.days).to_date,
@@ -104,7 +109,7 @@ The building features a Nubian Vault style masonry roof and features organic lin
 In this fun, team-building workshop, Ethan will guide guests through the processes used in vault construction, and you’ll go home with the skills needed to get your natural building project started!  Visitors will have the chance to become part of the Bay Area’s natural building community, assisting each other on sustainable and natural construction projects.",
                                 price: "$10"
                               },
-                              {host_id: 5,
+                              {host_id: users[5-1].id,
                                 title: "Urban Gardening",
                                 details: "Planting and Sustainability",
                                 date: (Time.now + 27.days).to_date,
@@ -125,7 +130,7 @@ We are an inner city community college serving a diverse population and our visi
                                 price: "$5"
                               },
 
-                              {host_id: 6,
+                              {host_id: users[6-1].id,
                                 title: "Housing Complex",
                                 details: "The Media and Urban Development",
                                 date: (Time.now + 32.days).to_date,
@@ -142,7 +147,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 price: "$10"
                               },
 
-                              {host_id: 1,
+                              {host_id: users[1-1].id,
                                 title: "Play Fetch",
                                 details: "Who is a good boy?",
                                 date: (Time.now - 15.days).to_date,
@@ -153,7 +158,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 price: "$100"
                               },
 
-                              {host_id: 2,
+                              {host_id: users[2-1].id,
                                 title: "Learn Ruby on Rails",
                                 details: "Understanding the MVC framework",
                                 date: (Time.now - 2.days).to_date,
@@ -164,7 +169,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 price: "$10"
                               },
 
-                              {host_id: 2,
+                              {host_id: users[2-1].id,
                                 title: "Archaeological excavation",
                                 details: "Learn How to Dig",
                                 date: (Time.now - 8.days).to_date,
@@ -175,7 +180,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 price: "$100"
                               },
 
-                              {host_id: 3,
+                              {host_id: users[3-1].id,
                                 title: "Touring Wine Caves",
                                 details: "Beneath the Soil in Sonoma",
                                 date: (Time.now - 15.days).to_date,
@@ -186,7 +191,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 price: "$100"
                               },
 
-                              {host_id: 3,
+                              {host_id: users[3-1].id,
                                 title: "Biking through Wine Country",
                                 details: "A bicycle tour through Alexander Valley's vineyards",
                                 date: (Time.now - 43.days).to_date,
@@ -197,7 +202,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 price: "$30"
                               },
 
-                              {host_id: 4,
+                              {host_id: users[4-1].id,
                                 title: "Natural plasters",
                                 details: "Learn to use timeless techniques",
                                 date: (Time.now - 18.days).to_date,
@@ -208,7 +213,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 price: "$10"
                               },
 
-                              {host_id: 5,
+                              {host_id: users[5-1].id,
                                 title: "Acro-Yoga",
                                 details: "Find the natural balance between serenity and daredevil",
                                 date: (Time.now - 4.days).to_date,
@@ -219,7 +224,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 price: "$14"
                               },
 
-                              {host_id: 6,
+                              {host_id: users[6-1].id,
                                 title: "Writing a Cover Story",
                                 details: "Find the hook to captivate readers",
                                 date: (Time.now - 28.days).to_date,
@@ -230,7 +235,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 price: "$12"
                               },
 
-                              {host_id: 7,
+                              {host_id: users[7-1].id,
                                 title: "Fire Dancing",
                                 details: "Meld Agility and Awe with Performance",
                                 date: (Time.now + 21.days).to_date,
@@ -252,80 +257,80 @@ Enjoy the meeting place between performance, agility, and adrenaline in this bla
 
                               #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 
-photos = Photo.create([{name: 'Noah', imageable_type: "User", imageable_id: 2, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_crop,h_203,w_200,x_0,y_0/v1445277732/noah_profile_bsiwvo.jpg"},
+photos = Photo.create([{name: 'Noah', imageable_type: "User", imageable_id: users[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_crop,h_203,w_200,x_0,y_0/v1445277732/noah_profile_bsiwvo.jpg"},
 
-                      {name: 'Ethan team on roof', imageable_type: "Workshop", imageable_id: 4, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277793/ethan_team_project_qrkhji.jpg"},
-                      {name: 'Nubian2', imageable_type: "Workshop", imageable_id: 4, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277797/nubian2_dn83ew.jpg"},
-                      {name: '0_Nubian', imageable_type: "Workshop", imageable_id: 4, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277795/nubian_vault_mlieow.jpg"},
-                      {name: 'Team', imageable_type: "Workshop", imageable_id: 4, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_crop,h_842,w_750/v1445277797/ethan_team_ijlpkq.jpg"},
-                      {name: 'EthanOven', imageable_type: "Workshop", imageable_id: 4, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277795/ethan_oven_q2foyu.jpg"},
-                      {name: 'Ethan', imageable_type: "User", imageable_id: 4, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277732/ethan_profile_otnhh9.jpg"},
+                      {name: 'Ethan team on roof', imageable_type: "Workshop", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277793/ethan_team_project_qrkhji.jpg"},
+                      {name: 'Nubian2', imageable_type: "Workshop", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277797/nubian2_dn83ew.jpg"},
+                      {name: '0_Nubian', imageable_type: "Workshop", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277795/nubian_vault_mlieow.jpg"},
+                      {name: 'Team', imageable_type: "Workshop", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_crop,h_842,w_750/v1445277797/ethan_team_ijlpkq.jpg"},
+                      {name: 'EthanOven', imageable_type: "Workshop", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277795/ethan_oven_q2foyu.jpg"},
+                      {name: 'Ethan', imageable_type: "User", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277732/ethan_profile_otnhh9.jpg"},
 
-                      {name: 'Bottle and Barrels', imageable_type: "Workshop", imageable_id: 3, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277797/bottle_and_barrels_suobpz.jpg"},
-                      {name: 'Cheers', imageable_type: "Workshop", imageable_id: 3, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277791/cheers_vdb5th.jpg"},
-                      {name: 'Glass', imageable_type: "Workshop", imageable_id: 3, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277789/glass_f1ptq7.jpg"},
-                      {name: 'grapes and barrel', imageable_type: "Workshop", imageable_id: 3, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277791/grapes_and_barrel_y9y7wn.jpg"},
-                      {name: 'wine_bottles', imageable_type: "Workshop", imageable_id: 3, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/wine_bottles_b0ffcb.jpg"},
-                      {name: 'Limor', imageable_type: "User", imageable_id: 3, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277757/limor_profile_enwwr4.jpg"},
+                      {name: 'Bottle and Barrels', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277797/bottle_and_barrels_suobpz.jpg"},
+                      {name: 'Cheers', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277791/cheers_vdb5th.jpg"},
+                      {name: 'Glass', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277789/glass_f1ptq7.jpg"},
+                      {name: 'grapes and barrel', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277791/grapes_and_barrel_y9y7wn.jpg"},
+                      {name: 'wine_bottles', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/wine_bottles_b0ffcb.jpg"},
+                      {name: 'Limor', imageable_type: "User", imageable_id: users[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277757/limor_profile_enwwr4.jpg"},
 
-                      {name: '0_coding-demo', imageable_type: "Workshop", imageable_id: 1, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277738/0_coding_demo_hl57bu.jpg"},
-                      {name: 'atom_screenshot', imageable_type: "Workshop", imageable_id: 1, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277734/atom_screenshot_grxxuw.png"},
-                      {name: 'anthony_and_edmund', imageable_type: "Workshop", imageable_id: 1, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277742/anthony_and_edmund_fpb3g6.jpg"},
-                      {name: '1_whiteboarding', imageable_type: "Workshop", imageable_id: 1, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277738/whiteboarding_atexot.jpg"},
+                      {name: '0_coding-demo', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277738/0_coding_demo_hl57bu.jpg"},
+                      {name: 'atom_screenshot', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277734/atom_screenshot_grxxuw.png"},
+                      {name: 'anthony_and_edmund', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277742/anthony_and_edmund_fpb3g6.jpg"},
+                      {name: '1_whiteboarding', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277738/whiteboarding_atexot.jpg"},
 
-                      {name: 'Marley', imageable_type: "User", imageable_id: 5, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277735/marley_ocqyib.jpg"},
-                      {name: 'garden2', imageable_type: "Workshop", imageable_id: 5, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277800/garden2_v599d3.jpg"},
-                      {name: 'garden3', imageable_type: "Workshop", imageable_id: 5, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277799/garden3_etlrew.jpg"},
-                      {name: '0_garden4', imageable_type: "Workshop", imageable_id: 5, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277800/garden4_q1mtcw.jpg"},
-                      {name: 'garden', imageable_type: "Workshop", imageable_id: 5, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277799/garden_qpyvlm.jpg"},
-                      {name: 'garden5', imageable_type: "Workshop", imageable_id: 5, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/garden5_mvrgu6.jpg"},
-                      {name: 'feet', imageable_type: "Workshop", imageable_id: 5, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277797/feet_ymilrb.jpg"},
+                      {name: 'Marley', imageable_type: "User", imageable_id: users[5-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277735/marley_ocqyib.jpg"},
+                      {name: 'garden2', imageable_type: "Workshop", imageable_id: workshops[5-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277800/garden2_v599d3.jpg"},
+                      {name: 'garden3', imageable_type: "Workshop", imageable_id: workshops[5-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277799/garden3_etlrew.jpg"},
+                      {name: '0_garden4', imageable_type: "Workshop", imageable_id: workshops[5-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277800/garden4_q1mtcw.jpg"},
+                      {name: 'garden', imageable_type: "Workshop", imageable_id: workshops[5-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277799/garden_qpyvlm.jpg"},
+                      {name: 'garden5', imageable_type: "Workshop", imageable_id: workshops[5-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/garden5_mvrgu6.jpg"},
+                      {name: 'feet', imageable_type: "Workshop", imageable_id: workshops[5-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277797/feet_ymilrb.jpg"},
 
 
-                      {name: 'Rumo', imageable_type: "User", imageable_id: 1, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277744/rumo_ruiidb.png"},
-                      {name: '0_hike2', imageable_type: "Workshop", imageable_id: 2, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277767/0_hike2_g417fd.jpg"},
-                      {name: 'beach', imageable_type: "Workshop", imageable_id: 2, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277755/beach_lb72vw.png"},
-                      {name: 'ears', imageable_type: "Workshop", imageable_id: 2, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277823/rumo_ears_tmvo2m.png"},
-                      {name: 'hike', imageable_type: "Workshop", imageable_id: 2, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277768/hike_o5ayb0.jpg"},
-                      {name: 'pack', imageable_type: "Workshop", imageable_id: 2, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_800/v1445277800/pack_olie1y.png"},
-                      {name: 'tent', imageable_type: "Workshop", imageable_id: 2, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_scale,h_863/v1445277794/tent_hkpipk.png"},
-                      {name: 'tongue', imageable_type: "Workshop", imageable_id: 2, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_751/v1445277784/tongue_m3xgmj.png"},
+                      {name: 'Rumo', imageable_type: "User", imageable_id: users[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277744/rumo_ruiidb.png"},
+                      {name: '0_hike2', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277767/0_hike2_g417fd.jpg"},
+                      {name: 'beach', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277755/beach_lb72vw.png"},
+                      {name: 'ears', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277823/rumo_ears_tmvo2m.png"},
+                      {name: 'hike', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277768/hike_o5ayb0.jpg"},
+                      {name: 'pack', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_800/v1445277800/pack_olie1y.png"},
+                      {name: 'tent', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_scale,h_863/v1445277794/tent_hkpipk.png"},
+                      {name: 'tongue', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_751/v1445277784/tongue_m3xgmj.png"},
 
-                      {name: 'Aaron', imageable_type: "User", imageable_id: 6, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277731/Aaron_ms1gcg.jpg"},
-                      {name: '0_street-sense', imageable_type: "Workshop", imageable_id: 6, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/street-sense_shmmdz.jpg"},
-                      {name: 'aaron', imageable_type: "Workshop", imageable_id: 6, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277731/Aaron_ms1gcg.jpg"},
-                      {name: 'mj', imageable_type: "Workshop", imageable_id: 6, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/mother_jones_uq5qvf.jpg"},
-                      {name: 'newspaper_boy', imageable_type: "Workshop", imageable_id: 6, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277742/newspaper_boy_uqj9t1.jpg"},
+                      {name: 'Aaron', imageable_type: "User", imageable_id: users[6-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277731/Aaron_ms1gcg.jpg"},
+                      {name: '0_street-sense', imageable_type: "Workshop", imageable_id: workshops[6-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/street-sense_shmmdz.jpg"},
+                      {name: 'aaron', imageable_type: "Workshop", imageable_id: workshops[6-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277731/Aaron_ms1gcg.jpg"},
+                      {name: 'mj', imageable_type: "Workshop", imageable_id: workshops[6-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/mother_jones_uq5qvf.jpg"},
+                      {name: 'newspaper_boy', imageable_type: "Workshop", imageable_id: workshops[6-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277742/newspaper_boy_uqj9t1.jpg"},
 
-                      {name: 'rumo', imageable_type: "Workshop", imageable_id: 7, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_scale,h_617/v1445277774/ears_o6xcbs.jpg"},
-                      {name: 'RoR', imageable_type: "Workshop", imageable_id: 8, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/RoR_lzpda8.jpg"},
-                      {name: 'archaeology', imageable_type: "Workshop", imageable_id: 9, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277808/archaeology_v16fef.jpg"},
-                      {name: 'caves', imageable_type: "Workshop", imageable_id: 10, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277741/caves_xeufor.png"},
-                      {name: 'bike', imageable_type: "Workshop", imageable_id: 11, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_601/v1445277745/bike_epefxc.jpg"},
-                      {name: 'plaster', imageable_type: "Workshop", imageable_id: 12, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277741/ethan_paint_vwxew4.jpg"},
-                      {name: 'acro', imageable_type: "Workshop", imageable_id: 13, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277744/acro_t3newv.jpg"},
-                      {name: 'boy', imageable_type: "Workshop", imageable_id: 14, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277742/newspaper_boy_uqj9t1.jpg"},
+                      {name: 'rumo', imageable_type: "Workshop", imageable_id: workshops[7-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_scale,h_617/v1445277774/ears_o6xcbs.jpg"},
+                      {name: 'RoR', imageable_type: "Workshop", imageable_id: workshops[8-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/RoR_lzpda8.jpg"},
+                      {name: 'archaeology', imageable_type: "Workshop", imageable_id: workshops[9-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277808/archaeology_v16fef.jpg"},
+                      {name: 'caves', imageable_type: "Workshop", imageable_id: workshops[10-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277741/caves_xeufor.png"},
+                      {name: 'bike', imageable_type: "Workshop", imageable_id: workshops[11-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_601/v1445277745/bike_epefxc.jpg"},
+                      {name: 'plaster', imageable_type: "Workshop", imageable_id: workshops[12-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277741/ethan_paint_vwxew4.jpg"},
+                      {name: 'acro', imageable_type: "Workshop", imageable_id: workshops[13-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277744/acro_t3newv.jpg"},
+                      {name: 'boy', imageable_type: "Workshop", imageable_id: workshops[14-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277742/newspaper_boy_uqj9t1.jpg"},
 
-                      {name: 'Ben', imageable_type: "User", imageable_id: 7, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277732/ben_profile_zbrxlx.jpg"},
-                      {name: 'Ben', imageable_type: "Workshop", imageable_id: 15, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/0Ben_nk4vfr.jpg"},
-                      {name: 'Ben.jpg', imageable_type: "Workshop", imageable_id: 15, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/01Ben_s8kuzn.jpg"},
-                      {name: 'ben2', imageable_type: "Workshop", imageable_id: 15, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/ben2_zehx74.jpg"},
-                      {name: '0ben3', imageable_type: "Workshop", imageable_id: 15, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/ben3_gskyhu.jpg"}
+                      {name: 'Ben', imageable_type: "User", imageable_id: users[7-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277732/ben_profile_zbrxlx.jpg"},
+                      {name: 'Ben', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/0Ben_nk4vfr.jpg"},
+                      {name: 'Ben.jpg', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/01Ben_s8kuzn.jpg"},
+                      {name: 'ben2', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/ben2_zehx74.jpg"},
+                      {name: '0ben3', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/ben3_gskyhu.jpg"}
 
                         ])
 
-signups = Signup.create([{user_id:1, workshop_id:1},
-                        {user_id:2, workshop_id:6},
-                        {user_id:2, workshop_id:12},
-                        {user_id:2, workshop_id:14},
-                        {user_id:2, workshop_id:9},
-                        {user_id:2, workshop_id:11},
-                        {user_id:2, workshop_id:8}
+signups = Signup.create([{user_id:users[1-1].id, workshop_id:workshops[1-1].id},
+                        {user_id:users[2-1].id, workshop_id:workshops[6-1].id},
+                        {user_id:users[2-1].id, workshop_id:workshops[12-1].id},
+                        {user_id:users[2-1].id, workshop_id:workshops[14-1].id},
+                        {user_id:users[2-1].id, workshop_id:workshops[9-1].id},
+                        {user_id:users[2-1].id, workshop_id:workshops[11-1].id},
+                        {user_id:users[2-1].id, workshop_id:workshops[8-1].id}
                         ])
 
-reviews = Review.create([{user_id: 1, workshop_id: 8, title: "Woof", body: "Maybe you shouldnt have dogs take coding classes", rating: 2},
-                        {user_id: 2, workshop_id: 10, title: "Amazing", body: "Limor is the best host!", rating: 5},
-                        {user_id: 5, workshop_id: 11, title: "Fun!", body: "Great Bike Ride!", rating: 4},
-                        {user_id: 2, workshop_id: 15, title: "Terrible", body: "I got lit on fire!", rating: 1},
-                        {user_id: 5, workshop_id: 14, title: "Hard", body: "Journalism is challenging for a dog, what with the fact that I can't speak or write", rating: 1}
+reviews = Review.create([{user_id: users[1-1].id, workshop_id: workshops[8-1].id, title: "Woof", body: "Maybe you shouldnt have dogs take coding classes", rating: 2},
+                        {user_id: users[2-1].id, workshop_id: workshops[10-1].id, title: "Amazing", body: "Limor is the best host!", rating: 5},
+                        {user_id: users[5-1].id, workshop_id: workshops[11-1].id, title: "Fun!", body: "Great Bike Ride!", rating: 4},
+                        {user_id: users[2-1].id, workshop_id: workshops[15-1].id, title: "Terrible", body: "I got lit on fire!", rating: 1},
+                        {user_id: users[5-1].id, workshop_id: workshops[14-1].id, title: "Hard", body: "Journalism is challenging for a dog, what with the fact that I can't speak or write", rating: 1}
   ])
