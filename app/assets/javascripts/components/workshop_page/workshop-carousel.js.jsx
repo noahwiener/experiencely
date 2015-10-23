@@ -3,6 +3,14 @@ WorkshopCarousel = React.createClass({
   render: function(){
     return (
       <div id="myCarousel" className="carousel slide" data-ride="carousel">
+        <div className="carousel-caption">
+          <div className="carousel-date">
+            <span>{this.props.workshop.eng_date}</span>
+          </div>
+          <div className="carousel-time">
+            <span>{this.props.workshop.start_time}</span>
+          </div>
+        </div>
         <div className="slides-cont">
           <ol className="carousel-indicators">
             { this.props.photos.map(function (photo, idx) {

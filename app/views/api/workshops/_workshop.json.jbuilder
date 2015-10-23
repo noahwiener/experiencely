@@ -11,7 +11,8 @@ json.extract!(workshop,
               :lng,
               :location,
               :price,
-              :body)
+              :body,
+              :eng_date)
   #
 
   if current_user

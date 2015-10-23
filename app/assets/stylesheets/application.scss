@@ -181,7 +181,14 @@ body {
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
+  padding: 10px;
+  left: 45%;
+  right: 45%;
+  min-width: 200px;
+  font-size: 24px;
   z-index: 10;
+  bottom: 80%;
+  background-color: rgba(50, 50, 50, 0.8);
 }
 
 /* Declare heights because of positioning of img element */
@@ -653,7 +660,7 @@ body {
   }
 
   .star-bar li {
-    display: inline;
+    display: inline-block;
     list-style: none;
     float: left;
     padding:0px;
@@ -671,9 +678,35 @@ body {
     background-color: #f8f9f7;
     color: #747676;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 80px;
     position: relative;
+  }
+
+  .avg-stars-p {
+    font-size: 24px;
+    line-height: 4;
+    padding: 0 20px 0 10px;
+  }
+
+  .stars-in-workshop-bar ul{
+    margin-top: 30px;
+  }
+
+  .profile-tiny-img, .avg-stars-p, .star-bar{
+    float: left;
+  }
+
+  .profile-tiny-img {
+    max-height: 80px;
+    max-width: 80px;
+    border-radius: 50%
+  }
+
+  .profile-navbar-img {
+    max-height: 60px;
+    max-width: 60px;
+    border-radius: 50%
   }
 
   .map{

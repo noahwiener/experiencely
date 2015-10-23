@@ -2,12 +2,15 @@ WorkshopReviewBar = React.createClass({
   render: function(){
 
   if (this.props.workshop.host.reviews_of_self.length > 0){
+
     return (
       <div className="reviews-avg-bar">
         <div>
-          {this.props.workshop.host.first_name} has earned an average of {this.props.workshop.host.avg_reviews} stars in {this.props.workshop.host.reviews_of_self.length} review(s)
           <div className="reviews-avg-stars">
-            < Stars clickable={false} rating={this.props.workshop.host.avg_reviews} size={'fa-3x'} />
+            <img className="profile-tiny-img" src={this.props.workshop.host.photos[0].url}></img>
+            <p className="avg-stars-p">Host {this.props.workshop.host.first_name} {this.props.workshop.host.last_name[0]}.  </p>
+            <span className="stars-in-workshop-bar">< Stars clickable={false} rating={this.props.workshop.host.avg_reviews} size={'fa-3x'} /></span>
+          <p className="avg-stars-p">  ({this.props.workshop.host.reviews_of_self.length})</p>
           </div>
         </div>
       </div>

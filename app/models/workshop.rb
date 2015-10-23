@@ -33,6 +33,10 @@ class Workshop < ActiveRecord::Base
     Workshop.where('date > ?', Date.today).order('date')
   end
 
+  def eng_date
+    date.strftime('%a %b %d, %Y')
+  end
+
   def attendees
     guests = current_attendees
     signups.each do |signup|

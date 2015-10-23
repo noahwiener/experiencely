@@ -1,9 +1,16 @@
 Navbar = React.createClass({
   render: function () {
     var x = "";
+    var img = "";
+
+    if (window.CURRENT_USER_PIC){
+      img = <img src={window.CURRENT_USER_PIC} className="profile-navbar-img"></img>;
+    }
+
     if (window.CURRENT_USER_UNAME){
-      x = (<li className="dropdown">
-        <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{window.CURRENT_USER_FNAME || window.CURRENT_USER_UNAME}<span className="caret"></span></a>
+      x = (
+        <li className="dropdown">
+        <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{img} {window.CURRENT_USER_FNAME || window.CURRENT_USER_UNAME}<span className="caret"></span></a>
         <ul className="dropdown-menu">
           <li><a href="#/account/profile">My Profile</a></li>
           <li><a href="#/account/profile?attending">Attending Workshops</a></li>
@@ -16,6 +23,7 @@ Navbar = React.createClass({
     }else{
       x=<li><a href="/account/login">LOG IN/SIGN UP</a></li>;
     }
+
 
     return (
       <div id="navbar" className="navbar-collapse collapse noah-nav">
