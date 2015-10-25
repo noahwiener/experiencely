@@ -23,7 +23,20 @@ Map = React.createClass({
 
   render: function(){
     return(
-      <div className="map" ref="map"></div>
+      <div>
+        <div className="map-bar">
+          <div className="map-title">
+            <span>{this.props.workshop.title}</span>
+          </div>
+          <div className="map-location-details">
+            <span><i className="fa fa-map-marker"></i>{this.props.workshop.location}</span>
+          </div>
+          <div className="exact">
+            <span>(Exact address will be sent to guests in an email before the workshop)</span>
+          </div>
+        </div>
+        <div className="map" ref="map"></div>
+      </div>
     );
   }
 });

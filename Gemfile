@@ -40,6 +40,8 @@ gem "figaro"
 
 gem 'jquery-easing-rails'
 
+gem "typedjs-rails", "~> 1.0.2"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

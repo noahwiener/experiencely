@@ -32,8 +32,16 @@ ModalSignup = React.createClass({
         <section id="modal" className="modal is-active">
             <article className="modal-content">
               <span onClick={this.props.close} className="modal-close js-hide-modal">&times;</span>
-
-                <h1>Sign up for {this.props.workshop.title} on {this.props.workshop.date}</h1>
+                <div className="modal-signup">
+                  <span>Join us at </span>
+                  <span className="modal-title">{this.props.workshop.title}</span> 
+                </div>
+                <div className="modal-signup">
+                  <span>On {this.props.workshop.eng_date}</span>
+                </div>
+                <div className="modal-signup">
+                  <span>Number of guests attending:</span>
+                </div>
                 <div>
                     <div className="input-group">
                               <span className="input-group-btn">

@@ -22,3 +22,4 @@
 //= require_tree .
 //= require bootstrap
 //= require jquery.easing
+//= require typed

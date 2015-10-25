@@ -1,5 +1,9 @@
 ModalSignin = React.createClass({
 
+  sendSignIn: function(){
+    window.location = '/account/login';
+  },
+
   render: function() {
     return (
       <div>
@@ -7,10 +11,10 @@ ModalSignin = React.createClass({
         <section id="modal" className="modal is-active">
             <article className="modal-content">
               <span onClick={this.props.close} className="modal-close js-hide-modal">&times;</span>
-
-                <h1>Please sign in to register for {this.props.workshop.title}</h1>
-
-              <button onClick={window.location = '/account/login'}>Sign in</button>
+              <div className="modal-signup">
+                <span>Please sign in to register for {this.props.workshop.title}</span>
+              </div>
+              <button className="btn" onClick={this.sendSignIn}>Sign in</button>
             </article>
             <div className="modal-screen js-hide-modal"></div>
           </section>

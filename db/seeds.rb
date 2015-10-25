@@ -59,7 +59,7 @@ workshops = Workshop.create([{host_id: users[1].id,
                                 max_attendees: 10,
                                 lat: 37.781220,
                                 lng: -122.411342,
-                                location: "App Academy, SF",
+                                location: "App Academy, San Francisco",
                                 price: "Free",
                                 body: "More and more developers are switching over to Facebook’s new front-end JavaScript library for creating UI components. React has many selling points: a lighting-quick Virtual DOM, modular components, JSX syntax, Flux’s unidirectional flow data, and much more.
 
@@ -102,7 +102,7 @@ Limor developed her love of wine while living in the heart of Malbec country on 
                               },
                               {host_id: users[4-1].id,
                                 title: "Natural Building",
-                                details: "Get your hands dirty with adobe brickmaking",
+                                details: "Learn Traditional Adobe Brickmaking",
                                 date: (Time.now + 17.days).to_date,
                                 start_time: "1:00 PM",
                                 max_attendees: 80,
@@ -124,7 +124,7 @@ In this fun, team-building workshop, Ethan will guide guests through the process
                                 max_attendees: 20,
                                 lat: 37.796534,
                                 lng: -122.263412,
-                                location: "Mindful Garden Collective, Laney College, Oakland",
+                                location: "Mindful Garden Collective, Oakland",
                                 body: "By your host, Marley BenShalom, director of the Mindful Garden Collective at Laney College in Oakland:
 
 The Mindful Garden Collective is a social innovation project lead by students that empowers other students to create their own adventure through the revitalization and expansion of an urban space. We are committed to the wellness of our locality by providing organic food to those in need and by hosting a space for community gatherings. We believe in serving the community as a part of a larger effort to consciously influence the evolution of the planet in the name of synergy, compassion, and love.
@@ -145,7 +145,7 @@ We are an inner city community college serving a diverse population and our visi
                                 max_attendees: 20,
                                 lat: 37.789995,
                                 lng: -122.404536,
-                                location: "Mother Jones Headquarters, San Francisco",
+                                location: "Mother Jones HQ, San Francisco",
                                 body: "The quickly changing urban landscape of San Francisco is a hot topic in local papers. How does media coverage on urban development here in the Bay Area compare with coverage elsewhere in the US?
 
 Mother Jones Senior Editor Aaron Wiener will host a workshop on local papers’ coverage of topics including development, housing, transportation, neighborhoods, and education. Reporters, bloggers, neighborhood advocates, and anyone interested in urban studies are encouraged to join as Aaron hosts an open discussion on how to fairly represent communities and their relationship with the city. Guests are encouraged to come to the workshop with articles, blogposts, or other media for Aaron and other guests to discuss.

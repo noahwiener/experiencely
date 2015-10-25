@@ -45,17 +45,15 @@ var Workshop = React.createClass({
     }else {
 
       return (
-          <div>
+          <div className="workshop-page">
             < WorkshopCarousel workshop={this.state.workshop} photos={this.state.workshop.photos} />
             < WorkshopReviewBar workshop={this.state.workshop} />
             < WorkshopText workshop={this.state.workshop} />
             < WorkshopSignup workshop={this.state.workshop} />
             < WorkshopDescription workshop={this.state.workshop} />
             < WorkshopHost host={this.state.workshop.host} />
-            < WorkshopReviews host={this.state.workshop.host} reviews={ this.state.workshop.host.reviews_of_self } />
+            < WorkshopReviews workshop={this.state.workshop} host={this.state.workshop.host} reviews={ this.state.workshop.host.reviews_of_self } />
             < Map workshop={this.state.workshop} />
-            
-
           </div>
         );
     }

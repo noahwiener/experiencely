@@ -17,7 +17,7 @@ Navbar = React.createClass({
           <li><a href="#/account/profile?attended">Attended Workshops</a></li>
           <li><a href="#/account/profile?reviews">My Reviews</a></li>
           <li role="separator" className="divider"></li>
-          <li onClick={ApiUtil.signOut}><a href="#">Log Out</a></li>
+          <li onClick={ApiUtil.signOut}><a href="/account/login">Log Out</a></li>
         </ul>
       </li>);
     }else{
