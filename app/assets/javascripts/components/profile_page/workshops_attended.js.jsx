@@ -61,17 +61,21 @@ WorkshopsAttended = React.createClass({
       btntext = "Write Review";
     }
 
-    return(<div className="col-xs-12 col-sm-6">
-            <div className="reservation">
-              { modal }
-              <h2>{this.props.workshop.title}</h2>
-              <h3>{this.props.workshop.date}</h3>
-
-              <div style={divStyle}></div>
-                <p>Location: {this.props.workshop.location}</p>
-                <p>{this.props.workshop.details}</p>
-                <p>Host: {this.props.workshop.host.first_name} {this.props.workshop.host.last_name}</p>
-              <p><a className="btn btn-default" onClick={this.showReview}>{btntext}</a></p>
+    return(<div className="col-xs-12 col-sm-6 col-lg-4">
+            {modal}
+            <div className="attended" onClick={this.showReview}>
+                <div className="upcoming-item">
+                  < AttendedItemImage workshop={this.props.workshop} />
+                <div className="upcoming-item-details">
+                    <h2>{this.props.workshop.title}</h2>
+                    <div>
+                      <span><i className="fa fa-info"></i> {this.props.workshop.details}</span>
+                    </div>
+                    <div>
+                      <span><i className="fa fa-user"></i>  Host: {this.props.workshop.host.first_name} {this.props.workshop.host.last_name[0]}.</span>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>);
   }

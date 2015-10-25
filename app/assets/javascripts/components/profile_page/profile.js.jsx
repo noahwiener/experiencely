@@ -61,44 +61,68 @@ var Profile = React.createClass({
       name = this.state.user.user_name;
     }
 
+    var reservations;
+    if (this.state.user.upcoming.length > 0){
+    reservations = this.state.user.upcoming.map(function(workshop) {
+     return <Reservation key={workshop.title} workshop={workshop} />;
+    }.bind(this));
+    } else {
+      reservations = <span>Looks like you aren't signed up for anything yet. Go ahead, try something new!</span>;
+    }
+
+    var attended;
+    if (this.state.attended.length > 0){
+      attended = this.state.attended.map(function(workshop) {
+       return <WorkshopsAttended key={workshop.title} user={this.state.user} workshop={workshop} />;
+      }.bind(this));
+    }else {
+      attended = <span>Looks like you've never attended one of our workshops before. Go ahead, give it a try!</span>;
+    }
+
+
+
+
+    if (this.state.user.upcoming.length > 0){
+    reservations = this.state.user.upcoming.map(function(workshop) {
+     return <Reservation key={workshop.title} workshop={workshop} />;
+    }.bind(this));
+    } else {
+      reservations = <span>Looks like you aren't signed up for anything yet. Go ahead, try something new!</span>;
+    }
+
+
     return(
       <div className="container">
 
         <div className="row row-offcanvas row-offcanvas-right">
-          <div className="col-xs-6 col-sm-4 sidebar-offcanvas" id="sidebar">
+          <div className="col-xs-8 col-sm-4 sidebar-offcanvas" id="sidebar">
             < Sidebar user={this.state.user} />
           </div>
 
           <div className="col-xs-12 col-sm-8">
               <div className="hello" col-xs-12>
-
-                <h1>Hello, { name }!</h1>
+                <span>Hi, I'm { name }!</span>
               </div>
 
-              <div className="row upcoming" id="attending">
-                <div>
-                  <h1>Upcoming Reservations</h1>
-                  {this.state.user.upcoming.map(function(workshop) {
-                   return <Reservation key={workshop.title} workshop={workshop} />;
-                  }.bind(this))}
+                <div className="row upcoming" id="attending">
+                  <div>
+                    <h1>Upcoming Reservations</h1>
+                    { reservations }
+                  </div>
+                </div>
+
+                <div className="row previous" id="attended">
+                  <div>
+                    <h1>Workshops Attended</h1>
+                    { attended }
+                  </div>
+                </div>
+
+                <div className="row profile-reviews" id="reviews">
+                  < Reviews user={this.state.user} />
                 </div>
               </div>
-
-              <div className="row previous" id="attended">
-                <div>
-                  <h1>Workshops Attended</h1>
-                  {this.state.attended.map(function(workshop) {
-                   return <WorkshopsAttended key={workshop.title} user={this.state.user} workshop={workshop} />;
-                  }.bind(this))}
-                </div>
-              </div>
-
-              <div className="row profile-reviews" id="reviews">
-                < Reviews user={this.state.user} />
-              </div>
-
-            </div>
-          </div>
+        </div>
       </div>
 
 

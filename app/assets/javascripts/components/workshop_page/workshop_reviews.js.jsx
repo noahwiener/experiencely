@@ -51,10 +51,10 @@ WorkshopReviews = React.createClass({
           if (review.rating){
             rating = < Stars clickable={false} rating={review.rating} size={'fa-1x'} />;
           }
-
+          var key = review.workshop.title + "_" + review.id;
 
         return (
-          <div key={review.id} className="container workshop-reviews">
+          <div key={key} className="container workshop-reviews">
             <div className="row">
               <div className="col-xs-2 col-xs-offset-2">
                 <div className="reviewer-image" style={divStyle}></div>

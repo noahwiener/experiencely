@@ -484,7 +484,7 @@ span.glyphicon.glyphicon-chevron-right{
 }
 
 .exp-homeimg.step3{
-  background-image: url("http://res.cloudinary.com/drfyambuq/image/upload/c_scale,q_100,w_1110/v1445277829/boat_c6acwi.png");
+  background-image: url("https://res.cloudinary.com/drfyambuq/image/upload/c_scale,q_100,w_1110/v1445277829/boat_c6acwi.png");
 }
 
 .exp-homequote {
@@ -593,7 +593,31 @@ span.glyphicon.glyphicon-chevron-right{
 // profile
 
 .hello {
+  color: rgb(116, 118, 118);
+  display: block;
+  font-style: serif;
+  font-size: 22px;
+  font-weight: normal;
+  height: 29px;
+  line-height: 27.5px;
+  margin-bottom: 13.1999998092651px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 13.1999998092651px;
+  padding-bottom: 1px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 1px;
   text-align: center;
+  text-overflow: ellipsis;
+  text-rendering: optimizeLegibility;
+  text-shadow: none;
+  white-space: nowrap;
+  width: 698px;
+}
+
+.profile-buttons{
+  text-align: justify;
 }
 
 
@@ -601,9 +625,27 @@ span.glyphicon.glyphicon-chevron-right{
   background-color: darkgrey;
 }
 .profile-pic{
+  position: relative;
   display: block;
   height: 300px;
   margin: 20px;
+}
+
+.update-profile-pic {
+  position: absolute;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background: rgba(70, 70, 70, 0.7);
+  padding: 15px;
+  text-align: center;
+  bottom: 0px;
+}
+
+.update-profile-pic:hover{
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .profile-sidebar-text{
@@ -637,8 +679,6 @@ span.glyphicon.glyphicon-chevron-right{
 
 .reservation {
   text-align: center;
-  background-color: #ccc;
-  margin: 15px;
 }
 
 .upcoming{
@@ -918,4 +958,66 @@ span.glyphicon.glyphicon-chevron-right{
       padding-bottom: 10px;
       border-top: 2px solid rgb(234, 234, 234);
       margin-bottom: 5px;
+    }
+
+
+    .upcoming-item {
+      background-color: white;
+      margin: 10px;
+      white-space: pre-wrap;
+      border: 1px solid lightgrey;
+      color: #464646;
+      height: 320px;
+    }
+
+    .upcoming-item:hover {
+      cursor: pointer;
+    }
+
+    .upcoming-item h2 {
+      font-weight: 700;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 20px;
+      max-height: 45px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .upcoming-item-details{
+      padding-left: 5px;
+    }
+
+    .upcoming-item-details span{
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      height: auto;
+      letter-spacing: 1.5px;
+      line-height: 20px;
+      text-transform: uppercase;
+      white-space: pre-wrap;
+      margin: 0 2px;
+    }
+
+    .upcoming-pic{
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+
+    .upcoming-pic-date{
+      display: block;
+      color: white;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      background: rgba(70, 70, 70, 0.7);
+      padding: 5px;
+      text-align: center;
+    }
+
+    .upcoming-item:hover .upcoming-pic{
+      -webkit-filter: brightness(120%);
     }

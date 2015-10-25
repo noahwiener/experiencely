@@ -200,7 +200,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
 
                               {host_id: users[3-1].id,
                                 title: "Biking through Wine Country",
-                                details: "A bicycle tour through Alexander Valley's vineyards",
+                                details: "Tour Alexander Valley's vineyards",
                                 date: (Time.now - 43.days).to_date,
                                 start_time: "1:00 PM",
                                 max_attendees: 30,
@@ -211,7 +211,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
 
                               {host_id: users[4-1].id,
                                 title: "Natural plasters",
-                                details: "Learn to use timeless techniques",
+                                details: "Learn timeless techniques",
                                 date: (Time.now - 18.days).to_date,
                                 start_time: "1:00 PM",
                                 max_attendees: 30,
@@ -222,7 +222,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
 
                               {host_id: users[5-1].id,
                                 title: "Acro-Yoga",
-                                details: "Find the natural balance between serenity and daredevil",
+                                details: "Balance between serenity and daredevil",
                                 date: (Time.now - 4.days).to_date,
                                 start_time: "1:00 PM",
                                 max_attendees: 14,

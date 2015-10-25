@@ -25,6 +25,8 @@ ModalSignup = React.createClass({
     this.setState({num_in_party : party});
   },
 
+
+
   render: function() {
     return (
       <div>
@@ -34,7 +36,7 @@ ModalSignup = React.createClass({
               <span onClick={this.props.close} className="modal-close js-hide-modal">&times;</span>
                 <div className="modal-signup">
                   <span>Join us at </span>
-                  <span className="modal-title">{this.props.workshop.title}</span> 
+                  <span className="modal-title">{this.props.workshop.title}</span>
                 </div>
                 <div className="modal-signup">
                   <span>On {this.props.workshop.eng_date}</span>
@@ -49,7 +51,7 @@ ModalSignup = React.createClass({
                                       <span className="glyphicon glyphicon-minus"></span>
                                   </button>
                               </span>
-                              <input type="text" className="form-control input-number" value={this.state.num_in_party} />
+                              <input type="text" className="form-control input-number" onChange={this.handleInput} value={this.state.num_in_party} />
                               <span className="input-group-btn">
                                   <button type="button" className="btn btn-default btn-number" data-type="plus" onClick={this.add}>
                                       <span className="glyphicon glyphicon-plus"></span>

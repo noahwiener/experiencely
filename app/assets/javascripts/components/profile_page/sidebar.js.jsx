@@ -22,7 +22,7 @@ Sidebar = React.createClass({
         if (error){
         console.log(error);
       } else {
-        this.setState({image_url: result[0]['url']})
+        this.setState({image_url: result[0].url});
         var profile_params = { user_id: this.props.user.id, photo_url: this.state.image_url };
         ApiUtil.updateProfile({ user: profile_params });
       }
@@ -52,17 +52,17 @@ Sidebar = React.createClass({
 
     return (
       <div className="profile-sidebar">
-        <div className="btn cloudinary">
-          <button onClick={ this.callCloudinary }>Open Cloudinary</button>
+        <div className="profile-pic" style={profileStyle}>
+          <div className="update-profile-pic">
+            <span onClick={ this.callCloudinary }><i className="fa fa-plus"></i> Update Profile Picture</span>
+          </div>
         </div>
-        <div className="profile-pic" style={profileStyle}></div>
         <div className="profile-sidebar-text">
           { modal }
-          <h2>Hi {this.props.user.user_name}</h2>
+          <p className="profile-buttons"><a className="btn btn-default" onClick={this.openProfileModal}>Update Profile</a><a className="btn btn-default" onClick={ApiUtil.signOut}>Log Out</a></p>
           <p>Name: {this.props.user.first_name} {this.props.user.last_name}</p>
           <p>About Me: {this.props.user.about_me}</p>
-          <p><button onClick={ApiUtil.signOut}>Log Out</button></p>
-          <p><a className="btn btn-default" onClick={this.openProfileModal}>Update Profile</a></p>
+
 
         </div>
     </div>
