@@ -262,11 +262,11 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  box-shadow: 0px 0px 5px 5px #222222;
 }
 
 .side {
   min-width: 40%;
+  filter: brightness(0.1);
   opacity: 0.2;
   position: absolute;
 }
@@ -384,7 +384,7 @@ span.glyphicon.glyphicon-chevron-right{
 // home page
 
 #header.header {
-  background-image: url("http://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_1091/v1445277833/muralmax_yhonxd.png");
+  background-image: url("https://res.cloudinary.com/drfyambuq/image/upload/v1445750639/muralmax_bbdm4j.png");
   background-size: cover;
   display: block;
   height: 600px;
@@ -484,7 +484,7 @@ span.glyphicon.glyphicon-chevron-right{
 }
 
 .exp-homeimg.step3{
-  background-image: url("https://res.cloudinary.com/drfyambuq/image/upload/c_scale,w_1080/v1445277829/boat_c6acwi.png");
+  background-image: url("http://res.cloudinary.com/drfyambuq/image/upload/c_scale,q_100,w_1110/v1445277829/boat_c6acwi.png");
 }
 
 .exp-homequote {
@@ -887,3 +887,35 @@ span.glyphicon.glyphicon-chevron-right{
     font-size: 18px;
     color: rgb(110, 110, 110);
   }
+
+
+  // profile reviews
+
+
+    .review-host-image{
+      display: block;
+    }
+
+    .profle-review-bottom-title{
+      color: rgb(70, 70, 70);
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .profle-review-bottom-body{
+      color: rgb(152, 155, 153);
+      font-size: 16px;
+    }
+
+    .profle-review-bottom-workshop span{
+      color: rgb(255, 190, 20);
+      font-size: 16px;
+      padding-left: 5px;
+    }
+
+    .profile-reviews{
+      padding-bottom: 10px;
+      border-top: 2px solid rgb(234, 234, 234);
+      margin-bottom: 5px;
+    }

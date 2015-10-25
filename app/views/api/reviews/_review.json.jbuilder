@@ -17,5 +17,6 @@ json.workshop do
   json.workshop_host do
     json.first_name review.workshop.host.first_name
     json.last_init (review.workshop.host.last_name[0] + ".")
+    json.host_photo (review.workshop.host.photos[0].url)
   end
 end

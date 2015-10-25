@@ -54,6 +54,13 @@ var Profile = React.createClass({
       return (<div className="spinner-loader">Loading…</div>);
     }else {
 
+    var name;
+    if (this.state.user.first_name){
+      name = this.state.user.first_name;
+    }else{
+      name = this.state.user.user_name;
+    }
+
     return(
       <div className="container">
 
@@ -63,35 +70,35 @@ var Profile = React.createClass({
           </div>
 
           <div className="col-xs-12 col-sm-8">
-            <div className="hello">
-              <h1>Hello, {this.state.user.first_name || this.state.user.user_name}!</h1>
-            </div>
+              <div className="hello" col-xs-12>
 
-            <div className="row upcoming" id="attending">
-              <div>
-                <h1>Upcoming Reservations</h1>
-                {this.state.user.upcoming.map(function(workshop) {
-                 return <Reservation key={workshop.title} workshop={workshop} />;
-                }.bind(this))}
+                <h1>Hello, { name }!</h1>
               </div>
-            </div>
 
-            <div className="row previous" id="attended">
-              <div>
-                <h1>Workshops Attended</h1>
-                {this.state.attended.map(function(workshop) {
-                 return <WorkshopsAttended key={workshop.title} user={this.state.user} workshop={workshop} />;
-                }.bind(this))}
+              <div className="row upcoming" id="attending">
+                <div>
+                  <h1>Upcoming Reservations</h1>
+                  {this.state.user.upcoming.map(function(workshop) {
+                   return <Reservation key={workshop.title} workshop={workshop} />;
+                  }.bind(this))}
+                </div>
               </div>
-            </div>
 
-            <div className="row profile-reviews" id="reviews">
-              < Reviews user={this.state.user} />
+              <div className="row previous" id="attended">
+                <div>
+                  <h1>Workshops Attended</h1>
+                  {this.state.attended.map(function(workshop) {
+                   return <WorkshopsAttended key={workshop.title} user={this.state.user} workshop={workshop} />;
+                  }.bind(this))}
+                </div>
+              </div>
+
+              <div className="row profile-reviews" id="reviews">
+                < Reviews user={this.state.user} />
+              </div>
+
             </div>
           </div>
-        </div>
-
-
       </div>
 
 

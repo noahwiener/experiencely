@@ -1,19 +1,26 @@
 WorkshopCarousel = React.createClass({
 
   render: function(){
+    var date = "";
+    var start_time = "";
+    var photos = [];
+    if (this.props.workshop.date){ date = this.props.workshop.eng_date; }
+    if (this.props.workshop.start_time) {start_time = this.props.workshop.start_time; }
+    if (this.props.photos){ photos = this.props.photos; }
+
     return (
       <div id="myCarousel" className="carousel slide" data-ride="carousel">
         <div className="carousel-caption">
           <div className="carousel-date">
-            <span>{this.props.workshop.eng_date}</span>
+            <span>{ date }</span>
           </div>
           <div className="carousel-time">
-            <span>{this.props.workshop.start_time}</span>
+            <span>{ start_time }</span>
           </div>
         </div>
         <div className="slides-cont">
           <ol className="carousel-indicators">
-            { this.props.photos.map(function (photo, idx) {
+            { photos.map(function (photo, idx) {
                 var klass = (idx === 0 ? 'active' : '');
                 return (
                   <li data-target="#myCarousel" data-slide-to={idx} key={idx + "_" + photo.url} className={klass}></li>
@@ -24,7 +31,7 @@ WorkshopCarousel = React.createClass({
 
           <div className="carousel-inner" role="listbox">
           {
-            this.props.photos.map(function(photo, idx){
+            photos.map(function(photo, idx){
               var klass = idx === 0 ? 'item active' : 'item';
               return (
                 <div key={photo.url} className={klass}>

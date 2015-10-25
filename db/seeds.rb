@@ -271,7 +271,7 @@ photos = Photo.create([{name: 'Noah', imageable_type: "User", imageable_id: user
                       {name: '0_Nubian', imageable_type: "Workshop", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277795/nubian_vault_mlieow.jpg"},
                       {name: 'Team', imageable_type: "Workshop", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/c_crop,h_842,w_750/v1445277797/ethan_team_ijlpkq.jpg"},
                       {name: 'EthanOven', imageable_type: "Workshop", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277795/ethan_oven_q2foyu.jpg"},
-                      {name: 'Ethan', imageable_type: "User", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277732/ethan_profile_otnhh9.jpg"},
+                      {name: 'Ethan', imageable_type: "User", imageable_id: users[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277732/ethan_profile_otnhh9.jpg"},
 
                       {name: 'Bottle and Barrels', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277797/bottle_and_barrels_suobpz.jpg"},
                       {name: 'Cheers', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277791/cheers_vdb5th.jpg"},

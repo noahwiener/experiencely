@@ -4,6 +4,7 @@ Map = React.createClass({
     var map = React.findDOMNode(this.refs.map);
     var mapOptions = {
       center: { lat: this.props.workshop.lat, lng: this.props.workshop.lng},
+      scrollwheel: false,
       zoom: 13
     };
     this.map = new google.maps.Map(map, mapOptions);
