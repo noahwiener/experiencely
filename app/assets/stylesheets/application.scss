@@ -1126,3 +1126,14 @@ span.glyphicon.glyphicon-chevron-right{
   .modal-content span.signin{
     line-height: 25px;
   }
+
+  .navbar-nav a, span{
+    float: left;
+  }
+
+  .navbar-nav span{
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #747676;
+    line-height: 4.5;
+  }
