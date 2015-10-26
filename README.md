@@ -2,11 +2,11 @@
 
 [Heroku link][heroku]
 
-[heroku]: https://stark-woodland-1668.herokuapp.com/
+[heroku]: http://www.experiencely.xyz/
 
 ## Minimum Viable Product
 
-Workshoply is a Ruby on Rails/React.js web app inspired by Feastly, a community where professional chefs host private dinners.  In this adaptation, professionals will host workshops teaching guests new skills, providing unique personal experiences, and granting private access to exciting materials in their field. Workshoply will allow users to:
+Experiencely is a Ruby on Rails/React.js web app inspired by Feastly, a community where professional chefs host private dinners.  In this adaptation, professionals will host workshops teaching guests new skills, providing unique personal experiences, and granting private access to exciting materials in their field. Experiencely allows users to:
 
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
@@ -17,15 +17,28 @@ Workshoply is a Ruby on Rails/React.js web app inspired by Feastly, a community 
 - [ ] View details, reviews, image carousels, etc for each workshop
 - [ ] Read reviews of workshop hosts
 - [ ] View workshops by map location
-- [ ] Sign up for workshops
+- [ ] Sign up for workshops with a variable number of guests
 - [ ] Prevented from signing up for workshops that are at capacity
 - [ ] Review hosts of previously attended workshops
 - [ ] Update profile information
+- [ ] upload a profile picture
+- [ ] login as a guest
 - [ ] View attended workshops, attended workshops, and reviews on profile page
+- [ ] Write reviews of workshop hosts
+- [ ] Edit old reviews
 - [ ] View descriptive homepage when not logged in
 - [ ] Redirect to browse page if logged in
-- [ ] View other recommended workshops
 - [ ] upload a profile picture
+
+## Future Todos
+
+- [ ] allow users to sign up as professional workshop hosts
+- [ ] allow users to build workshop pages
+- [ ] add additional cities, add search/filter params
+- [ ] build out seed data for past workshops
+- [ ] create new host profile pages
+- [ ] recommend workshops based on similarity of content
+- [ ] revise ratings into categories based on hospitality, education, community, fun, new skills learned
 
 ## Design Docs
 * [View Wireframes][view]
@@ -65,14 +78,14 @@ In building a workshops page, I will set up relationships between workshops and 
 
 ### Phase 4: Profiles and Reviews (2 days)
 
-Phase 4 builds out user profile pages, with react components for the profile page, upcoming events, past events, and reviews. Workshop reviews will persist through to their hosts. (ASK TA--should I create a user store here? Or should adding reviews here just create one in the database, which will then communicate with the respective workshop's store, which in turn, will emit a change event?) I will go back to the browse and workshop pages to add review information to these pages.
+Phase 4 builds out user profile pages, with react components for the profile page, upcoming events, past events, and reviews. Workshop reviews will persist through to their hosts. I will go back to the browse and workshop pages to add review information to these pages.
 
 [Details][phase-four]
 
 ### Phase 5: Static pages, additional data (2 days)
 
 Phase 5 will include the creation of the home page, the footer/navbar, updates to the login page, and other static but css-heavy contributions. The home page will require some new css elements for hash fragments. In addition, logged in users will be redirected from the home to the browse page, and will not view the home page.
-The navbar will need to be aware of login status, so click handlers will need to be added to the log in, register, and log out buttons.  CHECK WITH TAs--SHOULD THIS GO INTO A USER STORE? OR WHERE SHOULD THIS AUTHENTICATION INFO EXIST IN REACT?
+The navbar will need to be aware of login status, so click handlers will need to be added to the log in, register, and log out buttons.
 
 Finally, with the main architecture in place, I will add additional seed data, and complete the CSS.
 
