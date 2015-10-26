@@ -67,9 +67,9 @@ ProfileForm = React.createClass({
                    onChange={this.handleInput.bind(null, 'about_me')}/>
           </div>
 
-          <button className="btn" type="submit">Update Profile</button>
+          <button className="btn update-review-btn" type="submit">Update Profile</button>
         </form>
-          <button className="btn" onClick={this.props.close}>Cancel</button>
+          <button className="btn update-review-btn" onClick={this.props.close}>Cancel</button>
       </div>
     );
   }

@@ -100,7 +100,7 @@ var Profile = React.createClass({
             < Sidebar user={this.state.user} />
           </div>
 
-          <div className="col-sm-8 profile-main not-fixed">
+          <div className="col-sm-8 profile-right not-fixed">
 
                 <div className="row upcoming" id="attending">
                   <div>
@@ -116,7 +116,7 @@ var Profile = React.createClass({
                   </div>
                 </div>
 
-                <div className="row profile-reviews" id="reviews">
+                <div className="row" id="reviews">
                   < Reviews user={this.state.user} name={name}/>
                 </div>
               </div>

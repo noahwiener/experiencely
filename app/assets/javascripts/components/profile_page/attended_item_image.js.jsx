@@ -16,7 +16,7 @@ AttendedItemImage = React.createClass({
 
     return(<div className="upcoming-pic">
             <div className="upcoming-pic-date">
-              <span><i className="fa fa-calendar-times-o"></i> { reviewed }</span>
+              <span><i className="fa fa-pencil-square-o"></i> { reviewed }</span>
             </div>
             <img src={urlsrc} height="200px" width="100%"/>
           </div>);

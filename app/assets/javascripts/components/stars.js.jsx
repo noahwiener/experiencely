@@ -45,7 +45,6 @@ Stars = React.createClass({
         this.stars.push(this.empty);}
   },
 
-
   render: function() {
     if (this.props.clickable) {
       this.showClickable();

@@ -8,7 +8,7 @@ ProfileModal = React.createClass({
             <article className="modal-content">
               <span onClick={ this.props.close } className="modal-close js-hide-modal">&times;</span>
 
-                <h1>Hi {this.props.user.user_name}</h1>
+                <span className="title">Hi {this.props.user.user_name}</span>
 
               < ProfileForm close={this.props.close} user={this.props.user} />
 

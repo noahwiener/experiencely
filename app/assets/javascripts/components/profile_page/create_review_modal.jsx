@@ -8,7 +8,7 @@ CreateReviewModal = React.createClass({
             <article className="modal-content">
               <span onClick={ this.props.close } className="modal-close js-hide-modal">&times;</span>
 
-                <h1>Review {this.props.workshop.title}</h1>
+                <span>Review </span><span className="title">{this.props.workshop.title}</span>
 
               < ReviewForm close={this.props.close} workshop={this.props.workshop} user={this.props.user} />
 

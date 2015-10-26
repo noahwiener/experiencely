@@ -8,7 +8,7 @@ UpdateModal = React.createClass({
             <article className="modal-content">
               <span onClick={ this.props.close } className="modal-close js-hide-modal">&times;</span>
 
-                <h1>Update Your Review of {this.props.workshop.title}</h1>
+                <span>Update your review of </span><span className="title">{this.props.workshop.title}</span>
 
                 < UpdateReviewForm close={this.props.close}
                                     workshop={this.props.workshop}

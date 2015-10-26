@@ -53,7 +53,7 @@ WorkshopReviews = React.createClass({
             rating = < Stars clickable={false} rating={review.rating} size={'fa-1x'} />;
           }
 
-        var key = review.title;
+        var key = review.body;
 
         return (
           <div key={ key } className="container workshop-reviews">

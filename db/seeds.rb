@@ -451,7 +451,7 @@ reviews = Review.create([{user_id: users[21].id, workshop_id: workshops[6].id, t
 
 {user_id: users[5].id, workshop_id: workshops[7].id, title: "Great Course", body: "Ruby is an amazing language, and Noah was a fantastic instructor.  I had a great time with this workshop, and can’t wait to take his React.js workshop soon!", rating: 5},
 
-{user_id: users[18].id, workshop_id: workshops[7].id, title: "RoR Demystified", body: "I’ve read a few books on Ruby, but this course opened up my work to the whole MVC framework of Rails. Great workshop!", rating: 5},
+{user_id: users[7].id, workshop_id: workshops[7].id, title: "RoR Demystified", body: "I’ve read a few books on Ruby, but this course opened up my eyes to MVC frameworks and the power of Rails. Great workshop!", rating: 5},
 
 {user_id: users[9].id, workshop_id: workshops[7].id, title: "Good Community", body: "Our host, Noah, has done a great job of extending the tech scene to outsiders like myself.  I had a really wonderful time learning the basics of rails, and the reading list that he supplied will allow me to keep learning", rating: 5},
 
@@ -464,7 +464,7 @@ reviews = Review.create([{user_id: users[21].id, workshop_id: workshops[6].id, t
 
 {user_id: users[1].id, workshop_id: workshops[9].id, title: "Fascinating", body: "I had an amazing time learning about wine with Limor, and the tour of Hamel’s wine caves was incredible.  The open geology of the caves gave concepts of terroir a tangible reality, and I have a newfound respect for the California wine scene!", rating: 5},
 
-{user_id: users[7].id, workshop_id: workshops[9].id, title: "Delicious", body: "This was a fantastic tour and workshop.  Limor gave us a tour of the vineyards and then walked us through the wine-making process, highlighting techniques and machinery along the way before our tasting. I learned so much and can’t wait to join her for another workshop", rating: 5},
+{user_id: users[7].id, workshop_id: workshops[9].id, title: "Delightful", body: "This was a fantastic tour and workshop.  Limor gave us a tour of the vineyards and then walked us through the wine-making process, highlighting techniques and machinery along the way before our tasting. I learned so much and can’t wait to join her for another workshop", rating: 5},
 
 {user_id: users[21].id, workshop_id: workshops[9].id, title: "Delicious", body: "Amazing tour with an amazing host", rating: 5},
 
@@ -478,7 +478,7 @@ reviews = Review.create([{user_id: users[21].id, workshop_id: workshops[6].id, t
 
 {user_id: users[4].id, workshop_id: workshops[11].id, title: "Amazing", body: "Ethan was the best! We had so much fun working with plaster, and checking out the other structures that Ethan has built on the farm.  Plus, it was great to hang out with goats in Berkeley--the farm is wonderful!", rating: 5},
 
-{user_id: users[7].id, workshop_id: workshops[11].id, title: "A great learning experience", body: "I learned a ton about sustainable building techniques.  I hope Ethan teaches a class on solar water heating systems some time soon--he mentioned that he has experience building them!", rating: 4},
+{user_id: users[7].id, workshop_id: workshops[11].id, title: "A Great Learning Experience", body: "I learned a ton about sustainable building techniques.  I hope Ethan teaches a class on solar water heating systems some time soon--he mentioned that he has experience building them!", rating: 4},
 
 {user_id: users[3].id, workshop_id: workshops[12].id, title: "Learned to fly!", body: "I’ve always seen people doing acro-yoga, but figured it took years of agility training.  With Marley’s help, I was proven wrong, and managed some amazing feats in a single afternoon!", rating: 5},
 

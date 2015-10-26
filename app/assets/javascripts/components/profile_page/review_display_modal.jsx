@@ -12,13 +12,19 @@ ReviewDisplayModal = React.createClass({
         <section id="modal" className="modal is-active">
             <article className="modal-content">
               <span onClick={ this.props.close } className="modal-close js-hide-modal">&times;</span>
-
-                <h1>{this.props.review.title}</h1>
-
-                <p>{this.props.review.body}</p>
-                < Stars clickable={false} rating={this.props.review.rating} size={'fa-2x'} />
-                <button className="btn" type="submit" onClick={this.handleClick}>Update Your Review</button>
-
+                <div className="review-title-modal">
+                  <span className="title">{this.props.review.title}</span>
+                </div>
+                <div className="review-body-modal-star">
+                  < Stars clickable={false} rating={this.props.review.rating} size={'fa-2x'} />
+                <br /><br />
+                </div>
+                <div className="review-body-modal">
+                  <span>{this.props.review.body}</span>
+                </div>
+                <div>
+                  <button className="btn update-review-btn" type="submit" onClick={this.handleClick}>Update Your Review</button>
+                </div>
 
             </article>
             <div className="modal-screen js-hide-modal"></div>

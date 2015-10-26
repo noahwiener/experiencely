@@ -59,9 +59,9 @@ Sidebar = React.createClass({
         </div>
         <div className="profile-sidebar-text">
           { modal }
-          <p className="profile-buttons"><a className="btn btn-default" onClick={this.openProfileModal}>Update Profile</a><a className="btn btn-default" onClick={ApiUtil.signOut}>Log Out</a></p>
-          <p>Name: {this.props.user.first_name} {this.props.user.last_name}</p>
-          <p>About Me: {this.props.user.about_me}</p>
+          <p className="profile-buttons"><a className="btn profile-btn" onClick={this.openProfileModal}>Update Profile</a><a className="btn profile-btn" onClick={ApiUtil.signOut}>Log Out</a></p>
+          <p><span className="sidebar-section">Name:</span> {this.props.user.first_name} {this.props.user.last_name}</p>
+          <p><span className="sidebar-section">About Me:</span> {this.props.user.about_me}</p>
 
 
         </div>
