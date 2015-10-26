@@ -76,10 +76,8 @@ var Profile = React.createClass({
        return <WorkshopsAttended key={workshop.title} user={this.state.user} workshop={workshop} />;
       }.bind(this));
     }else {
-      attended = <span>Looks like you've never attended one of our workshops before. Go ahead, give it a try!</span>;
+      attended = <span>There are no workshops here.  How about logging out and logging back in with our guest account?</span>;
     }
-
-
 
 
     if (this.state.user.upcoming.length > 0){
@@ -87,7 +85,7 @@ var Profile = React.createClass({
      return <Reservation key={workshop.title} workshop={workshop} />;
     }.bind(this));
     } else {
-      reservations = <span>Looks like you aren't signed up for anything yet. Go ahead, try something new!</span>;
+      reservations = <span>Nothing to see here! Check out our reviews system by logging out and logging back in with our guest account?</span>;
     }
 
 

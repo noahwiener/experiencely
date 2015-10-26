@@ -17,6 +17,7 @@ Footer = React.createClass({
         <div className="bottom-bar">
           <span className="footer-logo" onClick={this.top}>
             <img src="images/logo.png" alt="logo" height="60px"/>
+            <span>A Feastly Clone</span>
           </span>
         </div>
       </footer>

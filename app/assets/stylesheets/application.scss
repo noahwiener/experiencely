@@ -42,6 +42,10 @@ body {
   color: #FFFFF5;
 }
 
+.footer-logo {
+  font-size: 13px;
+}
+
 .footer-logo:hover{
   cursor: pointer;
 }
@@ -956,7 +960,7 @@ span.glyphicon.glyphicon-chevron-right{
       white-space: pre-wrap;
       border: 1px solid lightgrey;
       color: #464646;
-      height: 320px;
+      height: 340px;
     }
 
     .upcoming-item:hover {
@@ -1125,15 +1129,4 @@ span.glyphicon.glyphicon-chevron-right{
 
   .modal-content span.signin{
     line-height: 25px;
-  }
-
-  .navbar-nav a, span{
-    float: left;
-  }
-
-  .navbar-nav span{
-    float: left;
-    font-family: 'Montserrat', sans-serif;
-    color: #747676;
-    line-height: 4.5;
   }

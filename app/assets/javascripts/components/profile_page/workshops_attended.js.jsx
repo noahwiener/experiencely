@@ -35,7 +35,7 @@ WorkshopsAttended = React.createClass({
     }
   },
 
-  render: function(){    
+  render: function(){
     var modal;
     if (this.state.displaymodalIsOpen === true){
       modal = < ReviewDisplayModal close={ this.closeModal } openUpdateFormModal={this.openUpdateFormModal} review={this.props.workshop.current_user_review[0]} />;
@@ -70,6 +70,9 @@ WorkshopsAttended = React.createClass({
                     <h2>{this.props.workshop.title}</h2>
                     <div>
                       <span><i className="fa fa-info"></i> {this.props.workshop.details}</span>
+                    </div>
+                    <div>
+                      <span><i className="fa fa-calendar"></i> {this.props.workshop.eng_date}</span>
                     </div>
                     <div>
                       <span><i className="fa fa-graduation-cap"></i>  Host: {this.props.workshop.host.first_name} {this.props.workshop.host.last_name[0]}.</span>

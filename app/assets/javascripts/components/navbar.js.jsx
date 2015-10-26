@@ -28,7 +28,7 @@ Navbar = React.createClass({
     return (
       <div id="navbar" className="navbar-collapse collapse noah-nav">
         <ul className="nav navbar-nav">
-          <li className="active"><a href="/#browse"><img src="images/logo.png" alt="logo" height="60px" /></a><span>Inspired by Feastly</span></li> 
+          <li className="active"><a href="/#browse"><img src="images/logo.png" alt="logo" height="60px" /></a></li>
         </ul>
         <ul className="nav navbar-nav navbar-right">
           {x}
