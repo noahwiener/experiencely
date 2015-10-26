@@ -11,24 +11,24 @@ Experiencely is a Ruby on Rails/React.js web app inspired by Feastly, a communit
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [ ] Create an account
-- [ ] Log in / Log out
-- [ ] Browse upcoming workshops by date
-- [ ] View details, reviews, image carousels, etc for each workshop
-- [ ] Read reviews of workshop hosts
-- [ ] View workshops by map location
-- [ ] Sign up for workshops with a variable number of guests
-- [ ] Prevented from signing up for workshops that are at capacity
-- [ ] Review hosts of previously attended workshops
-- [ ] Update profile information
-- [ ] upload a profile picture
-- [ ] login as a guest
-- [ ] View attended workshops, attended workshops, and reviews on profile page
-- [ ] Write reviews of workshop hosts
-- [ ] Edit old reviews
-- [ ] View descriptive homepage when not logged in
-- [ ] Redirect to browse page if logged in
-- [ ] upload a profile picture
+- [ X ] Create an account
+- [ X ] Log in / Log out
+- [ X ] Browse upcoming workshops by date
+- [ X ] View details, reviews, image carousels, etc for each workshop
+- [ X ] Read reviews of workshop hosts
+- [ X ] View workshops by map location
+- [ X ] Sign up for workshops with a variable number of guests
+- [ X ] Prevented from signing up for workshops that are at capacity
+- [ X ] Review hosts of previously attended workshops
+- [ X ] Update profile information
+- [ X ] upload a profile picture
+- [ X ] login as a guest
+- [ X ] View attended workshops, attended workshops, and reviews on profile page
+- [ X ] Write reviews of workshop hosts
+- [ X ] Edit old reviews
+- [ X ] View descriptive homepage when not logged in
+- [ X ] Redirect to browse page if logged in
+- [ X ] upload a profile picture
 
 ## Future Todos
 
