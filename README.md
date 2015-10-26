@@ -1,8 +1,8 @@
 # Experiencely
 
-[Heroku link][heroku]
+[Live link][live]
 
-[heroku]: http://www.experiencely.xyz/
+[live]: http://www.experiencely.xyz/
 
 ## Minimum Viable Product
 
