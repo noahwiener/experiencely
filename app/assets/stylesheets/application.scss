@@ -371,7 +371,7 @@ span.glyphicon.glyphicon-chevron-right{
 }
 
 .host-img img {
-  max-height: 300px;
+  max-height: 270px;
   border-radius: 20%;
 }
 
@@ -864,7 +864,7 @@ span.glyphicon.glyphicon-chevron-right{
 
   .review-bottom-workshop span{
     color: rgb(255, 190, 20);
-    font-size: 11px;
+    font-size: 13px;
     padding-left: 5px;
   }
 
@@ -1121,4 +1121,8 @@ span.glyphicon.glyphicon-chevron-right{
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+
+  .modal-content span.signin{
+    line-height: 25px;
   }

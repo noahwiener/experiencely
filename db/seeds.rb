@@ -79,12 +79,11 @@ workshops = Workshop.create([{host_id: users[1].id,
                                 lng: -122.411342,
                                 location: "App Academy, San Francisco",
                                 price: "Free",
-                                body: "More and more developers are switching over to Facebook’s new front-end JavaScript library for creating UI components. React has many selling points: a lighting-quick Virtual DOM, modular components, JSX syntax, Flux’s unidirectional flow data, and much more.
+                                body: "More and more developers are switching over to Facebook’s new front-end JavaScript library for single-page applications. React has many selling points: a lighting-quick Virtual DOM, modular components, JSX syntax, Flux’s unidirectional flow data, and much more.
 
-One of the best things about React and Flux are their simplicity: JSX resembles HTML/XML, React has no models, no collections, no controllers, no templates, and no routers, and Flux is more of a pattern then a framework, so it can be implemented without having to learn much new code.
+One of the best things about React and Flux are their simplicity: JSX resembles HTML/XML, and Flux is more of a pattern then a framework, so it can be implemented without having to learn much new code. While relatively easy to learn, they are powerful tools for building large applications with data that changes over time.
 
-Your host for this workshop is Experiencely’s founder, Noah Wiener, who designed the Experiencely website using React and Flux architecture.  Noah is a soon-to-be graduate of San Francisco’s prestigious App Academy, a web development bootcamp focusing on Rails and React development.
-
+Your host for this workshop is Experiencely’s founder, Noah Wiener, who designed the Experiencely website using React and Flux architecture on top of a Rails backend.  Noah is a soon-to-be graduate of San Francisco’s prestigious App Academy, a web development bootcamp focusing on Rails and React development.
 
 This workshop will be held in the heart of San Francisco’s tech scene at the App Academy offices. The workshop will go back-and-forth between demo and lecture, as Noah introduces guests to React components, the React router, and Flux’s unidirectional data model. At the end of the lecture, guests will each sit down at a computer and work through Experiencely’s source code to see React in action!"
                               },
@@ -438,7 +437,9 @@ signups = Signup.create([{user_id:users[21].id, workshop_id:workshops[6].id},
 {user_id: users[3].id, workshop_id: workshops[2].id},
 {user_id: users[7].id, workshop_id: workshops[0].id},
 {user_id: users[7].id, workshop_id: workshops[1].id},
-{user_id: users[7].id, workshop_id: workshops[5].id}
+{user_id: users[7].id, workshop_id: workshops[5].id},
+{user_id: users[7].id, workshop_id: workshops[13].id}
+
 ])
 
 reviews = Review.create([{user_id: users[21].id, workshop_id: workshops[6].id, title: "Learned to Fetch", body: "I never knew how much fun it was to chase sticks until Rumo taught us all proper technique. I’d love to be a dog!", rating: 5},
@@ -488,7 +489,7 @@ reviews = Review.create([{user_id: users[21].id, workshop_id: workshops[6].id, t
 
 {user_id: users[9].id, workshop_id: workshops[13].id, title: "Write like a pro!", body: "Aaron is an accomplished journalist, and it was great to have him guide our discussions, and he was nice enough to spend some time after class discussing how to structure a blog that I’m starting soon. ", rating: 5},
 
-{user_id: users[3].id, workshop_id: workshops[13].id, title: "Thanks Aaron", body: "As someone who moved here from Washington, DC, I’ve been reading Aaron’s articles for years, so it was great to meet him in person to get some feedback on my own writing!", rating: 5},
+{user_id: users[2].id, workshop_id: workshops[13].id, title: "Thanks Aaron", body: "As someone who moved here from Washington, DC, I’ve been reading Aaron’s articles for years, so it was great to meet him in person to get some feedback on my own writing!", rating: 5},
 
 {user_id: users[19].id, workshop_id: workshops[13].id, title: "Tough", body: "Guess I am not cut out to be a writer", rating: 3},
 

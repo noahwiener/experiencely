@@ -13,7 +13,7 @@ WorkshopReviews = React.createClass({
               </div>
             </div>
             <div className="col-xs-3">
-              <p className="num_reviews">({this.props.reviews.length} Reviews)</p>
+              <p className="num_reviews">({this.props.reviews.length} Host Reviews)</p>
             </div>
           </div>
         </div>
