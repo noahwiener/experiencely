@@ -64,8 +64,8 @@ ProfileReview = React.createClass({
           <div className="row">
             <div className="col-xs-3">
               <div className="review-host-image" style={divStyle}></div>
-              <p>Host {this.props.review.workshop.workshop_host.first_name} {this.props.review.workshop.workshop_host.last_init}</p>
-              <button className="btn" type="submit" onClick={this.handleClick}>Update Your Review</button>
+              <p className="host-name-review">Host {this.props.review.workshop.workshop_host.first_name} {this.props.review.workshop.workshop_host.last_init}</p>
+              <button className="update-review-btn" type="submit" onClick={this.handleClick}>Update Review</button>
             </div>
             <div className="col-xs-9">
               <p className="profle-review-bottom-title">{ title }</p>

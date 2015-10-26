@@ -92,17 +92,15 @@ var Profile = React.createClass({
 
 
     return(
-      <div className="container">
+      <div className="profile-total">
+      <div className="container profile-main">
 
         <div className="row row-offcanvas row-offcanvas-right">
-          <div className="col-xs-8 col-sm-4 sidebar-offcanvas" id="sidebar">
+          <div className="col-sm-4 sidebar fixed" id="sidebar">
             < Sidebar user={this.state.user} />
           </div>
 
-          <div className="col-xs-12 col-sm-8">
-              <div className="hello" col-xs-12>
-                <span>Hi, I'm { name }!</span>
-              </div>
+          <div className="col-sm-8 profile-main not-fixed">
 
                 <div className="row upcoming" id="attending">
                   <div>
@@ -119,12 +117,12 @@ var Profile = React.createClass({
                 </div>
 
                 <div className="row profile-reviews" id="reviews">
-                  < Reviews user={this.state.user} />
+                  < Reviews user={this.state.user} name={name}/>
                 </div>
               </div>
         </div>
       </div>
-
+      </div>
 
 
     );

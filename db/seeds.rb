@@ -46,6 +46,23 @@ You can sign me up for more events on individual workshops' pages, and they will
 
 Tired of being Bugs? Personalize your profile! Click Update Profile to make this page your own, and click on the profile picture if you are done looking like a bunny (but it is a pretty good look, if I do say so myself!)"},
 
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)},
+{user_name: Faker::Internet.email, password: Faker::Internet.password(8), first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, about_me:Faker::Lorem.sentence(3, true)}
                   ])
 
 
@@ -56,6 +73,7 @@ workshops = Workshop.create([{host_id: users[1].id,
                                 details: "From the Virtual DOM to Flux Architecture",
                                 date: (Time.now + 9.days).to_date,
                                 start_time: "6:00 PM",
+                                current_attendees: 3,
                                 max_attendees: 10,
                                 lat: 37.781220,
                                 lng: -122.411342,
@@ -75,7 +93,8 @@ This workshop will be held in the heart of San Francisco’s tech scene at the A
                                 details: "Professional Advice from My Dog",
                                 date: (Time.now + 25.days).to_date,
                                 start_time: "2:00 PM",
-                                max_attendees: 1000,
+                                current_attendees: 5,
+                                max_attendees: 15,
                                 lat: 37.873549,
                                 lng: -122.274688,
                                 location: "Ohlone Dog Park, Berkeley",
@@ -89,7 +108,8 @@ woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof 
                                 details: "Discover California Zinfandels",
                                 date: (Time.now + 12.days).to_date,
                                 start_time: "5:00 PM",
-                                max_attendees: 8,
+                                current_attendees: 5,
+                                max_attendees: 10,
                                 lat: 37.793899,
                                 lng: -122.266470,
                                 location: "Dashe Cellars, Oakland",
@@ -105,7 +125,8 @@ Limor developed her love of wine while living in the heart of Malbec country on 
                                 details: "Learn Traditional Adobe Brickmaking",
                                 date: (Time.now + 17.days).to_date,
                                 start_time: "1:00 PM",
-                                max_attendees: 80,
+                                current_attendees: 5,
+                                max_attendees: 30,
                                 lat: 37.864702,
                                 lng: -122.289131,
                                 location: "Green Fairie Farm, Berkeley",
@@ -121,6 +142,7 @@ In this fun, team-building workshop, Ethan will guide guests through the process
                                 details: "Planting and Sustainability",
                                 date: (Time.now + 27.days).to_date,
                                 start_time: "3:00 PM",
+                                current_attendees: 12,
                                 max_attendees: 20,
                                 lat: 37.796534,
                                 lng: -122.263412,
@@ -142,6 +164,7 @@ We are an inner city community college serving a diverse population and our visi
                                 details: "The Media and Urban Development",
                                 date: (Time.now + 32.days).to_date,
                                 start_time: "7:00 PM",
+                                current_attendees: 8,
                                 max_attendees: 20,
                                 lat: 37.789995,
                                 lng: -122.404536,
@@ -159,6 +182,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 details: "Who is a good boy?",
                                 date: (Time.now - 15.days).to_date,
                                 start_time: "1:00 PM",
+                                current_attendees: 16,
                                 max_attendees: 20,
                                 location: "Golden Gate Park",
                                 body: "Learn to chase a ball",
@@ -170,6 +194,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 details: "Understanding the MVC framework",
                                 date: (Time.now - 2.days).to_date,
                                 start_time: "1:00 PM",
+                                current_attendees: 12,
                                 max_attendees: 20,
                                 location: "App Academy, San Francisco",
                                 body: "Full-stack development",
@@ -181,10 +206,11 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 details: "Learn How to Dig",
                                 date: (Time.now - 8.days).to_date,
                                 start_time: "1:00 PM",
-                                max_attendees: 20,
+                                current_attendees: 12,
+                                max_attendees: 17,
                                 location: "Archaeological Research Facility, Berkeley",
                                 body: "Understanding stratigraphy, history, and getting your hands dirty",
-                                price: "$100"
+                                price: "$15"
                               },
 
                               {host_id: users[3-1].id,
@@ -192,10 +218,11 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 details: "Beneath the Soil in Sonoma",
                                 date: (Time.now - 15.days).to_date,
                                 start_time: "1:00 PM",
-                                max_attendees: 20,
+                                current_attendees: 12,
+                                max_attendees: 19,
                                 location: "Hamel Family Wines, Sonoma",
                                 body: "Get an insider's peak at an upscale Sonoma winery",
-                                price: "$100"
+                                price: "$16"
                               },
 
                               {host_id: users[3-1].id,
@@ -203,6 +230,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 details: "Tour Alexander Valley's vineyards",
                                 date: (Time.now - 43.days).to_date,
                                 start_time: "1:00 PM",
+                                current_attendees: 25,
                                 max_attendees: 30,
                                 location: "Alexander Valley, CA",
                                 body: "Bike in sun-soaked Alexander Valley and visit three wineries on the way",
@@ -214,7 +242,8 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 details: "Learn timeless techniques",
                                 date: (Time.now - 18.days).to_date,
                                 start_time: "1:00 PM",
-                                max_attendees: 30,
+                                current_attendees: 5,
+                                max_attendees: 10,
                                 location: "Green Fairie Farm, Berkeley",
                                 body: "Complete construction on a naturally-built goat shed",
                                 price: "$10"
@@ -225,6 +254,7 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 details: "Balance between serenity and daredevil",
                                 date: (Time.now - 4.days).to_date,
                                 start_time: "1:00 PM",
+                                current_attendees: 5,
                                 max_attendees: 14,
                                 location: "Dolores Park, San Francisco",
                                 body: "Defy gravity and feel at peace with your partner",
@@ -236,22 +266,42 @@ The topic is a personal passion of Aaron’s; his Housing Complex blog for the W
                                 details: "Find the hook to captivate readers",
                                 date: (Time.now - 28.days).to_date,
                                 start_time: "1:00 PM",
-                                max_attendees: 14,
+                                current_attendees: 5,
+                                max_attendees: 10,
                                 location: "Mother Jones, San Francisco",
                                 body: "Learn with journalist Aaron Wiener",
                                 price: "$12"
                               },
 
                               {host_id: users[7-1].id,
-                                title: "Fire Dancing",
+                                title: "Fire Dancing II",
                                 details: "Meld Agility and Awe with Performance",
                                 date: (Time.now + 21.days).to_date,
                                 start_time: "8:00 PM",
-                                max_attendees: 9,
+                                current_attendees: 8,
+                                max_attendees: 15,
                                 lat: 37.781438,
                                 lng: -122.407479,
                                 location: "Temple of Poi, San Francisco",
-                                body: "From poi to fire-breathing, fire-performance never fails to catch the eye. In this workshop, you’ll be introduced to a variety of fire-dancing techniques, including the instructor’s favorite, contact staff.
+                                body: "From poi to fire-breathing, fire-performance never fails to catch the eye. In part two of this workshop, you’ll be introduced to a variety of fire-dancing techniques, including the instructor’s favorite, contact staff.
+
+Your host Ben will instruct guests in some basic fire-dancing movements.  Don’t worry—the only time that the objects will be lit will be at the end of the workshop, when Ben gives a full show of some of his favorite moves.
+
+Enjoy the meeting place between performance, agility, and adrenaline in this blazing workshop, and get ready to wow your friends with your new hobby.",
+                                price: "$10"
+                              },
+
+                              {host_id: users[7-1].id,
+                                title: "Fire Dancing I",
+                                details: "Meld Agility and Awe with Performance",
+                                date: (Time.now - 3.days).to_date,
+                                start_time: "8:00 PM",
+                                current_attendees: 5,
+                                max_attendees: 15,
+                                lat: 37.781438,
+                                lng: -122.407479,
+                                location: "Temple of Poi, San Francisco",
+                                body: "From poi to fire-breathing, fire-performance never fails to catch the eye. In part one of this workshop, you’ll be introduced to a variety of fire-dancing techniques, including the instructor’s favorite, contact staff.
 
 Your host Ben will instruct guests in some basic fire-dancing movements.  Don’t worry—the only time that the objects will be lit will be at the end of the workshop, when Ben gives a full show of some of his favorite moves.
 
@@ -323,21 +373,130 @@ photos = Photo.create([{name: 'Noah', imageable_type: "User", imageable_id: user
                       {name: 'Ben.jpg', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/01Ben_s8kuzn.jpg"},
                       {name: 'ben2', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/ben2_zehx74.jpg"},
                       {name: '0ben3', imageable_type: "Workshop", imageable_id: workshops[15-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/ben3_gskyhu.jpg"},
-                      {name: 'Bugs', imageable_type: "User", imageable_id: users[7].id, url: "http://res.cloudinary.com/drfyambuq/image/upload/v1445639967/bugs_pphxai.jpg"}
+                      {name: 'ben2', imageable_type: "Workshop", imageable_id: workshops[15].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277743/ben2_zehx74.jpg"},
+                      {name: 'Bugs', imageable_type: "User", imageable_id: users[7].id, url: "http://res.cloudinary.com/drfyambuq/image/upload/v1445639967/bugs_pphxai.jpg"},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[8].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[9].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[10].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[11].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[12].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[13].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[14].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[15].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[16].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[17].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[18].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[19].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[20].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[21].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[22].id, url: Faker::Avatar.image},
+                      {name: 'faker', imageable_type: "User", imageable_id: users[23].id, url: Faker::Avatar.image}
                         ])
 
-signups = Signup.create([{user_id:users[1-1].id, workshop_id:workshops[1-1].id},
-                        {user_id:users[2-1].id, workshop_id:workshops[6-1].id},
-                        {user_id:users[2-1].id, workshop_id:workshops[12-1].id},
-                        {user_id:users[2-1].id, workshop_id:workshops[14-1].id},
-                        {user_id:users[2-1].id, workshop_id:workshops[9-1].id},
-                        {user_id:users[2-1].id, workshop_id:workshops[11-1].id},
-                        {user_id:users[2-1].id, workshop_id:workshops[8-1].id}
-                        ])
+signups = Signup.create([{user_id:users[21].id, workshop_id:workshops[6].id},
+{user_id:users[23].id, workshop_id:workshops[6].id},
+{user_id:users[3].id, workshop_id:workshops[6].id},
+{user_id:users[15].id, workshop_id:workshops[6].id},
+{user_id:users[5].id, workshop_id:workshops[7].id},
+{user_id:users[18].id, workshop_id:workshops[7].id},
+{user_id:users[9].id, workshop_id:workshops[7].id},
+{user_id:users[0].id, workshop_id:workshops[7].id},
+{user_id: users[20].id, workshop_id: workshops[8].id},
+{user_id: users[0].id, workshop_id: workshops[8].id},
+{user_id: users[1].id, workshop_id: workshops[9].id},
+{user_id: users[7].id, workshop_id: workshops[9].id},
+{user_id: users[21].id, workshop_id: workshops[9].id},
+{user_id: users[5].id, workshop_id: workshops[10].id},
+{user_id: users[0].id, workshop_id: workshops[10].id},
+{user_id: users[22].id, workshop_id: workshops[10].id},
+{user_id: users[16].id, workshop_id: workshops[11].id},
+{user_id: users[4].id, workshop_id: workshops[11].id},
+{user_id: users[7].id, workshop_id: workshops[11].id},
+{user_id: users[3].id, workshop_id: workshops[12].id},
+{user_id: users[23].id, workshop_id: workshops[12].id},
+{user_id: users[14].id, workshop_id: workshops[12].id},
+{user_id: users[9].id, workshop_id: workshops[13].id},
+{user_id: users[3].id, workshop_id: workshops[13].id},
+{user_id: users[19].id, workshop_id: workshops[13].id},
+{user_id: users[0].id, workshop_id: workshops[13].id},
+{user_id: users[17].id, workshop_id: workshops[15].id},
+{user_id: users[7].id, workshop_id: workshops[15].id},
+{user_id: users[6].id, workshop_id: workshops[15].id},
+{user_id: users[7].id, workshop_id: workshops[7].id},
+{user_id: users[7].id, workshop_id: workshops[10].id},
+{user_id: users[0].id, workshop_id: workshops[1].id},
+{user_id: users[0].id, workshop_id: workshops[4].id},
+{user_id: users[0].id, workshop_id: workshops[5].id},
+{user_id: users[1].id, workshop_id: workshops[1].id},
+{user_id: users[1].id, workshop_id: workshops[3].id},
+{user_id: users[1].id, workshop_id: workshops[4].id},
+{user_id: users[1].id, workshop_id: workshops[5].id},
+{user_id: users[1].id, workshop_id: workshops[6].id},
+{user_id: users[2].id, workshop_id: workshops[1].id},
+{user_id: users[2].id, workshop_id: workshops[3].id},
+{user_id: users[2].id, workshop_id: workshops[6].id},
+{user_id: users[3].id, workshop_id: workshops[2].id},
+{user_id: users[7].id, workshop_id: workshops[0].id},
+{user_id: users[7].id, workshop_id: workshops[1].id},
+{user_id: users[7].id, workshop_id: workshops[5].id}
+])
 
-reviews = Review.create([{user_id: users[1-1].id, workshop_id: workshops[8-1].id, title: "Woof", body: "Maybe you shouldnt have dogs take coding classes", rating: 2},
-                        {user_id: users[2-1].id, workshop_id: workshops[10-1].id, title: "Amazing", body: "Limor is the best host!", rating: 5},
-                        {user_id: users[5-1].id, workshop_id: workshops[11-1].id, title: "Fun!", body: "Great Bike Ride!", rating: 4},
-                        {user_id: users[2-1].id, workshop_id: workshops[15-1].id, title: "Terrible", body: "I got lit on fire!", rating: 1},
-                        {user_id: users[5-1].id, workshop_id: workshops[14-1].id, title: "Hard", body: "Journalism is challenging for a dog, what with the fact that I can't speak or write", rating: 1}
+reviews = Review.create([{user_id: users[21].id, workshop_id: workshops[6].id, title: "Learned to Fetch", body: "I never knew how much fun it was to chase sticks until Rumo taught us all proper technique. I’d love to be a dog!", rating: 5},
+
+{user_id: users[23].id, workshop_id: workshops[6].id, title: "Amazing Ears", body: "I’ll admit--I didn’t come to this workshop to learn how to play fetch. I’ve been playing fetch professionally for years.  But I heard the instructor, Rumo, had incredibly huge ears, and I had to check it out in person.  Turns out it is true! That is one great dog!", rating: 5},
+
+{user_id: users[2].id, workshop_id: workshops[6].id, title: "Greatest Dog There Ever Was", body: "Rumo is the greatest dog that ever lived.  Take a class with him if you get a chance!", rating: 5},
+
+{user_id: users[15].id, workshop_id: workshops[6].id, title: "Taught by a Dog", body: "I can’t believe Experiencely lets dogs host workshops! To be fair, this was an amazing dog, but come on!", rating: 2},
+
+{user_id: users[5].id, workshop_id: workshops[7].id, title: "Great Course", body: "Ruby is an amazing language, and Noah was a fantastic instructor.  I had a great time with this workshop, and can’t wait to take his React.js workshop soon!", rating: 5},
+
+{user_id: users[18].id, workshop_id: workshops[7].id, title: "RoR Demystified", body: "I’ve read a few books on Ruby, but this course opened up my work to the whole MVC framework of Rails. Great workshop!", rating: 5},
+
+{user_id: users[9].id, workshop_id: workshops[7].id, title: "Good Community", body: "Our host, Noah, has done a great job of extending the tech scene to outsiders like myself.  I had a really wonderful time learning the basics of rails, and the reading list that he supplied will allow me to keep learning", rating: 5},
+
+{user_id: users[0].id, workshop_id: workshops[7].id, title: "Woof", body: "I didn’t really get much from this class, being a dog.  Experiencely, take note: Add a warning for all workshops that require opposable thumbs!  I’m a dog and had a very hard time coding.", rating: 2},
+{user_id: users[4].id, workshop_id: workshops[8].id, title: "Archaeology is so much fun", body: "Noah set up a model excavation for us to learn about stratigraphy, superposition, survey, and excavation techniques.  Archaeology is tough but meticulous work, and I was inspired to apply to participate in international excavations after this workshop.", rating: 5},
+
+{user_id: users[20].id, workshop_id: workshops[8].id, title: "Archaeology", body: "History is fascinating, and Noah is a great guide.  Between his experience digging on three continents and his academic background in archaeology, he was the perfect instructor. I’m only giving him four stars because he decided to switch careers to software development--I would love to learn more about archaeology!", rating: 4},
+
+{user_id: users[0].id, workshop_id: workshops[8].id, title: "Digging", body: "As a dog, I absolutely love to dig.  This workshop opened my eyes to a whole new side of digging: better understanding the past! I can’t wait to go on my next excavation--maybe I’ll dig up some bones to study (and chew on!).", rating: 5},
+
+{user_id: users[1].id, workshop_id: workshops[9].id, title: "Fascinating", body: "I had an amazing time learning about wine with Limor, and the tour of Hamel’s wine caves was incredible.  The open geology of the caves gave concepts of terroir a tangible reality, and I have a newfound respect for the California wine scene!", rating: 5},
+
+{user_id: users[7].id, workshop_id: workshops[9].id, title: "Delicious", body: "This was a fantastic tour and workshop.  Limor gave us a tour of the vineyards and then walked us through the wine-making process, highlighting techniques and machinery along the way before our tasting. I learned so much and can’t wait to join her for another workshop", rating: 5},
+
+{user_id: users[21].id, workshop_id: workshops[9].id, title: "Delicious", body: "Amazing tour with an amazing host", rating: 5},
+
+{user_id: users[5].id, workshop_id: workshops[10].id, title: "Great Ride", body: "I can’t picture a more stunning setting for a bike ride, and we all learned a ton about wine! This is why I love Experiencely--I get to have a fun day out while learning from professionals!", rating: 5},
+
+{user_id: users[0].id, workshop_id: workshops[10].id, title: "Amazing run", body: "As a dog, I have a hard time riding a bike, but I ran alongside the group and had a beautiful day in wine country!", rating: 5},
+
+{user_id: users[22].id, workshop_id: workshops[10].id, title: "Learned so much!", body: "Limor knows everything about wine! After the workshop, I realized that she works at a winery right here in Oakland. Guess I don’t have to go all the way to Sonoma for a great wine experience.", rating: 5},
+
+{user_id: users[16].id, workshop_id: workshops[11].id, title: "Guess I am not cut out for this type of work", body: "Ethan was a knowledgeable and wonderful host, but I had a hard time mastering plasters. I learned a ton about natural building techniques, and was very impressed by Ethan’s expertise, but I don’t love getting my hands dirty.", rating: 3},
+
+{user_id: users[4].id, workshop_id: workshops[11].id, title: "Amazing", body: "Ethan was the best! We had so much fun working with plaster, and checking out the other structures that Ethan has built on the farm.  Plus, it was great to hang out with goats in Berkeley--the farm is wonderful!", rating: 5},
+
+{user_id: users[7].id, workshop_id: workshops[11].id, title: "A great learning experience", body: "I learned a ton about sustainable building techniques.  I hope Ethan teaches a class on solar water heating systems some time soon--he mentioned that he has experience building them!", rating: 4},
+
+{user_id: users[3].id, workshop_id: workshops[12].id, title: "Learned to fly!", body: "I’ve always seen people doing acro-yoga, but figured it took years of agility training.  With Marley’s help, I was proven wrong, and managed some amazing feats in a single afternoon!", rating: 5},
+
+{user_id: users[23].id, workshop_id: workshops[12].id, title: "Fell a few times", body: "Our hostm Marley, had a great spirit, but I am just not agile enough for yoga!", rating: 2},
+
+{user_id: users[14].id, workshop_id: workshops[12].id, title: "Felt great for days", body: "Yoga was a blast, and Marley was a great host!", rating: 4},
+
+{user_id: users[9].id, workshop_id: workshops[13].id, title: "Write like a pro!", body: "Aaron is an accomplished journalist, and it was great to have him guide our discussions, and he was nice enough to spend some time after class discussing how to structure a blog that I’m starting soon. ", rating: 5},
+
+{user_id: users[3].id, workshop_id: workshops[13].id, title: "Thanks Aaron", body: "As someone who moved here from Washington, DC, I’ve been reading Aaron’s articles for years, so it was great to meet him in person to get some feedback on my own writing!", rating: 5},
+
+{user_id: users[19].id, workshop_id: workshops[13].id, title: "Tough", body: "Guess I am not cut out to be a writer", rating: 3},
+
+{user_id: users[0].id, workshop_id: workshops[13].id, title: "Woof", body: "Warning: Aaron’s journalism workshops are for humans, not dogs!  He prefers stories in English over those in barking. Woof woof", rating: 2},
+
+{user_id: users[17].id, workshop_id: workshops[15].id, title: "Beautiful", body: "fire performance is a wonderful art, and Ben is a master instructor and performer!", rating: 5},
+
+{user_id: users[7].id, workshop_id: workshops[15].id, title: "On Fire!", body: "Everyone else loved this workshop, but I got lit on fire! Luckily I’m a cartoon character, so I was alright, but be careful!", rating: 2},
+
+{user_id: users[3].id, workshop_id: workshops[15].id, title: "Spectacular", body: "An amazing dance and a wonderful art.  Can’t wait to attend the second part of the workshop", rating: 4}
   ])

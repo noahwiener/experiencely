@@ -42,6 +42,8 @@ gem 'jquery-easing-rails'
 
 gem "typedjs-rails", "~> 1.0.2"
 
+gem 'faker', '~> 1.4', '>= 1.4.3'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
