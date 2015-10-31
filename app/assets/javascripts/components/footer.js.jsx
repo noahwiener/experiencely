@@ -8,10 +8,11 @@ Footer = React.createClass({
       <footer className="footer">
           <div className="row">
             <ul className="footer-item">
-              <li><a href="https://www.linkedin.com/in/noahwiener">About</a></li>
-              <li><a href="https://www.linkedin.com/in/noahwiener">Team</a></li>
-              <li><a href="https://www.linkedin.com/in/noahwiener">Press</a> </li>
-              <li><a href="https://www.linkedin.com/in/noahwiener">Career Opportunities</a></li>
+              <li><a href="http://noahwiener.github.io/">Portfolio</a></li>
+              <li><a href="https://www.linkedin.com/in/noahwiener">LinkedIn</a></li>
+              <li><a href="https://github.com/noahwiener">Github</a> </li>
+              <li><a href="http://noahwiener.github.io/ResumeNoahWiener.pdf">Resume</a></li>
+              <li><a href="mailto:noah.wiener@gmail.com">Contact</a></li>
             </ul>
           </div>
         <div className="bottom-bar">
