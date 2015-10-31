@@ -20,7 +20,6 @@ Sidebar = React.createClass({
     cloudinary.openUploadWidget({cloud_name: window.CLOUD_NAME, upload_preset: window.UPLOAD_PRESET},
       function(error, result) {
         if (error){
-        console.log(error);
       } else {
         this.setState({image_url: result[0].url});
         var profile_params = { user_id: this.props.user.id, photo_url: this.state.image_url };

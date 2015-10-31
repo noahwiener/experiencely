@@ -108,7 +108,6 @@ ApiUtil = {
 
 
   updateReview: function(review) {
-    console.log(review);
     $.ajax({
       url: "api/reviews/"+review.id,
       type: "PATCH",

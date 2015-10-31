@@ -35,7 +35,7 @@ Home = React.createClass({
                   <div className="col-lg-4 col-md-6 col-10-sm">
                     <div className="exp-homecontent">
                       <div className="exp-hometext">
-                        Our hosts offer their knowledge, tools, and behind-the-scenes access to unique work locations from wine caves to industrial studios.
+                        Our hosts offer knowledge, tools, and behind-the-scenes access to unique locations from wine caves to industrial studios.
                       </div>
                       <div className="exp-homeicon step1"></div>
                         <a href="#step2" className="btn btn-circle page-scroll">

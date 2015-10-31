@@ -467,9 +467,13 @@ span.glyphicon.glyphicon-chevron-right{
 }
 
 .exp-home-bg{
-  padding-bottom: 150px;
+  padding-bottom: 200px;
   background-color: #fffefb;
   display: block;
+}
+
+@media (max-width: 992px) {
+  .exp-home-bg{padding-bottom: 50px;}
 }
 
 .exp-homeimg{
@@ -506,9 +510,7 @@ span.glyphicon.glyphicon-chevron-right{
   margin-top: -120px;
 }
 
-.exp-home-bg{
-  padding-bottom: 200px;
-}
+
 
 .exp-homeicon{
   background-position: center;
@@ -527,7 +529,7 @@ span.glyphicon.glyphicon-chevron-right{
 }
 
 .exp-hometext {
-  padding: 50px 20px;
+  padding: 35px 20px;
 }
 
 .btn-circle {
