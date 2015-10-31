@@ -1,10 +1,36 @@
 Navbar = React.createClass({
+  getInitialState: function () {
+    var user = UserStore.current() || {} ;
+    return { user: user };
+  },
+
+  componentDidMount: function () {
+    UserStore.addChangeListener(this._userChanged);
+    ApiUtil.fetchCurrentUser();
+  },
+
+  _userChanged: function () {
+    var user = UserStore.current();
+    this.setState({ user: user });
+  },
+
+  componentWillUnmount: function (){
+    UserStore.removeChangeListener(this._userChanged);
+  },
+
   render: function () {
     var x = "";
     var img = "";
+    var imgUrl;
 
-    if (window.CURRENT_USER_PIC){
-      img = <img src={window.CURRENT_USER_PIC} className="profile-navbar-img"></img>;
+    if (this.state.user.photos && this.state.user.photos[0]){
+      imgUrl = this.state.user.photos[0].url;
+    }else {
+      imgUrl = 'https://res.cloudinary.com/drfyambuq/image/upload/v1445286277/empty_person1_qsxnqh.png';
+    }
+
+    if (window.CURRENT_USER_UNAME){
+      img = <img src={imgUrl} className="profile-navbar-img"></img>;
     }
 
     if (window.CURRENT_USER_UNAME){
