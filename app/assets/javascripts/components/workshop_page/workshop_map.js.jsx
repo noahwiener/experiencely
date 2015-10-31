@@ -12,9 +12,9 @@ Map = React.createClass({
     var circle = new google.maps.Circle({
       center:{lat: this.props.workshop.lat, lng: this.props.workshop.lng},
       radius: 500,
-      fillColor: '#ffbe14',
+      fillColor: '#951202',
       fillOpacity: 0.5,
-      strokeColor: '#ffbe14',
+      strokeColor: '#951202',
       strokeWeight: 2,
       map: this.map,
       title: "workshop"
