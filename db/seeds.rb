@@ -333,7 +333,7 @@ photos = Photo.create([{name: 'Noah', imageable_type: "User", imageable_id: user
                       {name: 'atom_screenshot', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277734/atom_screenshot_grxxuw.png"},
                       {name: 'anthony_and_edmund', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277742/anthony_and_edmund_fpb3g6.jpg"},
                       {name: '1_whiteboarding', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277738/whiteboarding_atexot.jpg"},
-                      {name: 'react', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1446440937/react_d3urdk.png"},
+                      {name: '00_react', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1446440937/react_d3urdk.png"},
 
 
                       {name: 'Marley', imageable_type: "User", imageable_id: users[5-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277735/marley_ocqyib.jpg"},
