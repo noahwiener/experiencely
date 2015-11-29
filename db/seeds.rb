@@ -322,12 +322,12 @@ photos = Photo.create([{name: 'Noah', imageable_type: "User", imageable_id: user
                       {name: 'EthanOven', imageable_type: "Workshop", imageable_id: workshops[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277795/ethan_oven_q2foyu.jpg"},
                       {name: 'Ethan', imageable_type: "User", imageable_id: users[4-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277732/ethan_profile_otnhh9.jpg"},
 
-                      {name: 'Bottle and Barrels', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277797/bottle_and_barrels_suobpz.jpg"},
-                      {name: 'Cheers', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277791/cheers_vdb5th.jpg"},
+                      {name: 'Bottle and Barrels', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1448814074/bottle_and_barrels_reduced_zg1tgb.jpg"},
+                      {name: 'Cheers', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1448814073/cheers_reduced_usknh2.jpg"},
                       {name: 'Glass', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277789/glass_f1ptq7.jpg"},
-                      {name: 'grapes and barrel', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277791/grapes_and_barrel_y9y7wn.jpg"},
-                      {name: 'wine_bottles', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/wine_bottles_b0ffcb.jpg"},
-                      {name: 'Limor', imageable_type: "User", imageable_id: users[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1446791317/limor_c7qvzm.jpg"},
+                      {name: 'grapes and barrel', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1448814074/grapes_and_barrel_reduced_icewzo.jpg"},
+                      {name: 'wine_bottles', imageable_type: "Workshop", imageable_id: workshops[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1448814073/wine_bottles_reduced_uvktmg.jpg"},
+                      {name: 'Limor', imageable_type: "User", imageable_id: users[3-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1448814495/limor_reduced_ytxoeo.jpg"},
 
                       {name: '0_coding-demo', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277738/0_coding_demo_hl57bu.jpg"},
                       {name: 'atom_screenshot', imageable_type: "Workshop", imageable_id: workshops[1-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277734/atom_screenshot_grxxuw.png"},
@@ -352,7 +352,7 @@ photos = Photo.create([{name: 'Noah', imageable_type: "User", imageable_id: user
                       {name: 'hike', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1446791773/hike2_koc8y3.jpg"},
                       {name: 'pack', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1446791312/pack_ntrx96.jpg"},
                       {name: 'tent', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1446791298/tent_v87ick.jpg"},
-                      {name: 'tongue', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1446791306/tongue_tchclm.jpg"},
+                      {name: 'tongue', imageable_type: "Workshop", imageable_id: workshops[2-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1448814074/tongue_reduced_haat2f.jpg"},
 
                       {name: 'Aaron', imageable_type: "User", imageable_id: users[6-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277731/Aaron_ms1gcg.jpg"},
                       {name: '0_street-sense', imageable_type: "Workshop", imageable_id: workshops[6-1].id, url: "https://res.cloudinary.com/drfyambuq/image/upload/v1445277801/street-sense_shmmdz.jpg"},
